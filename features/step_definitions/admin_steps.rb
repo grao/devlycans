@@ -20,13 +20,13 @@ end
 
 
 Then /^I should logged out$/ do
-  click_link('Sign Out')
+  click_link('Logout')
 end
 
 Then /^I should be on the home page$/ do
   
   #      response.should contain('Logout')
-  page.should have_content('Sign Out')
+  page.should have_content('Logout')
 
 end
 
