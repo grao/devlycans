@@ -66,7 +66,9 @@ end
 Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
   page.should_not have_content(text)
 end
-
+When /^(?:|I )follow "([^\"]*)"$/ do |link|
+  click_link(link)
+end
 
 #Then /^(?:|I )should be on (.+)$/ do |page_name|
 #  current_path = URI.parse(current_url).select(:path, :query).compact.join('?')
