@@ -20,8 +20,12 @@ element.send_keys "changeit"
 element=driver.find_element(:class, "Btn1Def")
 element.click
 wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
-wait.until { driver.find_element(:link => "Logout") }
-element=driver.find_element(:link, 'Logout')
+wait.until { driver.find_element(:link => "Admin") }
+element=driver.find_element(:link, 'Admin')
+element.click
+wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
+wait.until { driver.find_element(:link => "Sign Out") }
+element=driver.find_element(:link, 'Sign Out')
 element.click
 
 
