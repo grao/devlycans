@@ -12,8 +12,10 @@ Scenario: Admin User Login
     When I go to the login page
     When I login as Admin with "demo" and "changeit"
     Then I should be on the home page
-
-    Then I should see "Admin"
+    When I follow "demo"
+    Then I should see "My Account"
+    When I follow "Roles"
+    Then I should see "SLI Administrator"
     Then I should logged out
 
   Scenario: Normal User Login
@@ -21,5 +23,9 @@ Scenario: Admin User Login
     Then I go to the login page
     When I login as Normal with "educator" and "educator1234"
     Then I should be on the home page
-    Then I should not see "Admin"
+    When I follow "Some Educator"
+    Then I should see "My Account"
+    When I follow "Roles"
+    
+    Then I should not see "SLI Administrator"
     Then I should logged out
