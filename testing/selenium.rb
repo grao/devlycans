@@ -1,7 +1,7 @@
 #for run this file just use "ruby filename" 
 require 'selenium-webdriver' #install gem selenium-webdriver
 
-driver = Selenium::WebDriver.for :chrome
+driver = Selenium::WebDriver.for :firefox
 driver.navigate.to "https://testlr1.slidev.org"
 a=driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
