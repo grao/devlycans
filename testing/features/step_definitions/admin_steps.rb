@@ -11,8 +11,8 @@ Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do
 end
 
 When /^I go to the login page$/ do
-  visit "https://testlr1.slidev.org"
-  select('SLI Realm', :from => 'realmId')
+  visit "https://devlr1.slidev.org"
+  select('Shared Learning Infrastructure', :from => 'realmId')
   click_button('Go')
 end
 
@@ -44,7 +44,7 @@ end
 
 When /^I login as Admin with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
-  visit "https://testlr1.slidev.org"
+  visit "https://devlr1.slidev.org"
   fill_in "IDToken1", :with=>username
   fill_in "IDToken2", :with=>password
   click_button "Log In"
@@ -52,7 +52,7 @@ end
 
 When /^I login as Normal with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
-  visit "https://testlr1.slidev.org"
+  visit "https://devlr1.slidev.org"
   fill_in "IDToken1", :with=>username
   fill_in "IDToken2", :with=>password
   click_button "Log In"
