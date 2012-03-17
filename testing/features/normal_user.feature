@@ -6,7 +6,7 @@ Feature: title
     Given a normal user exists with "educator" and "educator1234"
     
     
- Scenario: Admin User Login
+ Scenario: Normal User Login
     When I go to the login page
     When I login as Admin with "demo" and "changeit"
     Then I should be on the home page
