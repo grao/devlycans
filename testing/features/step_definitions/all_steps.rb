@@ -44,7 +44,6 @@ end
 
 When /^I login as Admin with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
-  visit "https://devlr1.slidev.org"
   fill_in "IDToken1", :with=>username
   fill_in "IDToken2", :with=>password
   click_button "Log In"
@@ -52,7 +51,7 @@ end
 
 When /^I login as Normal with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
-  visit "https://devlr1.slidev.org"
+  
   fill_in "IDToken1", :with=>username
   fill_in "IDToken2", :with=>password
   click_button "Log In"

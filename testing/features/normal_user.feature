@@ -10,8 +10,5 @@ Feature: title
     When I go to the login page
     When I login as Admin with "educator" and "educator1234"
     Then I should be on the home page
-    #When I follow "demo"
-    #Then I should see "My Account"
-   # When I follow "Roles"
     Then I should see "Admin"
     Then I should logged out
