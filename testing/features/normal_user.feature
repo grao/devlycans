@@ -8,7 +8,7 @@ Feature: title
     
  Scenario: Normal User Login
     When I go to the login page
-    When I login as Admin with "demo" and "changeit"
+    When I login as Admin with "educator" and "educator1234"
     Then I should be on the home page
     #When I follow "demo"
     #Then I should see "My Account"
