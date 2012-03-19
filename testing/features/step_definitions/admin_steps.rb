@@ -10,30 +10,15 @@ Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do
   User.new(:username => username, :password => password, :password_confirmation => password).save! unless User.exists?(:username => username)
 end
 
-Then /^I am on the Realm selection page$/ do
-  visit "https://devlr1.slidev.org"
-end
-
-Then /^I select "([^\"]*)"$/ do |text|
-  select(text, :from => 'realmId') 
-end
-
-Then /^I click "([^\"]*)"$/ do |btn_text|
-  click_button btn_text
-end 
-
-Given /^EULA has been accepted$/ do
-
-end
-
 When /^I go to the login page$/ do
   visit "https://devlr1.slidev.org"
   select('Shared Learning Infrastructure', :from => 'realmId')
   click_button('Go')
 end
 
+Then /^We have to accept EULA$/ do
 
-
+end
 
 Then /^I should logged out$/ do
   click_link('Logout')
@@ -60,6 +45,7 @@ end
 
 When /^I login as Admin with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
+  visit "https://devlr1.slidev.org"
   fill_in "IDToken1", :with=>username
   fill_in "IDToken2", :with=>password
   click_button "Log In"
@@ -67,7 +53,7 @@ end
 
 When /^I login as Normal with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
-  
+  visit "https://devlr1.slidev.org"
   fill_in "IDToken1", :with=>username
   fill_in "IDToken2", :with=>password
   click_button "Log In"
@@ -81,10 +67,6 @@ end
 Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
   page.should_not have_content(text)
 end
-When /^(?:|I )follow "([^\"]*)"$/ do |link|
-  click_link(link)
-end
-
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
   click_link(link)
 end
