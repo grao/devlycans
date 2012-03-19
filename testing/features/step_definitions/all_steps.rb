@@ -1,13 +1,16 @@
 
-Given /^an admin user Demo exists with "([^\"]*)" and "([^\"]*)"$/ do
+Given /^an admin user Demo exists with "([^\"]*)" and "([^\"]*)"$/ do |username,password|
   
-  User.new(:username => username, :password => password, :password_confirmation => password).save! unless User.exists?(:username => username)
-  User.find_by_username('demo').update_attribute(:admin, 1)
+#  User.new(:username => username, :password => password, :password_confirmation => password).save! unless User.exists?(:username => username)
+#  User.find_by_username('demo').update_attribute(:admin, 1)
+
+User.exists?(:username => username)
 end
 
-Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do
+Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do |username,password|
   
-  User.new(:username => username, :password => password, :password_confirmation => password).save! unless User.exists?(:username => username)
+  #User.new(:username => username, :password => password, :password_confirmation => password).save! unless User.exists?(:username => username)
+  User.exists?(:username => username)
 end
 
 Then /^I am on the Realm selection page$/ do

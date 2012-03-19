@@ -49,8 +49,13 @@ element = driver.find_element(:id, 'IDToken2')
 element.send_keys "educator1234"
 element=driver.find_element(:class, "Btn1Def")
 element.click
+if driver.find_element(:id, 'aui_3_4_0_1_226').displayed?
+driver.find_element(:id, 'aui_3_4_0_1_226').click
+else
 wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
 wait.until { driver.find_element(:link => "Logout") }
 
 element=driver.find_element(:link, 'Logout')
 element.click
+end
+
