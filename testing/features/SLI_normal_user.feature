@@ -8,7 +8,7 @@ Feature: title
     
  Scenario: Normal User Login
     When I go to the login page
-    When I login as Admin with "educator" and "educator1234"
+    When I login with "educator" and "educator1234"
     Then I should be on the home page
     Then I should see "Admin"
     Then I should logged out

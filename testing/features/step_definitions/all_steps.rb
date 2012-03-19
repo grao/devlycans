@@ -22,7 +22,7 @@ Then /^I select "([^\"]*)"$/ do |text|
 end
 
 Then /^I click "([^\"]*)"$/ do |btn_text|
-  click_button btn_text
+  click_button(btn_text)
 end 
 
 Given /^EULA has been accepted$/ do
@@ -61,20 +61,20 @@ end
 #end
 
 
-When /^I login as Admin with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
+When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
   fill_in "IDToken1", :with=>username
   fill_in "IDToken2", :with=>password
   click_button "Log In"
 end
 
-When /^I login as Normal with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
+#When /^I login as Normal with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
   
-  fill_in "IDToken1", :with=>username
-  fill_in "IDToken2", :with=>password
-  click_button "Log In"
-end
+ # fill_in "IDToken1", :with=>username
+ # fill_in "IDToken2", :with=>password
+ # click_button "Log In"
+#end
 
 
 Then /^(?:|I )should see "([^\"]*)"$/ do |text|

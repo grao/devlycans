@@ -10,7 +10,7 @@ Feature: title
 
 Scenario: Admin User Login
     When I go to the login page
-    When I login as Admin with "demo" and "changeit"
+    When I login with "demo" and "changeit"
     Then I should be on the home page
     Then I should see "Admin"
     Then I should logged out
