@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<definition name="portlet.ext" extends="portlet" />
+	
+	<definition name="portal" path="/common/themes/portal.jsp">
+		<put name="title" value="" />
+		<put name="selectable" value="false" />
+	</definition>
+	
+	<definition name="portal.eula_disagree" extends="portal">
+		<put name="title" value="EULA Disagree" />
+		<put name="content" value="/portal/eula_disagree.jsp" />
+	</definition>
+</tiles-definitions>
