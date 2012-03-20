@@ -3,6 +3,6 @@
     <wb-module deploy-name="wgen-portlet">
         <wb-resource deploy-path="/" source-path="/docroot" tag="defaultRootSource"/>
         <property name="context-root" value="wgen-portlet"/>
-        <property name="java-output-path" value="/wgen-portlet/docroot/WEB-INF/classes"/>
+        <property name="java-output-path" value="/wgen-portlet/build/classes"/>
     </wb-module>
 </project-modules>
