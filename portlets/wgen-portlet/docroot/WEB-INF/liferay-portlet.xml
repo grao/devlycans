@@ -2,13 +2,28 @@
 <!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd">
 
 <liferay-portlet-app>
+	
 	<portlet>
-		<portlet-name>wgen</portlet-name>
+		<portlet-name>headerportlet</portlet-name>
 		<icon>/icon.png</icon>
 		<instanceable>false</instanceable>
+		<private-session-attributes>false</private-session-attributes>
 		<header-portlet-css>/css/main.css</header-portlet-css>
-		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
-		<css-class-wrapper>wgen-portlet</css-class-wrapper>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>headerportlet-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>footerportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<private-session-attributes>false</private-session-attributes>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>footerportlet-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
