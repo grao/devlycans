@@ -21,6 +21,14 @@ Then /^I select "([^\"]*)"$/ do |text|
   select(text, :from => 'realmId') 
 end
 
+Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
+  select(text, :from => field) 
+end
+
+Then /^I fill "([^\"]*)" from "([^\"]*)"$/ do |text_desc, field|
+  fill_in field, :with=>text_desc
+end
+
 Then /^I click "([^\"]*)"$/ do |btn_text|
   click_button(btn_text)
 end 
@@ -75,6 +83,9 @@ end
  # fill_in "IDToken2", :with=>password
  # click_button "Log In"
 #end
+Then /^It open a pop up$/ do
+page.evaluate_script("var a='/web/guest/report-a-problem';newwindow=window.open(a,'name','height=700,width=700');if(window.focus){newwindow.focus()}return false");
+end
 
 
 Then /^(?:|I )should see "([^\"]*)"$/ do |text|
