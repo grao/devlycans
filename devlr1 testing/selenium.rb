@@ -1,4 +1,4 @@
-require 'selenium-webdriver'
+require 'selenium-webdriver'#run the file ruby selenium.rb 'Name of your selection releam' 'username' 'password'
 driver = Selenium::WebDriver.for :firefox
 driver.navigate.to "https://devlr1.slidev.org"
 a=driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
