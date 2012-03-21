@@ -1,9 +1,11 @@
 require 'rubygems'
 require 'selenium-webdriver'#run the file ruby selenium.rb 'Name of your selection releam' 'username' 'password'
+
 #driver = Selenium::WebDriver.for :firefox
 profile = Selenium::WebDriver::Firefox::Profile.new
 profile['network.http.prompt-temp-redirect'] = false
 driver = Selenium::WebDriver.for :firefox, :profile => profile
+
 driver.navigate.to "https://devlr2.slidev.org"
 a=driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
@@ -31,3 +33,4 @@ wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
 wait.until { driver.find_element(:link => "Sign Out") }
 element=driver.find_element(:link, 'Sign Out')
 element.click
+
