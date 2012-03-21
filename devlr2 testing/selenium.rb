@@ -23,11 +23,11 @@ element = driver.find_element(:id, 'IDToken2') #the username field id is IDToken
 element.send_keys ARGV[2]
 element=driver.find_element(:class, "Btn1Def")
 element.click
-set=driver.find_element(:id, 'aui_3_4_0_1_225').displayed?
-if set
-driver.find_element(:id, 'aui_3_4_0_1_225').click
+#set=driver.find_element(:id, 'aui_3_4_0_1_225').displayed?
+#if set
+#driver.find_element(:id, 'aui_3_4_0_1_225').click
 
-end
+#end
 if ARGV[1] == "demo"
 wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
 wait.until { driver.find_element(:link => "Admin") }
