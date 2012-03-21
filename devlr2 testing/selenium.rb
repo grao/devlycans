@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'selenium-webdriver'#run the file ruby selenium.rb 'Name of your selection releam' 'username' 'password'
 #driver = Selenium::WebDriver.for :firefox
 profile = Selenium::WebDriver::Firefox::Profile.new
