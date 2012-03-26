@@ -17,7 +17,7 @@ options.each do |g|
 end
 ele=driver.find_element(:id, "go")
 ele.click
-if (ARGV[1] == "demo" || ARGV[1] == "educator" || ARGV[1] == "mario.sanchez" || ARGV[1] == "jdoe") &&( ARGV[2] == "changeit" || ARGV[2] == "educator1234" || ARGV[2] == "mario.sanchez1234" || ARGV[2] == "jdoe1234")
+if (ARGV[1] == "demo" && ARGV[2] == "changeit")  || (ARGV[1] == "educator" && ARGV[2] == "educator1234") || (ARGV[1] == "mario.sanchez" && ARGV[2] == "mario.sanchez1234" ) || (ARGV[1] == "jdoe" && ARGV[2] == "jdoe1234") 
   element = driver.find_element(:id, 'IDToken1') #the username field id is IDToken1
   element.send_keys ARGV[1]
 
@@ -27,31 +27,36 @@ if (ARGV[1] == "demo" || ARGV[1] == "educator" || ARGV[1] == "mario.sanchez" || 
 
   element=driver.find_element(:class, "Btn1Def")
   element.click
-  #set=driver.find_element(:id, 'aui_3_4_0_1_225').displayed?
-  #if set
-  #driver.find_element(:id, 'aui_3_4_0_1_225').click
+  begin
+  set=driver.find_element(:id, 'aui_3_4_0_1_225').displayed?
+  set=true
+  rescue
+  set=false
+  end
+  if set
+  driver.find_element(:id, 'aui_3_4_0_1_225').click
 
-  #end
-  #wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
+  end
+ # wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
   #wait.until { driver.find_element(:link => "Report a problem") }
   #element1=driver.find_element(:link, "Report a problem")
   #element1.click
   #element=driver.find_element(:id, "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2")
-  #element.send_keys "test Report"
+ # element.send_keys "test Report"
   #element=driver.find_element(:class, "aui-button-input-submit")
   #element.click
-  if ARGV[1] == "demo"
-    wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
-    wait.until { driver.find_element(:link => "Admin") }
-    element=driver.find_element(:link, 'Admin')
-    element.click
-  end
+  #if ARGV[1] == "demo"
+  #  wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
+   # wait.until { driver.find_element(:link => "Admin") }
+   # element=driver.find_element(:link, 'Admin')
+   # element.click
+  #end
   wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
   wait.until { driver.find_element(:link => "Sign Out") }
   element=driver.find_element(:link, 'Sign Out')
   element.click
 else
-  puts "Check your username and password"
+  puts "Authentication Failed"
 
 end
 
