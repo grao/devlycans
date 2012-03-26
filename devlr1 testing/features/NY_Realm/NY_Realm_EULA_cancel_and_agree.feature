@@ -3,6 +3,15 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   
   Background:
      Given EULA has been canceled
+     
+  Scenario:-User Login through New York Realm with wrong username and password
+  
+    Then I am on the Realm selection page
+    Then I select "New York Realm"
+    Then I click "Go"
+    When I login with "mario.sanc" and "mario.sanchez"
+    Then I should be on the authentication failed page
+    Then I should see "Authentication failed." 
   
   Scenario:-User Logs in through New York Realm, cancels the EULA and then agrees
     Then I am on the Realm selection page

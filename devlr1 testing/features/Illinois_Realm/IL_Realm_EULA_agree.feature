@@ -4,6 +4,15 @@ Navigate to dashboard link successfully using Illinois Realm under 'Select an Ap
   Background:
      Given EULA has been accepted  
   
+  Scenario:-User Login through Illinois Realm with wrong username and wrong password
+    Then I am on the Realm selection page
+    Then I select "Illinois Realm"
+    Then I click "Go"
+    When I login with "jd" and "jd"
+    Then I should be on the authentication failed page
+    Then I should see "Authentication failed."
+  
+  
   Scenario:-User Login through Illinois Realm
     Then I am on the Realm selection page
     Then I select "Illinois Realm"
