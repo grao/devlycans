@@ -4,7 +4,19 @@ Feature: title
 
   Background:
     Given a normal user exists with "educator" and "educator1234"
+   
+   
+ Scenario: Normal User Login with wrong username and password
+    When I go to the login page
+    When I login with "dem" and "change"
+    Then I should be on the authentication failed page
+    Then I should see "Authentication failed."
     
+ Scenario: Normal User Login with blank username and blank password
+    When I go to the login page
+    When I login with "" and ""
+    Then I should be on the authentication failed page
+    Then I should see "Authentication failed."   
     
  Scenario: Normal User Login
     When I go to the login page

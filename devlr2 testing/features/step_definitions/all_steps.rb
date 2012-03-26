@@ -67,6 +67,9 @@ When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   fill_in "IDToken2", :with=>password
   click_button "Log In"
 end
+Then /^I should be on the authentication failed page$/ do
+ visit "https://devopenam1.slidev.org:80/idp2/UI/Login"
+end
 
 #When /^I login as Normal with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   
