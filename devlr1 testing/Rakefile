@@ -1,12 +1,6 @@
 ###################################################
 # Section to setup necessary env vars and overrides
 
-DB_HOST = ENV['DB_HOST'] ? ENV['DB_HOST'] : "localhost"
-
-DB_NAME = ENV['DB_NAME'] ? ENV['DB_NAME'] : "sli"
-
-MONGO_BIN = ENV['MONGO_HOME'] ? ENV['MONGO_HOME']+"/bin/" : ""
-
 EXPAND = ENV['CUKE_EXPAND'] ? "--expand" : ""
 
 COLOR = ENV['FORCE_COLOR'] ? "-c" : ""
