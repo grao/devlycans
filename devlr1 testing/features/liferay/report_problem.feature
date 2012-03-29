@@ -29,7 +29,7 @@ Feature: title
     Then I click button "Report A Problem"
     Then I should not see "The form information was sent successfully."
     
-  Scenario:Report a problem submition for SLI admin User
+  Scenario:Report a problem cancelation for SLI admin User
     Given I have an open web browser
     When I go to the login page
     When I login with "demo" and "changeit"
@@ -40,6 +40,18 @@ Feature: title
     Then I fill "Some test Problems" from "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2"
     Then I click button "Report A Problem"
     Then I should see "The form information was sent successfully."
+    Then I should see "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2" as ""
+   
+   Scenario:Report a problem happy cancelation for SLI admin User
+    Given I have an open web browser
+    When I go to the login page
+    When I login with "demo" and "changeit"
+    Then I should be on the home page
+    When I follow "Report a Problem"
+    Then It open a popup
+    Then I select "problem1" from "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field1"
+    Then I fill "Some test Problems" from "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2"
+    Then I click button "Cancel"
     Then I should see "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2" as ""
    
    Scenario:Report a problem non happy submission for SLI admin User
