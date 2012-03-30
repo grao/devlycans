@@ -112,7 +112,7 @@ Then /^I should be on the home page$/ do
  if element
   ele.click
  else
-  puts "You have already agreed the EULA"
+  puts "EULA has already been accepted."
  end
  @driver.find_element(:link, 'Sign Out').displayed?
 
