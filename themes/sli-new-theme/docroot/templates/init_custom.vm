@@ -1,0 +1,3 @@
+#set ($portletSetupShowBordersDefault = $theme_settings.getProperty("portlet-setup-show-borders-default"))
+#set ($headerLogoArticleId = $theme_settings.getProperty("header-logo-article-id"))
+#set ($footerArticleId = $theme_settings.getProperty("footer-article-id"))
