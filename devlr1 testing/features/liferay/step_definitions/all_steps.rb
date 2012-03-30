@@ -97,7 +97,17 @@ Then  /^I follow the home page Dashboard$/ do
 end
 
 Then /^I should logged out$/ do
-  @driver.find_element(:link, 'Sign Out').click
+  #begin
+  #@driver.find_element(:link, 'Sign Out').click
+  #rescue
+  
+  
+   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   @driver.action.move_to(menu).perform
+   
+   submenu=@driver.find_element(:link, 'Logout')
+   @driver.action.move_to(menu).click(submenu).perform
+  
   #click_link('Logout')
 end
 
@@ -114,7 +124,11 @@ Then /^I should be on the home page$/ do
  else
   puts "EULA has already been accepted."
  end
- @driver.find_element(:link, 'Sign Out').displayed?
+   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   @driver.action.move_to(menu).perform
+   
+   submenu=@driver.find_element(:link, 'Logout').displayed?
+ #@driver.find_element(:link, 'Sign Out').displayed?
 
 end
 
