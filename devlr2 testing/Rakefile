@@ -1,6 +1,12 @@
 ###################################################
 # Section to setup necessary env vars and overrides
 
+DB_HOST = ENV['DB_HOST'] ? ENV['DB_HOST'] : "localhost"
+
+DB_NAME = ENV['DB_NAME'] ? ENV['DB_NAME'] : "sli"
+
+MONGO_BIN = ENV['MONGO_HOME'] ? ENV['MONGO_HOME']+"/bin/" : ""
+
 EXPAND = ENV['CUKE_EXPAND'] ? "--expand" : ""
 
 COLOR = ENV['FORCE_COLOR'] ? "-c" : ""
@@ -77,11 +83,10 @@ end
 
 desc "Run the testing for life ray SLI for admin"
 task :liferayTest do
-   runTests("features/liferay/SLI_admin.feature")
-   runTests("features/liferay/SLI_normal_user.feature")
-   runTests("features/liferay/NY_Realm_EULA_agree.feature")
-   runTests("features/liferay/report_problem.feature")
-   runTests("features/liferay/SSD_Realm_linda.feature")
+  runTests("features/liferay/SLI_admin.feature")
+  runTests("features/liferay/SLI_normal_user.feature")
+  runTests("features/liferay/NY_Realm_EULA_agree.feature")
+  runTests("features/liferay/report_problem.feature")
   
 # runTests("test/features/liferay/IL_Realm_EULA_agree.feature")
   

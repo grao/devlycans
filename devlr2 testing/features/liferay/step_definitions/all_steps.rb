@@ -17,7 +17,7 @@ Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do |usern
 end
 
 Then /^I am on the Realm selection page$/ do
-  @driver.navigate.to "https://testlr1.slidev.org"
+  @driver.navigate.to "https://devlr2.slidev.org"
 end
 
 Then /^I select "([^\"]*)"$/ do |text|
@@ -61,7 +61,7 @@ Given /^EULA has been accepted$/ do
 end
 
 When /^I go to the login page$/ do
- @driver.navigate.to "https://testlr1.slidev.org"
+ @driver.navigate.to "https://devlr2.slidev.org"
 begin
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 ele=true
@@ -87,22 +87,15 @@ end
 end
 
 
-Then  /^I follow the home page Dashboard$/ do 
- begin
-  element= @driver.find_element(:xpath, "//a/span[text()=' Dashboard']")
-  element.click 
- rescue
-  puts 'element selector has been changed'
- end
-end
+
 
 Then /^I should logged out$/ do
-  @driver.find_element(:link, 'Sign Out').click
+  @driver.find_element(:link, 'Logout').click
   #click_link('Logout')
 end
 
 Then /^I should be on the home page$/ do
- @driver.find_element(:link, 'Sign Out').displayed?
+  @driver.find_element(:link, 'Logout').displayed? ||   @driver.find_element(:link, 'Sign out').displayed?
 
 end
 
@@ -143,7 +136,7 @@ end
 
 
 Then /^It open a popup$/ do
- @driver.navigate.to "https://devlr1.slidev.org/web/guest/report-a-problem"
+ @driver.navigate.to "https://devlr2.slidev.org/web/guest/report-a-problem"
 end
 
 

@@ -28,23 +28,23 @@ if (ARGV[1] == "demo" && ARGV[2] == "changeit")  || (ARGV[1] == "educator" && AR
   element=driver.find_element(:class, "Btn1Def")
   element.click
   begin
-  set=driver.find_element(:id, 'aui_3_4_0_1_225').displayed?
+  set=driver.find_element(:xpath, "//span/input[@value='Agree']").displayed?
   set=true
   rescue
   set=false
   end
   if set
-  driver.find_element(:id, 'aui_3_4_0_1_225').click
+  driver.find_element(:xpath, "//span/input[@value='Agree']").click
 
   end
- # wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
-  #wait.until { driver.find_element(:link => "Report a problem") }
-  #element1=driver.find_element(:link, "Report a problem")
-  #element1.click
-  #element=driver.find_element(:id, "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2")
- # element.send_keys "test Report"
-  #element=driver.find_element(:class, "aui-button-input-submit")
-  #element.click
+  wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
+  wait.until { driver.find_element(:link => "Report a problem") }
+  element1=driver.find_element(:link, "Report a problem")
+  element1.click
+  element=driver.find_element(:id, "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2")
+  element.send_keys "test Report"
+  element=driver.find_element(:class, "aui-button-input-submit")
+  element.click
   #if ARGV[1] == "demo"
   #  wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
    # wait.until { driver.find_element(:link => "Admin") }

@@ -4,8 +4,8 @@ Feature: title
 
   #Background:
     #Given a normal user exists with "educator" and "educator1234"
-  @wip  
-  Scenario:Report a problem submission for SLI normal User
+    
+  Scenario:Report a problem submition for SLI normal User
     Given I have an open web browser
     When I go to the login page
     When I login with "educator" and "educator1234"
@@ -17,7 +17,7 @@ Feature: title
     Then I click button "Report A Problem"
     Then I should see "The form information was sent successfully."
    
-   @wip
+   
    Scenario:Report a problem non happy submission for SLI normal User
     Given I have an open web browser
     When I go to the login page
@@ -25,10 +25,11 @@ Feature: title
     Then I should be on the home page
     When I follow "Report a Problem"
     Then It open a popup
+  
     Then I click button "Report A Problem"
     Then I should not see "The form information was sent successfully."
-  @wip  
-  Scenario:Report a problem cancelation for SLI admin User
+    
+  Scenario:Report a problem submition for SLI admin User
     Given I have an open web browser
     When I go to the login page
     When I login with "demo" and "changeit"
@@ -40,20 +41,7 @@ Feature: title
     Then I click button "Report A Problem"
     Then I should see "The form information was sent successfully."
     Then I should see "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2" as ""
-   @wip
-   Scenario:Report a problem happy cancelation for SLI admin User
-    Given I have an open web browser
-    When I go to the login page
-    When I login with "demo" and "changeit"
-    Then I should be on the home page
-    When I follow "Report a Problem"
-    Then It open a popup
-    Then I select "problem1" from "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field1"
-    Then I fill "Some test Problems" from "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2"
-    Then I click button "Cancel"
-    Then I should see "_1_WAR_webformportlet_INSTANCE_FzH4hF7yJhCX_field2" as ""
-    
-   @wip
+   
    Scenario:Report a problem non happy submission for SLI admin User
     Given I have an open web browser
     When I go to the login page
@@ -64,7 +52,7 @@ Feature: title
     Then I click button "Report A Problem"
     Then I should not see "The form information was sent successfully." 
      
-    @wip
+    
     Scenario: Report a problem happy submission for New York Realm User
      Given I have an open web browser
      Then I am on the Realm selection page
@@ -78,7 +66,7 @@ Feature: title
      Then I click button "Report A Problem"
      Then I should see "The form information was sent successfully."
      
-    @wip
+    
     Scenario: Report a problem non happy submission for New York Realm User
      Given I have an open web browser
      Then I am on the Realm selection page
