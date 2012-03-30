@@ -102,10 +102,33 @@ Then /^I should logged out$/ do
 end
 
 Then /^I should be on the home page$/ do
+ begin
+  ele=@driver.find_element(:xpath, "//input[@value='Agree']")
+  element=true
+ rescue
+   element=false
+ end
+
+ if element
+  ele.click
+ else
+  puts "You have already agreed the EULA"
+ end
  @driver.find_element(:link, 'Sign Out').displayed?
 
 end
 
+
+When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
+
+   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   @driver.action.move_to(menu).perform
+   
+   submenu=@driver.find_element(:link, submenu)
+   @driver.action.move_to(menu).click(submenu).perform
+
+
+end
 
 
 #Then /^(?:|I )should be on (.+)$/ do |page_name|
@@ -138,7 +161,12 @@ Then /^I should be on the authentication failed page$/ do
 end
 
 Then /^I click button "([^\"]*)"$/ do |text|
-  @driver.find_element(:xpath, "//span/input[@value='#{text}']").click 
+  wait = Selenium::WebDriver::Wait.new(:timeout => 100)
+  wait.until { @driver.find_element(:xpath, "//span/input[@value='#{text}']") 
+   @driver.find_element(:xpath, "//span/input[@value='#{text}']").click
+  
+  }
+  
 end
 
 

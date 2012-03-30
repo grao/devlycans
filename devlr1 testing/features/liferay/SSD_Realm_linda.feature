@@ -2,7 +2,7 @@ Feature: title
 Navigate to dashboard link successfully using New York Realm under 'Select an Application' page
   
  
- Scenario:-User Login through New York Realm with wrong username and password
+ Scenario:-User Login through SSD Realm with wrong username and password
     Given I have an open web browser
     Then I am on the Realm selection page
     Then I select "Sunset School District 4526"
@@ -12,7 +12,7 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
     Then I should see "Authentication failed."
     
   
-  Scenario:-User Login through New York Realm
+  Scenario:-User Login through SSD Realm
     Given I have an open web browser
     Then I am on the Realm selection page
     Then I select "Sunset School District 4526"
