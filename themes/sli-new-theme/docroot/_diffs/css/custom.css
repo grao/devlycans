@@ -633,7 +633,7 @@ ul.menu_n a {display:block; color:#000; text-decoration:none;padding-right:15px;
 ul.menu_n li {position:relative; float:left; padding-right:10px; padding-left:2px;}
 ul.menu_n ul {
 position:absolute;
-top:21px; display:none; 
+top:20px; display:none; 
 list-style:none; 
 background:url(../images/custom/menu_arrow1.png) top no-repeat;
 border:none;
