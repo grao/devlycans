@@ -102,11 +102,13 @@ Then /^I should logged out$/ do
   #rescue
   
   
-   menu = @driver.find_elements(:xpath,"//ul[@id='menu_n']/li/a[@class='menulink']").first
+   menu = @driver.find_elements(:class,"menulink").first
+   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
    
-   submenu=@driver.find_element(:link, 'Logout')
-   @driver.action.move_to(menu).click(submenu).perform
+   #submenu=@driver.find_element(:link, 'Logout')
+   #submenu.click
+   #@driver.action.move_to(menu).click(submenu).perform
   
   #click_link('Logout')
 end
@@ -124,10 +126,13 @@ Then /^I should be on the home page$/ do
  else
   puts "EULA has already been accepted."
  end
-   menu = @driver.find_elements(:xpath,"//ul[@id='menu_n']/li/a[@class='menulink']").first
+  menu = @driver.find_elements(:class,"menulink").first
+  action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
    
-   submenu=@driver.find_element(:link, 'Logout').displayed?
+   #submenu=@driver.find_element(:link, 'Logout').displayed?
+ 
+   
  #@driver.find_element(:link, 'Sign Out').displayed?
 
 end
@@ -152,11 +157,13 @@ end
 
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
 
-   menu = @driver.find_elements(:xpath,"//ul[@id='menu_n']/li/a[@class='menulink']").first
+   menu = @driver.find_elements(:class,"menulink").first
+   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
    
-   submenu=@driver.find_element(:link, submenu)
-   @driver.action.move_to(menu).click(submenu).perform
+   #submenu=@driver.find_element(:link, 'Logout')
+   #submenu.click
+   
 
 
 end
