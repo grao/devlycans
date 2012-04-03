@@ -102,7 +102,7 @@ Then /^I should logged out$/ do
   #rescue
   
   
-   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   menu = @driver.find_elements(:xpath,"//ul[@id='menu_n']/li/a[@class='menulink']").first
    @driver.action.move_to(menu).perform
    
    submenu=@driver.find_element(:link, 'Logout')
@@ -124,7 +124,7 @@ Then /^I should be on the home page$/ do
  else
   puts "EULA has already been accepted."
  end
-   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   menu = @driver.find_elements(:xpath,"//ul[@id='menu_n']/li/a[@class='menulink']").first
    @driver.action.move_to(menu).perform
    
    submenu=@driver.find_element(:link, 'Logout').displayed?
@@ -133,9 +133,26 @@ Then /^I should be on the home page$/ do
 end
 
 
+And /^I see the EULA Page$/ do
+  begin
+    ele=@driver.find_element(:xpath, "//input[@value='Agree']")
+    ele2=@driver.find_element(:xpath, "//input[@value='Logout']")
+    element=true
+  rescue
+    element=false
+  end
+  if element == true
+    true
+  else
+    puts "You have already Acepted EULA"
+  end 
+end
+
+
+
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
 
-   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   menu = @driver.find_elements(:xpath,"//ul[@id='menu_n']/li/a[@class='menulink']").first
    @driver.action.move_to(menu).perform
    
    submenu=@driver.find_element(:link, submenu)
@@ -183,6 +200,11 @@ Then /^I click button "([^\"]*)"$/ do |text|
   
 end
 
+
+And /^I click "([^\"]*)"$/ do |btn|
+   
+  
+end
 
 Then /^It open a popup$/ do
  @driver.navigate.to "https://devlr1.slidev.org/web/guest/report-a-problem"
