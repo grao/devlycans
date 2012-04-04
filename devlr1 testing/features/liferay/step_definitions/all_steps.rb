@@ -89,7 +89,7 @@ end
 
 Then  /^I follow the home page Dashboard$/ do 
  begin
-  element= @driver.find_element(:xpath, "//a/span[text()=' Dashboard']")
+  element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
   element.click 
  rescue
   puts 'element selector has been changed'

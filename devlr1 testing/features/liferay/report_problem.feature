@@ -65,12 +65,12 @@ Feature: title
     #Then I click button "Report A Problem"
     #Then I should not see "The form information was sent successfully." 
      
-    
+    @wip
     Scenario: Report a problem happy submission for New York Realm User
      Given I have an open web browser
      Then I am on the Realm selection page
      Then I select "New York Realm"
-     When I login with "demo" and "changeit"
+     When I login with "mario.sanchez" and "mario.sanchez1234"
      Then I should be on the home page
      When I mouseover on menu and click submenu "Report a problem"
      #When I follow "Report a Problem"
@@ -80,7 +80,7 @@ Feature: title
      #Then I click button "Report A Problem"
     #Then I should see "The form information was sent successfully."
      
-    
+    @wip
     Scenario: Report a problem non happy submission for New York Realm User
      Given I have an open web browser
      Then I am on the Realm selection page
