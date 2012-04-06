@@ -89,7 +89,7 @@ end
 
 Then  /^I follow the home page Dashboard$/ do 
  begin
-  element= @driver.find_element(:xpath, "//a/span[text()=' Dashboard']")
+  element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
   element.click 
  rescue
   puts 'element selector has been changed'
@@ -102,11 +102,13 @@ Then /^I should logged out$/ do
   #rescue
   
   
-   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   menu = @driver.find_elements(:class,"menulink").first
+   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
    
-   submenu=@driver.find_element(:link, 'Logout')
-   @driver.action.move_to(menu).click(submenu).perform
+   #submenu=@driver.find_element(:link, 'Logout')
+   #submenu.click
+   #@driver.action.move_to(menu).click(submenu).perform
   
   #click_link('Logout')
 end
@@ -124,22 +126,44 @@ Then /^I should be on the home page$/ do
  else
   puts "EULA has already been accepted."
  end
-   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+  menu = @driver.find_elements(:class,"menulink").first
+  action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
    
-   submenu=@driver.find_element(:link, 'Logout').displayed?
+   #submenu=@driver.find_element(:link, 'Logout').displayed?
+ 
+   
  #@driver.find_element(:link, 'Sign Out').displayed?
 
 end
 
 
+And /^I see the EULA Page$/ do
+  begin
+    ele=@driver.find_element(:xpath, "//input[@value='Agree']")
+    ele2=@driver.find_element(:xpath, "//input[@value='Logout']")
+    element=true
+  rescue
+    element=false
+  end
+  if element == true
+    true
+  else
+    puts "You have already Acepted EULA"
+  end 
+end
+
+
+
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
 
-   menu = @driver.find_element(:xpath,"//ul[@id='menu_n']/li[@class='first_item']/a")
+   menu = @driver.find_elements(:class,"menulink").first
+   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
    
-   submenu=@driver.find_element(:link, submenu)
-   @driver.action.move_to(menu).click(submenu).perform
+   #submenu=@driver.find_element(:link, 'Logout')
+   #submenu.click
+   
 
 
 end
@@ -183,6 +207,11 @@ Then /^I click button "([^\"]*)"$/ do |text|
   
 end
 
+
+And /^I click "([^\"]*)"$/ do |btn|
+   
+  
+end
 
 Then /^It open a popup$/ do
  @driver.navigate.to "https://devlr1.slidev.org/web/guest/report-a-problem"

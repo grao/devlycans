@@ -26,3 +26,5 @@ Feature: title
     Then I should be on the home page
     Then I should see "Admin"
     Then I should logged out
+    
+  
