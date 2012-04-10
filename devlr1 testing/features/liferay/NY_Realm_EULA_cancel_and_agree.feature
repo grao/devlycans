@@ -12,7 +12,7 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
     When I login with "mario.sanc" and "mario.sanchez"
     Then I should be on the authentication failed page
     Then I should see "Authentication failed." 
-  
+  @wip
   Scenario:-User Logs in through New York Realm, cancels the EULA and then agrees
     Then I am on the Realm selection page
     Then I select "New York Realm"

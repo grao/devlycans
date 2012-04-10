@@ -107,7 +107,7 @@ Then /^I should logged out$/ do
    @driver.action.move_to(menu).perform
    
    #submenu=@driver.find_element(:link, 'Logout')
-   #submenu.click
+   
    #@driver.action.move_to(menu).click(submenu).perform
   
   #click_link('Logout')
@@ -162,7 +162,7 @@ When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
    @driver.action.move_to(menu).perform
    
    #submenu=@driver.find_element(:link, 'Logout')
-   #submenu.click
+  # submenu.click
    
 
 
