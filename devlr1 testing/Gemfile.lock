@@ -62,7 +62,7 @@ DEPENDENCIES
   bson_ext
   builder
   cucumber
-  ffi (= 1.0.9)
+  ffi
   json (= 1.6.2)
   mongo
   oauth2
