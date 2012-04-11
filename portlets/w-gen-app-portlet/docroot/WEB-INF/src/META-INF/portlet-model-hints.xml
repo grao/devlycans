@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.wgenapp.model.WgenApp">
+		<field name="WgenAppId" type="long" />
+		<field name="WgenAppTitle" type="String" />
+		<field name="WgenAppDescription" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="WgenAppURL" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+	</model>
+</model-hints>
