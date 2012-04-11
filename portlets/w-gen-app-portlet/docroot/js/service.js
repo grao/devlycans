@@ -1,1 +1,0 @@
-Liferay.Service.register("Liferay.Service.WgenApp", "com.wgenapp.service", "w-gen-app-portlet");
