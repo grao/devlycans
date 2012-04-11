@@ -4,7 +4,7 @@ Feature: title
 
   #Background:
     #Given a normal user exists with "educator" and "educator1234"
-    
+  @wip  
   Scenario:Report a problem submission for SLI normal User
     Given I have an open web browser
     When I go to the login page
@@ -17,7 +17,7 @@ Feature: title
     #Then I click button "Report A Problem"
     #Then I should see "The form information was sent successfully."
    
-   
+   @wip
    Scenario:Report a problem non happy submission for SLI normal User
     Given I have an open web browser
     When I go to the login page
