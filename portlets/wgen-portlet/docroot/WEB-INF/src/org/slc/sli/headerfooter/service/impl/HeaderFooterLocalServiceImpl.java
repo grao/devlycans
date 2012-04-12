@@ -141,7 +141,7 @@ public class HeaderFooterLocalServiceImpl
 			boolean isAdmin=isAdmin(userdata);
 
 			if(isAdmin){
-				headerData = headerData.replace("[$ADMIN_PAGE$]", "<li><a href=\"/web/guest/admin\">Admin</a></li></li>");
+				headerData = headerData.replace("[$ADMIN_PAGE$]", "<li class=\"last_item\"><a href=\"/web/guest/admin\">Admin</a></li></li>");
 				headerData = headerData.replace("[$ADMIN_PAGES$]", "<li class=\"last_item\"><a href=\"/web/guest/admin\" class=\"menulink\">Admin</a></li>");
 			}else{
 				headerData = headerData.replace("[$ADMIN_PAGE$]","");
