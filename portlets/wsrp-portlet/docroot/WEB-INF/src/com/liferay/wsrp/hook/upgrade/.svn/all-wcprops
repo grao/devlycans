@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/public/!svn/ver/105787/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/hook/upgrade
+END
+UpgradeProcess_1_0_0.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/hook/upgrade/UpgradeProcess_1_0_0.java
+END
+UpgradeProcess_1_1_0.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/hook/upgrade/UpgradeProcess_1_1_0.java
+END

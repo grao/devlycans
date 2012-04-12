@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/public/!svn/ver/104467/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/persistence
+END
+WSRPProducerPersistenceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/repos/public/!svn/ver/104467/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/persistence/WSRPProducerPersistenceImpl.java
+END
+WSRPConsumerPortletPersistenceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/repos/public/!svn/ver/104467/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/persistence/WSRPConsumerPortletPersistenceImpl.java
+END
+WSRPConsumerPersistenceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/repos/public/!svn/ver/104467/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/persistence/WSRPConsumerPersistenceImpl.java
+END
