@@ -62,7 +62,7 @@ public class RESTClient {
         if (token != null) {
             // url.addQueryParam(API_SESSION_KEY, token);
             HttpHeaders headers = new HttpHeaders();
-            headers.add("Authorization", "Bearer" + token);
+            headers.add("Authorization", "Bearer " + token);
             entity = new HttpEntity(headers);
         }
         logger.info("Accessing API at: " + url.toString());
