@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/public/!svn/ver/105856/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin
+END
+consumers.jspf
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/public/!svn/ver/104440/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/consumers.jspf
+END
+consumer_action.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/consumer_action.jsp
+END
+edit_producer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/public/!svn/ver/105856/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/edit_producer.jsp
+END
+edit_consumer_portlet.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/public/!svn/ver/105855/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/edit_consumer_portlet.jsp
+END
+edit_consumer_registration.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/public/!svn/ver/105855/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/edit_consumer_registration.jsp
+END
+view.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/view.jsp
+END
+producers.jspf
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/producers.jspf
+END
+edit_consumer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/public/!svn/ver/105855/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/edit_consumer.jsp
+END
+producer_action.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/producer_action.jsp
+END
+consumer_portlet_action.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/consumer_portlet_action.jsp
+END
+view_consumer_portlets.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/admin/view_consumer_portlets.jsp
+END

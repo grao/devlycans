@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/public/!svn/ver/105787/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/servlet
+END
+WSRPSessionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/servlet/WSRPSessionListener.java
+END
+ProxyServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/public/!svn/ver/104338/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/servlet/ProxyServlet.java
+END
+WSRPServletContextListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/servlet/WSRPServletContextListener.java
+END
+ServiceHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/servlet/ServiceHolder.java
+END
+WSDLServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/public/!svn/ver/105787/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/servlet/WSDLServlet.java
+END
