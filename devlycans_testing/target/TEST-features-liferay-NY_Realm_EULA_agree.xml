@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" name="title" skipped="0" tests="1" time="29.594848">
+<testcase classname="title.-User Login through New York Realm with wrong username and password" name="-User Login through New York Realm with wrong username and password" time="29.594848">
+  <failure message="failed -User Login through New York Realm with wrong username and password" type="failed">
+    <![CDATA[Scenario: -User Login through New York Realm with wrong username and password
+
+Given I have an open web browser
+Then I am on the Realm selection page
+Then I select "4cb026a0-73be-4296-ad36-d9abf11e3757"
+When I login with "mario.sanc" and "mario.sanchez"
+Then I should be on the authentication failed page
+Then I should see "Authentication failed."
+
+Message:
+]]>
+    <![CDATA[Unable to locate element: {"method":"name","selector":"realmId"} (Selenium::WebDriver::Error::NoSuchElementError)
+[remote server] file:///tmp/webdriver-profile20120413-4852-nb63f7/extensions/fxdriver@googlecode.com/components/driver_component.js:6573:in `unknown'
+[remote server] file:///tmp/webdriver-profile20120413-4852-nb63f7/extensions/fxdriver@googlecode.com/components/driver_component.js:471:in `unknown'
+./features/liferay/step_definitions/all_steps.rb:25:in `/^I select "([^\"]*)"$/'
+features/liferay/NY_Realm_EULA_agree.feature:10:in `Then I select "4cb026a0-73be-4296-ad36-d9abf11e3757"']]>
+  </failure>
+</testcase>
+</testsuite>

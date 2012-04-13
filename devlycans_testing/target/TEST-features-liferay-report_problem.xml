@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="title" skipped="0" tests="3" time="76.888677">
+<testcase classname="title.Report a problem cancelation for SLI admin User" name="Report a problem cancelation for SLI admin User" time="29.474705">
+</testcase>
+<testcase classname="title.Report a problem happy cancelation for SLI admin User" name="Report a problem happy cancelation for SLI admin User" time="23.222617">
+</testcase>
+<testcase classname="title.Report a problem non happy submission for SLI admin User" name="Report a problem non happy submission for SLI admin User" time="24.191355">
+</testcase>
+</testsuite>
