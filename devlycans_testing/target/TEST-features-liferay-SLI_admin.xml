@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="2" name="title" skipped="0" tests="2" time="13.448842">
+<testcase classname="title.Admin User Login with wrong username and password" name="Admin User Login with wrong username and password" time="7.363962">
+  <failure message="failed Admin User Login with wrong username and password" type="failed">
+    <![CDATA[Scenario: Admin User Login with wrong username and password
+
+Given I have an open web browser
+When I go to the login page
+When I login with "dem" and "change"
+Then I should be on the authentication failed page
+Then I should see "Authentication failed."
+
+Message:
+]]>
+    <![CDATA[undefined method `id' for #<Selenium::WebDriver::Element:0x9d4cd7c> (NoMethodError)
+./features/liferay/step_definitions/all_steps.rb:74:in `block (2 levels) in <top (required)>'
+./features/liferay/step_definitions/all_steps.rb:73:in `each'
+./features/liferay/step_definitions/all_steps.rb:73:in `/^I go to the login page$/'
+features/liferay/SLI_admin.feature:13:in `When I go to the login page']]>
+  </failure>
+</testcase>
+<testcase classname="title.Admin User Login" name="Admin User Login" time="6.084879">
+  <failure message="failed Admin User Login" type="failed">
+    <![CDATA[Scenario: Admin User Login
+
+Given I have an open web browser
+When I go to the login page
+When I login with "demo" and "changeit"
+Then I should be on the home page
+Then I should see "Admin"
+Then I should logged out
+
+Message:
+]]>
+    <![CDATA[end of file reached (EOFError)
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/protocol.rb:135:in `read_nonblock'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/protocol.rb:135:in `rbuf_fill'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/protocol.rb:116:in `readuntil'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/protocol.rb:126:in `readline'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/http.rb:2219:in `read_status_line'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/http.rb:2208:in `read_new'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/http.rb:1191:in `transport_request'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/http.rb:1177:in `request'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/http.rb:1170:in `block in request'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/http.rb:627:in `start'
+/home/fladmin/.rvm/rubies/ruby-1.9.2-p318/lib/ruby/1.9.1/net/http.rb:1168:in `request'
+./features/liferay/step_definitions/all_steps.rb:64:in `/^I go to the login page$/'
+features/liferay/SLI_admin.feature:30:in `When I go to the login page']]>
+  </failure>
+</testcase>
+</testsuite>
