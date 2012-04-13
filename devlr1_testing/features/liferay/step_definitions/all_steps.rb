@@ -25,7 +25,7 @@ Then /^I select "([^\"]*)"$/ do |text|
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
-  if g.text == text
+  if g.attribute('value') == text || g.text == text
     g.click
     break
   end
@@ -41,7 +41,7 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
  a=@driver.find_element(:id, field)
  options=a.find_elements(:tag_name=>"option")
  options.each do |g|
-  if g.text == text
+  if g.attribute('value') == text || g.text == text
     g.click
     break
   end
@@ -71,7 +71,7 @@ end
 if ele == true
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
-  if g.text == 'Shared Learning Infrastructure'
+  if g.attribute('value') == '5a4bfe96-1724-4565-9db1-35b3796e3ce1'
     g.click
     break
   end
