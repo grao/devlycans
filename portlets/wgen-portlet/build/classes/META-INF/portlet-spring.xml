@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="org.slc.sli.headerfooter.service.HeaderFooterLocalService" class="org.slc.sli.headerfooter.service.impl.HeaderFooterLocalServiceImpl" />
+	<bean id="org.slc.sli.headerfooter.service.HeaderFooterLocalServiceUtil" class="org.slc.sli.headerfooter.service.HeaderFooterLocalServiceUtil">
+		<property name="service" ref="org.slc.sli.headerfooter.service.HeaderFooterLocalService" />
+	</bean>
+	<bean id="org.slc.sli.headerfooter.service.HeaderFooterService" class="org.slc.sli.headerfooter.service.impl.HeaderFooterServiceImpl" />
+	<bean id="org.slc.sli.headerfooter.service.HeaderFooterServiceUtil" class="org.slc.sli.headerfooter.service.HeaderFooterServiceUtil">
+		<property name="service" ref="org.slc.sli.headerfooter.service.HeaderFooterService" />
+	</bean>
+	<bean id="org.slc.sli.headerfooter.service.persistence.HeaderFooterPersistence" class="org.slc.sli.headerfooter.service.persistence.HeaderFooterPersistenceImpl" parent="basePersistence" />
+</beans>
