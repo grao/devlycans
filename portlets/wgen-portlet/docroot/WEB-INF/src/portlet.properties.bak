@@ -1,3 +1,0 @@
-net.sf.ehcache.configurationResourceName=/custom_cache/hibernate-clustered.xml
-ehcache.single.vm.config.location=/custom_cache/liferay-single-vm.xml
-ehcache.multi.vm.config.location=/custom_cache/liferay-multi-vm-clustered.xml
