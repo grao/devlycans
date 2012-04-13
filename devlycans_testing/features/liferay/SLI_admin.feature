@@ -31,7 +31,7 @@ Feature: title
     #Given I should remove all cookies
     When I login with "demo" and "changeit"
     Then I should be on the home page
-    Then I should see "Admin"
+    #Then I should see "Admin"
     Then I should logged out
 
  
