@@ -17,19 +17,15 @@ Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do |usern
 end
 
 Then /^I am on the Realm selection page$/ do
-<<<<<<< HEAD
-  @driver.navigate.to "https://devlycans.slidev.org/portal"
-=======
-  @driver.navigate.to "https://devlycans.slidev.org/liferay/c/portal/login"
->>>>>>> af922660a2adffe0d4b963f40353d764126b4e83
+  @driver.navigate.to "https://testlr1.slidev.org"
 end
 
-Then /^I select "([^\"]*)"$/ do |id|
+Then /^I select "([^\"]*)"$/ do |text|
 
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
-  if g.attribute('value') == id || g.text == text
+  if g.attribute('value') == text || g.text == text
     g.click
     break
   end
@@ -65,11 +61,7 @@ Given /^EULA has been accepted$/ do
 end
 
 When /^I go to the login page$/ do
-<<<<<<< HEAD
- @driver.navigate.to "https://devlycans.slidev.org/portal"
-=======
- @driver.navigate.to "https://devlycans.slidev.org/liferay/c/portal/login"
->>>>>>> af922660a2adffe0d4b963f40353d764126b4e83
+ @driver.navigate.to "https://testlr1.slidev.org"
 begin
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 ele=true

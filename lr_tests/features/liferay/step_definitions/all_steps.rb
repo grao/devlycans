@@ -17,19 +17,15 @@ Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do |usern
 end
 
 Then /^I am on the Realm selection page$/ do
-<<<<<<< HEAD
-  @driver.navigate.to "https://devlycans.slidev.org/portal"
-=======
-  @driver.navigate.to "https://devlycans.slidev.org/liferay/c/portal/login"
->>>>>>> af922660a2adffe0d4b963f40353d764126b4e83
+  @driver.navigate.to "https://devlr2.slidev.org"
 end
 
-Then /^I select "([^\"]*)"$/ do |id|
+Then /^I select "([^\"]*)"$/ do |text|
 
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
-  if g.attribute('value') == id || g.text == text
+  if g.text == text
     g.click
     break
   end
@@ -45,7 +41,7 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
  a=@driver.find_element(:id, field)
  options=a.find_elements(:tag_name=>"option")
  options.each do |g|
-  if g.attribute('value') == text || g.text == text
+  if g.text == text
     g.click
     break
   end
@@ -65,11 +61,7 @@ Given /^EULA has been accepted$/ do
 end
 
 When /^I go to the login page$/ do
-<<<<<<< HEAD
- @driver.navigate.to "https://devlycans.slidev.org/portal"
-=======
- @driver.navigate.to "https://devlycans.slidev.org/liferay/c/portal/login"
->>>>>>> af922660a2adffe0d4b963f40353d764126b4e83
+ @driver.navigate.to "https://devlr2.slidev.org"
 begin
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 ele=true
@@ -79,7 +71,7 @@ end
 if ele == true
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
-  if g.attribute('value') == '5a4bfe96-1724-4565-9db1-35b3796e3ce1'
+  if g.text == 'Shared Learning Infrastructure'
     g.click
     break
   end
@@ -95,86 +87,18 @@ end
 end
 
 
-Then  /^I follow the home page Dashboard$/ do 
- begin
-  element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
-  element.click 
- rescue
-  puts 'element selector has been changed'
- end
-end
+
 
 Then /^I should logged out$/ do
-  #begin
-  #@driver.find_element(:link, 'Sign Out').click
-  #rescue
-  
-  
-   menu = @driver.find_elements(:class,"menulink").first
-   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-   @driver.action.move_to(menu).perform
-   
-   #submenu=@driver.find_element(:link, 'Logout')
-   
-   #@driver.action.move_to(menu).click(submenu).perform
-  
+  @driver.find_element(:link, 'Logout').click
   #click_link('Logout')
 end
 
 Then /^I should be on the home page$/ do
- begin
-  ele=@driver.find_element(:xpath, "//input[@value='Agree']")
-  element=true
- rescue
-   element=false
- end
-
- if element
-  ele.click
- else
-  puts "EULA has already been accepted."
- end
-  menu = @driver.find_elements(:class,"menulink").first
-  action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-   @driver.action.move_to(menu).perform
-   
-   #submenu=@driver.find_element(:link, 'Logout').displayed?
- 
-   
- #@driver.find_element(:link, 'Sign Out').displayed?
+  @driver.find_element(:link, 'Logout').displayed? ||   @driver.find_element(:link, 'Sign out').displayed?
 
 end
 
-
-And /^I see the EULA Page$/ do
-  begin
-    ele=@driver.find_element(:xpath, "//input[@value='Agree']")
-    ele2=@driver.find_element(:xpath, "//input[@value='Logout']")
-    element=true
-  rescue
-    element=false
-  end
-  if element == true
-    true
-  else
-    puts "You have already Acepted EULA"
-  end 
-end
-
-
-
-When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
-
-   menu = @driver.find_elements(:class,"menulink").first
-   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-   @driver.action.move_to(menu).perform
-   
-   #submenu=@driver.find_element(:link, 'Logout')
-  # submenu.click
-   
-
-
-end
 
 
 #Then /^(?:|I )should be on (.+)$/ do |page_name|
@@ -207,22 +131,12 @@ Then /^I should be on the authentication failed page$/ do
 end
 
 Then /^I click button "([^\"]*)"$/ do |text|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 100)
-  wait.until { @driver.find_element(:xpath, "//span/input[@value='#{text}']") 
-   @driver.find_element(:xpath, "//span/input[@value='#{text}']").click
-  
-  }
-  
+  @driver.find_element(:xpath, "//span/input[@value='#{text}']").click 
 end
 
-
-And /^I click "([^\"]*)"$/ do |btn|
-   
-  
-end
 
 Then /^It open a popup$/ do
- @driver.navigate.to "https://devlr1.slidev.org/web/guest/report-a-problem"
+ @driver.navigate.to "https://devlr2.slidev.org/web/guest/report-a-problem"
 end
 
 
