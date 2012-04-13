@@ -7,7 +7,7 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through New York Realm with wrong username and password
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "New York State"
+    Then I select "4cb026a0-73be-4296-ad36-d9abf11e3757"
     #Then I click "Go"
     When I login with "mario.sanc" and "mario.sanchez"
     Then I should be on the authentication failed page

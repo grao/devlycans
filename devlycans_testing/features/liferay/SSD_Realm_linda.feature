@@ -5,7 +5,7 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
  Scenario:-User Login through SSD Realm with wrong username and password
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda" and "linda.kim"
     Then I should be on the authentication failed page
@@ -15,13 +15,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through SSD Realm and choose No filter
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
     #Then I should see "Learning Map"
@@ -41,13 +41,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through SSD Realm and choose English Language Learner
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
     #Then I should see "Learning Map"
@@ -67,13 +67,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through SSD Realm and choose English Language Learner (former)
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
     #Then I should see "Learning Map"
@@ -93,13 +93,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through SSD Realm and choose Section 504
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
     #Then I should see "Learning Map"
@@ -119,13 +119,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
    Scenario:-User Login through SSD Realm and choose Section 504 (former)
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
     #Then I should see "Learning Map"
@@ -145,13 +145,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
    Scenario:-User Login through SSD Realm and choose IEP
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
     #Then I should see "Learning Map"
@@ -171,13 +171,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
    Scenario:-User Login through SSD Realm and choose IEP (former)
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
     Then I should see "Learning Map"
@@ -198,13 +198,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through SSD Realm and choose Custom Program
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
    # Then I should see "Learning Map"
@@ -224,13 +224,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through SSD Realm and choose Repeating Grade
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
    # Then I should see "Learning Map"
@@ -250,13 +250,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
   Scenario:-User Login through SSD Realm and choose Reduced Lunch
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
   #  Then I should see "Learning Map"
@@ -276,13 +276,13 @@ Navigate to dashboard link successfully using New York Realm under 'Select an Ap
      Scenario:-User Login through SSD Realm and choose Free Lunch
     Given I have an open web browser
     Then I am on the Realm selection page
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     When I login with "linda.kim" and "linda.kim1234"
     Then I should be on the home page
     Then I should see " Dashboard"
     Then I follow the home page Dashboard
-    Then I select "Illinois Sunset School District 4526"
+    Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
     #Then I click "Go"
     #Then I should see "             Select an application         "
    # Then I should see "Learning Map"
