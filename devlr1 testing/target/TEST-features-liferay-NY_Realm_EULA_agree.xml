@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="124.383800">
+<testcase classname="title.-User Login through New York Realm with wrong username and password" name="-User Login through New York Realm with wrong username and password" time="52.060200">
+</testcase>
+<testcase classname="title.-User Login through New York Realm" name="-User Login through New York Realm" time="72.323600">
+</testcase>
+</testsuite>
