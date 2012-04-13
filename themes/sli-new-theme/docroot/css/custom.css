@@ -670,9 +670,9 @@ right:0;
 }
 
 
-/*ul.menu_n li:hover ul{
+ul.menu_n li:hover ul{
 	display:block;
-}*/
+}
 
 
 ul.menu_n ul li {
@@ -689,10 +689,7 @@ ul.menu_n ul li {
 ul.menu_n ul li a {display:block; padding:5px 10px 5px; color:#55556A;}
 ul.menu_n ul li a:hover { background:#CCCCCC; color:#000035;}
 ul.menu_n ul ul {left:148px; top:-1px}
-ul.menu_n .menulink { color: #999999;}
-
-ul.menu_n .show { color: #FFFFFF;}
-
+ul.menu_n .menulink { color: #FFFFFF;}
 ul.menu_n .menulink:hover, ul.menu_n .menuhover {}
 
 ul.menu_n .first_item{
@@ -707,12 +704,9 @@ ul.menu_n .last_item{
 	border-left:#FFFFFF solid 1px;
 }
 ul.menu_n a.menulink{
-	background:url(../images/custom/arrow.png) no-repeat right center;
-} 
-ul.menu_n a.show, ul.menu_n .menulink:hover{
 	background:url(../images/custom/arrow_w.png) no-repeat right center;
-	color: #FFFFFF;
 } 
+
 ul.menu_n .first_item ul{
 	
 }
