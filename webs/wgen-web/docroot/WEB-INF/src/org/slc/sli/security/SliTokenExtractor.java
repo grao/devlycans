@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Class to get the token from the authorize response.
- * @author jnanney
+ * @author 
  *
  */
 public class SliTokenExtractor  implements AccessTokenExtractor {

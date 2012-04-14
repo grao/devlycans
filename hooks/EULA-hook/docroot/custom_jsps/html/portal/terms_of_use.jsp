@@ -234,9 +234,9 @@ if (referer.equals(themeDisplay.getPathMain() + "/portal/update_terms_of_use")) 
 			<%
 			String taglibOnClick = "alert('" + UnicodeLanguageUtil.get(pageContext, "you-must-agree-with-the-terms-of-use-to-continue") + "');";
 			%>
-
+            <a href="/portal/c/portal/logout" >
 			<aui:button onClick="<%= taglibOnClick %>" type="cancel" value="i-disagree" />
-            
+            </a>
             
 		</aui:button-row>
 	</c:if>

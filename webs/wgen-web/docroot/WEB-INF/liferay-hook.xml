@@ -8,7 +8,7 @@
 
 	<servlet-filter>
 		<servlet-filter-name>SSO WGEN SSO Filter</servlet-filter-name>
-		<servlet-filter-impl>org.slc.sli.login.servlet.filters.sso.wgensso.WgenSSOFilter</servlet-filter-impl>
+		<servlet-filter-impl>org.slc.sli.login.servlet.filter.sso.wgensso.WgenSSOFilter</servlet-filter-impl>
 	</servlet-filter>
 
 	<servlet-filter-mapping>

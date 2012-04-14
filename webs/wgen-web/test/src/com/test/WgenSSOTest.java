@@ -1,11 +1,11 @@
 package com.test;
 
 import junit.framework.TestCase;
-import org.slc.sli.login.servlet.filters.sso.wgensso.WgenSSOUtil;
+import org.slc.sli.login.servlet.filter.sso.wgensso.WgenSSOUtil;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonObject;
-import org.slc.sli.login.util.WgenUtil;
-import org.slc.sli.json.bean.UserData;
+import org.slc.sli.util.WgenUtil;
+import org.slc.sli.login.json.bean.UserData;
 import com.google.gson.Gson;
 import com.liferay.portal.kernel.util.Validator;
 

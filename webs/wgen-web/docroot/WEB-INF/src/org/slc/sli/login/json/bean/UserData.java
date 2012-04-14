@@ -1,9 +1,19 @@
-package org.slc.sli.json.bean;
+package org.slc.sli.login.json.bean;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class UserData implements Serializable{
+/**
+ * UserData.java
+ * 
+ * Purpose: the user json object retreived from the session chek api is
+ * converted to userdata bean
+ * 
+ * @author
+ * @version 1.0
+ */
+
+public class UserData implements Serializable {
 
 	public List<Role> getAll_roles() {
 		return all_roles;
@@ -14,9 +24,9 @@ public class UserData implements Serializable{
 	}
 
 	private List<Role> all_roles;
-	
+
 	private boolean authenticated;
-	
+
 	public boolean isAuthenticated() {
 		return authenticated;
 	}
@@ -34,11 +44,11 @@ public class UserData implements Serializable{
 	}
 
 	private String full_name;
-	
+
 	private String user_id;
-	
+
 	private String[] granted_authorities;
-	 
+
 	public String[] getGranted_authorities() {
 		return granted_authorities;
 	}
@@ -60,28 +70,35 @@ public class UserData implements Serializable{
 		private String id;
 		private String[] rights;
 		private String springRoleName;
-		
+
 		public String getName() {
 			return name;
 		}
+
 		public void setName(String name) {
 			this.name = name;
 		}
+
 		public String getId() {
 			return id;
 		}
+
 		public void setId(String id) {
 			this.id = id;
 		}
+
 		public String[] getRights() {
 			return rights;
 		}
+
 		public void setRights(String[] rights) {
 			this.rights = rights;
 		}
+
 		public String getSpringRoleName() {
 			return springRoleName;
 		}
+
 		public void setSpringRoleName(String springRoleName) {
 			this.springRoleName = springRoleName;
 		}
