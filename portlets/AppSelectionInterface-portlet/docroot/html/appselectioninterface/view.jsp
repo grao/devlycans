@@ -39,7 +39,7 @@
 <tr>
 <td><img src="${app.image_url }" alt="app_logo" width="46" height="45"></img><br><br></td>
 <td>&nbsp;&nbsp;&nbsp;</td>
-<td> 
+<td style="vertical-align:top;"> 
 
 <c:choose>
 	<c:when test='${app.behaviour eq "Wsrp App" }'>
