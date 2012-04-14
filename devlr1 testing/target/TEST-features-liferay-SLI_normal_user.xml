@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="97.426000">
-<testcase classname="title.Normal User Login with wrong username and password" name="Normal User Login with wrong username and password" time="54.024800">
-</testcase>
-<testcase classname="title.Normal User Login" name="Normal User Login" time="43.401200">
-</testcase>
-</testsuite>

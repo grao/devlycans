@@ -27,7 +27,7 @@ Feature: title
     #Then It open a popup
     #Then I click button "Report A Problem"
     #Then I should not see "The form information was sent successfully."
-    
+    @wip
   Scenario:Report a problem cancelation for SLI admin User
     Given I have an open web browser
     When I go to the login page
@@ -41,7 +41,7 @@ Feature: title
     #Then I click button "Report A Problem"
     #Then I should see "The form information was sent successfully."
     #Then I should see "_1_WAR_webformportlet_INSTANCE_5SN4WTq6xBVJ_field2" as ""
-   
+   @wip
    Scenario:Report a problem happy cancelation for SLI admin User
     Given I have an open web browser
     When I go to the login page
@@ -54,7 +54,7 @@ Feature: title
     #Then I click button "Cancel"
     #Then I should see "_1_WAR_webformportlet_INSTANCE_5SN4WTq6xBVJ_field2" as ""
     
-   
+   @wip
    Scenario:Report a problem non happy submission for SLI admin User
     Given I have an open web browser
     When I go to the login page
