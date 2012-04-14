@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/public/!svn/ver/105830/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/proxy
+END
+TypeConvertorUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/public/!svn/ver/105830/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/proxy/TypeConvertorUtil.java
+END
+ServiceDescriptionServiceHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/repos/public/!svn/ver/104345/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/proxy/ServiceDescriptionServiceHandler.java
+END
+PortletManagementServiceHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/repos/public/!svn/ver/104345/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/proxy/PortletManagementServiceHandler.java
+END
+RegistrationServiceHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/repos/public/!svn/ver/104345/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/proxy/RegistrationServiceHandler.java
+END
+MarkupServiceHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/public/!svn/ver/104408/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/proxy/MarkupServiceHandler.java
+END
+ServiceHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/public/!svn/ver/104404/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/proxy/ServiceHandler.java
+END

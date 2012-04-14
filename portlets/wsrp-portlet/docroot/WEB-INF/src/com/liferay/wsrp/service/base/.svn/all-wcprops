@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/public/!svn/ver/104462/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/base
+END
+WSRPConsumerLocalServiceBaseImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/repos/public/!svn/ver/104462/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/base/WSRPConsumerLocalServiceBaseImpl.java
+END
+WSRPProducerLocalServiceBaseImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/repos/public/!svn/ver/104462/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/base/WSRPProducerLocalServiceBaseImpl.java
+END
+WSRPConsumerPortletLocalServiceBaseImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/repos/public/!svn/ver/104462/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/service/base/WSRPConsumerPortletLocalServiceBaseImpl.java
+END

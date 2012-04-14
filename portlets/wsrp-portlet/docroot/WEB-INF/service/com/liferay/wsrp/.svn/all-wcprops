@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/public/!svn/ver/104462/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp
+END
+WSRPProducerNameException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/WSRPProducerNameException.java
+END
+WSRPConsumerWSDLException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/WSRPConsumerWSDLException.java
+END
+WSRPConsumerPortletNameException.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/WSRPConsumerPortletNameException.java
+END
+NoSuchProducerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/NoSuchProducerException.java
+END
+NoSuchConsumerPortletException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/NoSuchConsumerPortletException.java
+END
+WSRPConsumerNameException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/WSRPConsumerNameException.java
+END
+NoSuchConsumerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/NoSuchConsumerException.java
+END
+WSRPConsumerPortletHandleException.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/service/com/liferay/wsrp/WSRPConsumerPortletHandleException.java
+END

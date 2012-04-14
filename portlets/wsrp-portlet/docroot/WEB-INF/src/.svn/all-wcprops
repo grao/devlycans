@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/public/!svn/ver/105830/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src
+END
+portlet.properties
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/portlet.properties
+END
+service.properties
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/service.properties
+END
+portal.properties
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/portal.properties
+END
