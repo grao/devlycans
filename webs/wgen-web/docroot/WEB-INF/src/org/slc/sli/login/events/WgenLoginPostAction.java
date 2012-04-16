@@ -1,43 +1,31 @@
-/**
- * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
- *
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- *
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
- */
-
 package org.slc.sli.login.events;
 
 import com.liferay.portal.kernel.events.Action;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.service.RoleLocalServiceUtil;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.util.PropsUtil;
 import com.liferay.portal.model.Role;
 import com.liferay.portal.util.PortalUtil;
+import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.model.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.liferay.portal.kernel.util.WebKeys;
-import com.liferay.portal.model.User;
-import org.slc.sli.json.bean.UserData;
-import org.slc.sli.login.util.WgenUtil;
-import org.slc.sli.login.util.WgenPropsKeys;
-import org.slc.sli.login.util.WgenConstants;
-
-import com.liferay.portal.service.RoleLocalServiceUtil;
+import org.slc.sli.login.json.bean.UserData;
+import org.slc.sli.util.WgenUtil;
+import org.slc.sli.util.Constants;
+import org.slc.sli.util.WgenPropsValues;
 
 /**
- * @author 
+ * WgenLoginPostAction.java
+ * 
+ * Purpose: This class is called automatically every time when a user logged in
+ * to liferay. Responsible for mapping the SLI roles with Liferay roles
+ * 
+ * @author
+ * @version 1.0
  */
 
 public class WgenLoginPostAction extends Action {
@@ -48,40 +36,50 @@ public class WgenLoginPostAction extends Action {
 		try {
 			HttpSession session = request.getSession();
 
-			User user = (User)session.getAttribute(WebKeys.USER);
+			User user = (User) session.getAttribute(WebKeys.USER);
 
-			UserData userData = (UserData) session.getAttribute(WgenConstants.USER_DATA);
+			UserData userData = (UserData) session
+					.getAttribute(Constants.USER_DATA);
 
 			boolean isAdmin = WgenUtil.isAdmin(userData);
-			
+
 			long companyId = PortalUtil.getCompanyId(request);
-			
-			Role sliAdminRole = RoleLocalServiceUtil.getRole(companyId,GetterUtil.getString(PropsUtil.get(WgenPropsKeys.ROLE_SLI_ADMINISTRATOR)));
 
-			Role sliEducatorRole = RoleLocalServiceUtil.getRole(companyId,GetterUtil.getString(PropsUtil.get(WgenPropsKeys.ROLE_EDUCATOR)));
+			Role sliAdminRole = RoleLocalServiceUtil.getRole(companyId,
+					WgenPropsValues.ROLE_SLI_ADMINISTRATOR);
 
-			long[] adminRoleIds={sliAdminRole.getRoleId()};
+			Role sliEducatorRole = RoleLocalServiceUtil.getRole(companyId,
+					WgenPropsValues.ROLE_EDUCATOR);
 
-			long[] educatorRoleIds={sliEducatorRole.getRoleId()};
-			
-			if(isAdmin){
-				if(!RoleLocalServiceUtil.hasUserRole(user.getUserId(),sliAdminRole.getRoleId())){
-					RoleLocalServiceUtil.addUserRoles(user.getUserId(),adminRoleIds);
+			long[] adminRoleIds = { sliAdminRole.getRoleId() };
+
+			long[] educatorRoleIds = { sliEducatorRole.getRoleId() };
+
+			if (isAdmin) {
+				if (!RoleLocalServiceUtil.hasUserRole(user.getUserId(),
+						sliAdminRole.getRoleId())) {
+					RoleLocalServiceUtil.addUserRoles(user.getUserId(),
+							adminRoleIds);
+					if (_log.isDebugEnabled()) {
+						_log.debug("Adding SLI Admin role ");
+					}
+				}
+			} else {
+				if (!RoleLocalServiceUtil.hasUserRole(user.getUserId(),
+						sliEducatorRole.getRoleId())) {
+					RoleLocalServiceUtil.addUserRoles(user.getUserId(),
+							educatorRoleIds);
+					if (_log.isDebugEnabled()) {
+						_log.debug("Adding Educator role ");
+					}
 				}
 			}
-			else{
-				if(!RoleLocalServiceUtil.hasUserRole(user.getUserId(),sliEducatorRole.getRoleId())){
-					RoleLocalServiceUtil.addUserRoles(user.getUserId(),educatorRoleIds);
-				}
-			}
-			
-		}
-		catch (Exception e) {
+
+		} catch (Exception e) {
 			_log.error(e, e);
 		}
 
 	}
-
 
 	private static Log _log = LogFactoryUtil.getLog(WgenLoginPostAction.class);
 

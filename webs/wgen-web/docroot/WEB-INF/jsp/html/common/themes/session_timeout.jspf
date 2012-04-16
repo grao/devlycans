@@ -42,7 +42,7 @@
 			sessionRedirectOnExpire = true;
 			sessionRedirectUrl = PrefsPropsUtil.getString(companyId, PropsKeys.OPEN_SSO_LOGOUT_URL, PropsValues.OPEN_SSO_LOGOUT_URL);
 		}
-		else if (GetterUtil.getBoolean(PropsUtil.get("org.slc.sli.login.servlet.filters.sso.wgensso.WgenSSOFilter")) && GetterUtil.getBoolean(PropsUtil.get("wgen.sso.logout.on.session.expiration"))) {
+		else if (GetterUtil.getBoolean(PropsUtil.get("org.slc.sli.login.servlet.filter.sso.wgensso.WgenSSOFilter")) && GetterUtil.getBoolean(PropsUtil.get("wgen.sso.logout.on.session.expiration"))) {
 			sessionRedirectOnExpire = true;
 			sessionRedirectUrl = themeDisplay.getPortalURL()+"/c/portal/logout";
 		}

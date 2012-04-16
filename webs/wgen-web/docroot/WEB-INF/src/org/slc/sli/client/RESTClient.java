@@ -16,8 +16,11 @@ import org.slc.sli.util.Constants;
 import org.slc.sli.util.URLBuilder;
 
 /**
+ * RESTClient.java
+ * Purpose: Used to fire the rest api calls
  * 
- * @author pwolf
+ * @author
+ * @version 1.0 
  */
 @Component("RESTClient")
 public class RESTClient {
@@ -43,6 +46,23 @@ public class RESTClient {
         return parser.parse(jsonText).getAsJsonObject();
     }
 
+    /**
+     * Call the session/check API
+     * 
+     * @param token
+     *            the sessionId or null
+     * @return JsonOject as described by API documentation
+     * @throws NoSessionException
+     */
+    public JsonObject logout(String token) {
+        logger.info("logout URL = " + Constants.LOGOUT_PREFIX);
+        // String jsonText = makeJsonRequest(Constants.SESSION_CHECK_PREFIX, token);
+        String jsonText = makeJsonRequestWHeaders(Constants.LOGOUT_PREFIX, token, true);
+        logger.info("jsonText = " + jsonText);
+        JsonParser parser = new JsonParser();
+        return parser.parse(jsonText).getAsJsonObject();
+    }
+    
     /**
      * Make a request to a REST service and convert the result to JSON
      * 

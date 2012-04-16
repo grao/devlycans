@@ -19,7 +19,7 @@
 	    <property name="securityUrl" value="${security.server.url}" />
 	</bean>
 
-	<bean id="entryPoint" class="org.slc.sli.login.servlet.filters.sso.wgensso.WgenSSOUtil">
+	<bean id="entryPoint" class="org.slc.sli.login.servlet.filter.sso.wgensso.WgenSSOUtil">
 		<property name="restClient" ref="restClient" />
 		<property name="callbackUrl" value="${oauth.redirect}" />
 		<property name="clientId" value="${oauth.client.id}" />

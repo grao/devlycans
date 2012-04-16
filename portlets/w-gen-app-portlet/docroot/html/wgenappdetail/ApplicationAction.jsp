@@ -1,7 +1,7 @@
 <%@ include file="/../../jsp/init.jsp" %>
 <%
 	ResultRow row = (ResultRow) request.getAttribute(WebKeys.SEARCH_CONTAINER_RESULT_ROW);
-	Application infoDetail=(Application)row.getObject();	
+	WgenApp infoDetail=(WgenApp)row.getObject();	
 	String primaryKey=String.valueOf(infoDetail.getPrimaryKey());
 %>
 <lifery-ui:icon-menu>	
