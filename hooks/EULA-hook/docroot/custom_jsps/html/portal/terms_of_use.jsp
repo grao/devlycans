@@ -29,7 +29,9 @@ if (referer.equals(themeDisplay.getPathMain() + "/portal/update_terms_of_use")) 
          <div id="heading">
               <div class="portlet-layout">
                    <div class="portlet-column portlet-column-only" id="column-1">
-                         <div class="logo_main"> <a href="<%= themeDisplay.getURLHome() %>"> <img class="company-logo" src="<%= themeDisplay.getCompanyLogo() %>" width="<%= themeDisplay.getCompanyLogoWidth() %>" height="<%= themeDisplay.getCompanyLogoHeight() %>"/> </a> </div>
+                         <div class="logo_main"> <a href="<%= themeDisplay.getURLHome() %>"> <img class="company-logo" src="<%= themeDisplay.getCompanyLogo() %>" width="<%= themeDisplay.getCompanyLogoWidth() %>" height="<%= themeDisplay.getCompanyLogoHeight() %>"/> </a>
+							 <a href="<%= themeDisplay.getURLHome() %>"><span>SLI Portal</span></a>
+						 </div>
                    </div>
               </div>
         </div>
@@ -243,13 +245,11 @@ if (referer.equals(themeDisplay.getPathMain() + "/portal/update_terms_of_use")) 
 </aui:form>
 </div>
 <br /><br /><br /><br /><br /><br />
-<div id="content_main" >
-    <footer id="footer">
+     <footer id="footer">
       <div class="footer_wrap">
         <p>Proprietary information © 2012 SLC, LLC</p>
       </div>
     </footer>
-</div>
 <style type="text/css">
 .d_popup{
 	width:700px;
