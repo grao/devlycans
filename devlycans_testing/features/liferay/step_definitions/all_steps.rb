@@ -96,8 +96,12 @@ end
 
 
 Then /^I click "([^\"]*)"$/ do |btn_text|
+begin
   ele=@driver.find_element(:id, "go")
   ele.click
+ rescue
+  puts "Page not found"
+ end
   #@driver.find_element(:xpath, "//form/input[@value=#{btn_text}]").click
 end 
 
@@ -145,12 +149,16 @@ Then /^I should logged out$/ do
   #begin
   #@driver.find_element(:link, 'Sign Out').click
   #rescue
-  
+  begin
   
    menu = @driver.find_elements(:class,"menulink").first
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
+   rescue
    
+   puts ""
+   
+   end
    #submenu=@driver.find_element(:link, 'Logout')
    
    #@driver.action.move_to(menu).click(submenu).perform
@@ -204,11 +212,13 @@ end
 
 
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
-
+begin
    menu = @driver.find_elements(:class,"menulink").first
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
-   
+ rescue
+  puts ""
+ end  
    #submenu=@driver.find_element(:link, 'Logout')
   # submenu.click
    
@@ -276,12 +286,18 @@ end
 
 
 Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
+
+  begin
    if @driver.find_element(:id, field).text == text
     val=true
    else
     val=false
     puts "DEFECT:-The Description text box retains earlier text after reporting a problem"
    end 
+   
+   rescue
+    puts "Page is not loadingproperly"
+   end
    
 end
 
