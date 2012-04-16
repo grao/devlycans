@@ -145,12 +145,16 @@ Then /^I should logged out$/ do
   #begin
   #@driver.find_element(:link, 'Sign Out').click
   #rescue
-  
+  begin
   
    menu = @driver.find_elements(:class,"menulink").first
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
+   rescue
    
+   puts ""
+   
+   end
    #submenu=@driver.find_element(:link, 'Logout')
    
    #@driver.action.move_to(menu).click(submenu).perform
@@ -204,11 +208,13 @@ end
 
 
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
-
+begin
    menu = @driver.find_elements(:class,"menulink").first
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
-   
+ rescue
+  puts ""
+ end  
    #submenu=@driver.find_element(:link, 'Logout')
   # submenu.click
    
