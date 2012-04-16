@@ -96,8 +96,12 @@ end
 
 
 Then /^I click "([^\"]*)"$/ do |btn_text|
+begin
   ele=@driver.find_element(:id, "go")
   ele.click
+ rescue
+  puts "Page not found"
+ end
   #@driver.find_element(:xpath, "//form/input[@value=#{btn_text}]").click
 end 
 
@@ -282,12 +286,18 @@ end
 
 
 Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
+
+  begin
    if @driver.find_element(:id, field).text == text
     val=true
    else
     val=false
     puts "DEFECT:-The Description text box retains earlier text after reporting a problem"
    end 
+   
+   rescue
+    puts "Page is not loadingproperly"
+   end
    
 end
 
