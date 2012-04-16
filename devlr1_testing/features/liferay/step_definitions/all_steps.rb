@@ -21,7 +21,7 @@ Then /^I am on the Realm selection page$/ do
 end
 
 Then /^I select "([^\"]*)"$/ do |text|
-
+begin
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
@@ -33,11 +33,16 @@ end
 ele=@driver.find_element(:id, "go")
 ele.click
 
+rescue
+puts "element Not found"
+end
   #select(text, :from => 'realmId') 
 end
 
 
 Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
+
+begin
  a=@driver.find_element(:id, field)
  options=a.find_elements(:tag_name=>"option")
  options.each do |g|
@@ -46,13 +51,21 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
     break
   end
  end
+rescue
+puts "Selected element not found"
+end 
+ 
 end
 
 
 
 Then /^I click "([^\"]*)"$/ do |btn_text|
+ begin
   ele=@driver.find_element(:id, "go")
   ele.click
+ rescue
+   puts "the element not found"
+ end 
   #@driver.find_element(:xpath, "//form/input[@value=#{btn_text}]").click
 end 
 
@@ -156,11 +169,13 @@ end
 
 
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
-
+   begin
    menu = @driver.find_elements(:class,"menulink").first
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
-   
+   rescue
+    puts ""
+   end
    #submenu=@driver.find_element(:link, 'Logout')
   # submenu.click
    
@@ -184,13 +199,18 @@ end
 
 When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   @driver.manage.delete_all_cookies
-  element = @driver.find_element(:id, 'IDToken1') #the username field id is IDToken1
-  element.send_keys username
+  begin
+   element = @driver.find_element(:id, 'IDToken1') #the username field id is IDToken1
+   element.send_keys username
 
-  element = @driver.find_element(:id, 'IDToken2') #the username field id is IDToken2
-  element.send_keys password
-  element=@driver.find_element(:class, "Btn1Def")
-  element.click
+   element = @driver.find_element(:id, 'IDToken2') #the username field id is IDToken2
+   element.send_keys password
+   element=@driver.find_element(:class, "Btn1Def")
+   element.click
+  rescue
+  
+   puts "There is no such Login Form"
+  end
   #wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
  # wait.until { driver.find_element(:link => "Logout") }
 end
@@ -199,11 +219,17 @@ Then /^I should be on the authentication failed page$/ do
 end
 
 Then /^I click button "([^\"]*)"$/ do |text|
+
+ begin
   wait = Selenium::WebDriver::Wait.new(:timeout => 100)
   wait.until { @driver.find_element(:xpath, "//span/input[@value='#{text}']") 
    @driver.find_element(:xpath, "//span/input[@value='#{text}']").click
   
   }
+  
+ rescue
+   puts "Button is not found"
+ end 
   
 end
 
@@ -219,13 +245,16 @@ end
 
 
 Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
+  begin
    if @driver.find_element(:id, field).text == text
     val=true
    else
     val=false
     puts "DEFECT:-The Description text box retains earlier text after reporting a problem"
    end 
-   
+  rescue
+    puts ""
+  end 
 end
 
 Then /^I fill "([^"]*)" from "([^"]*)"$/ do |arg1, arg2|
@@ -259,10 +288,43 @@ Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
 #  page.should_not have_content(text)
 end
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
+begin
   @driver.find_element(:link, link).click
+rescue
+puts "Link not found"
+end
   #click_link(link)
 end
 
+
+
+Then /^I follow all the wsrp links$/ do
+ begin
+  wsrp_elements= []
+  #  wsrp_elements=@driver.find_elements(:xpath, "//section   [@id='portlet_appselectioninterfaceportlet_WAR_AppSelectionInterfaceportlet']/div/div/div/table/tbody/tr/td/a")
+   @driver.find_elements(:xpath, "//a[@href='#']").each do |tt|
+     if  tt.attribute('onclick') != nil && tt.attribute('onclick').match('callWsrp')
+        wsrp_elements << tt
+      end
+   end
+   wsrp_elements.compact!
+   wsrp_ele=[]
+   wsrp_elements.each do |wsrp|
+    wsrp_ele << wsrp.attribute('onclick').gsub("callWsrp","").gsub("(","").gsub(")","").gsub("'","")
+   end
+   
+   wsrp_ele.each do |el|
+     @driver.navigate.to el
+     puts "successfully open all the #{el} WSRP Page"
+   end
+   
+   
+   
+   rescue
+     puts "WSRP link Not found"
+   end
+    
+end
 
 #Then /^(?:|I )should be on (.+)$/ do |page_name|
 #  current_path = URI.parse(current_url).select(:path, :query).compact.join('?')

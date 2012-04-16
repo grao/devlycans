@@ -21,7 +21,7 @@ Then /^I am on the Realm selection page$/ do
 end
 
 Then /^I select "([^\"]*)"$/ do |text|
-
+begin
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
@@ -32,12 +32,53 @@ options.each do |g|
 end
 ele=@driver.find_element(:id, "go")
 ele.click
-
+rescue
+puts "No Such Element found for Selection"
+end
   #select(text, :from => 'realmId') 
+end
+
+Then /^I follow all the wsrp links$/ do
+  begin
+  wsrp_elements= []
+  #  wsrp_elements=@driver.find_elements(:xpath, "//section   [@id='portlet_appselectioninterfaceportlet_WAR_AppSelectionInterfaceportlet']/div/div/div/table/tbody/tr/td/a")
+   @driver.find_elements(:xpath, "//a[@href='#']").each do |tt|
+     if  tt.attribute('onclick') != nil && tt.attribute('onclick').match('callWsrp')
+        wsrp_elements << tt
+      end
+   end
+   wsrp_elements.compact!
+   wsrp_ele=[]
+   wsrp_elements.each do |wsrp|
+    wsrp_ele << wsrp.attribute('onclick').gsub("callWsrp","").gsub("(","").gsub(")","").gsub("'","")
+   end
+   
+   wsrp_ele.each do |el|
+     @driver.navigate.to el
+     puts "successfully open all the #{el} WSRP Page"
+   end
+   
+   
+   
+   rescue
+     puts "WSRP link Not found"
+   end
+    
+end
+
+Then /^I am on the wsrp page$/ do
+begin
+ text=@driver.find_element(:tag_name => "title").text()
+ puts text
+rescue
+  puts "The page is not opening correctly"
+end
+
 end
 
 
 Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
+begin
  a=@driver.find_element(:id, field)
  options=a.find_elements(:tag_name=>"option")
  options.each do |g|
@@ -46,7 +87,11 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
     break
   end
  end
+rescue
+puts "No such element found"
+end 
 end
+
 
 
 
@@ -61,7 +106,7 @@ Given /^EULA has been accepted$/ do
 end
 
 When /^I go to the login page$/ do
- @driver.navigate.to "https://testlr1.slidev.org"
+ @driver.navigate.to "https://devlycans.slidev.org/portal"
 begin
 a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
 ele=true
@@ -126,10 +171,13 @@ Then /^I should be on the home page$/ do
  else
   puts "EULA has already been accepted."
  end
+ begin
   menu = @driver.find_elements(:class,"menulink").first
   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-   @driver.action.move_to(menu).perform
-   
+  @driver.action.move_to(menu).perform
+ rescue
+   puts ""
+ end  
    #submenu=@driver.find_element(:link, 'Logout').displayed?
  
    
@@ -183,6 +231,7 @@ Given /^I should remove all cookies$/ do
 end
 
 When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
+begin
   @driver.manage.delete_all_cookies
   element = @driver.find_element(:id, 'IDToken1') #the username field id is IDToken1
   element.send_keys username
@@ -191,6 +240,9 @@ When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   element.send_keys password
   element=@driver.find_element(:class, "Btn1Def")
   element.click
+rescue
+puts "No Login form has been found"
+end  
   #wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
  # wait.until { driver.find_element(:link => "Logout") }
 end
@@ -199,11 +251,16 @@ Then /^I should be on the authentication failed page$/ do
 end
 
 Then /^I click button "([^\"]*)"$/ do |text|
+begin
   wait = Selenium::WebDriver::Wait.new(:timeout => 100)
   wait.until { @driver.find_element(:xpath, "//span/input[@value='#{text}']") 
    @driver.find_element(:xpath, "//span/input[@value='#{text}']").click
   
   }
+  
+rescue
+puts "No such element found check the server url"
+end  
   
 end
 
@@ -259,7 +316,11 @@ Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
 #  page.should_not have_content(text)
 end
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
+begin
   @driver.find_element(:link, link).click
+rescue
+  puts "No such Link Found"
+end  
   #click_link(link)
 end
 
