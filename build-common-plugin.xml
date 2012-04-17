@@ -305,7 +305,7 @@
 		</if>
 	</target>
 
-	<target name="compile">
+  <target name="compile">
 		<antcall target="merge" />
 
 		<mkdir dir="docroot/WEB-INF/classes" />
@@ -414,8 +414,7 @@ Please find a solution that does not require portal-impl.jar.
 		</if>
 
 		<antcall target="merge" />
-	</target>
-
+	</target>          
 	<target name="compile-test">
 		<mkdir dir="test-classes" />
 		<mkdir dir="test-results" />
