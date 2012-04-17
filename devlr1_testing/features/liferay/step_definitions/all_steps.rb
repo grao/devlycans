@@ -114,11 +114,13 @@ Then /^I should logged out$/ do
   #@driver.find_element(:link, 'Sign Out').click
   #rescue
   
-  
+  begin
    menu = @driver.find_elements(:class,"menulink").first
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
-   
+  rescue
+  puts ""
+  end 
    #submenu=@driver.find_element(:link, 'Logout')
    
    #@driver.action.move_to(menu).click(submenu).perform
@@ -139,10 +141,13 @@ Then /^I should be on the home page$/ do
  else
   puts "EULA has already been accepted."
  end
+ begin
   menu = @driver.find_elements(:class,"menulink").first
   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
-   
+  rescue
+   puts "Page not Load perfectly"
+  end 
    #submenu=@driver.find_element(:link, 'Logout').displayed?
  
    
