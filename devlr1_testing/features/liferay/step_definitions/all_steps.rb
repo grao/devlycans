@@ -34,7 +34,7 @@ ele=@driver.find_element(:id, "go")
 ele.click
 
 rescue
-puts "element Not found"
+puts "SLI Exception"
 end
   #select(text, :from => 'realmId') 
 end
@@ -52,7 +52,7 @@ begin
   end
  end
 rescue
-puts "Selected element not found"
+puts "SLI Exception"
 end 
  
 end
@@ -64,7 +64,7 @@ Then /^I click "([^\"]*)"$/ do |btn_text|
   ele=@driver.find_element(:id, "go")
   ele.click
  rescue
-   puts "the element not found"
+   puts "SLI Exception"
  end 
   #@driver.find_element(:xpath, "//form/input[@value=#{btn_text}]").click
 end 
@@ -81,6 +81,7 @@ ele=true
 rescue
 ele=false
 end
+begin
 if ele == true
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
@@ -92,6 +93,10 @@ end
 
 ele=@driver.find_element(:id, "go")
 ele.click
+rescue
+puts "SLI Exception"
+end
+
 end
 
   #visit "https://devlr2.slidev.org"
@@ -105,7 +110,7 @@ Then  /^I follow the home page Dashboard$/ do
   element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
   element.click 
  rescue
-  puts 'element selector has been changed'
+  puts 'SLI Exception'
  end
 end
 
@@ -119,7 +124,7 @@ Then /^I should logged out$/ do
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
   rescue
-  puts ""
+  puts "SLI Exception"
   end 
    #submenu=@driver.find_element(:link, 'Logout')
    
@@ -146,7 +151,7 @@ Then /^I should be on the home page$/ do
   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
   rescue
-   puts "Page not Load perfectly"
+   puts "SLI Exception"
   end 
    #submenu=@driver.find_element(:link, 'Logout').displayed?
  
@@ -179,7 +184,7 @@ When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
    rescue
-    puts ""
+    puts "SLI Exception"
    end
    #submenu=@driver.find_element(:link, 'Logout')
   # submenu.click
@@ -214,7 +219,7 @@ When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
    element.click
   rescue
   
-   puts "There is no such Login Form"
+   puts "SLI Exception"
   end
   #wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
  # wait.until { driver.find_element(:link => "Logout") }
@@ -233,7 +238,7 @@ Then /^I click button "([^\"]*)"$/ do |text|
   }
   
  rescue
-   puts "Button is not found"
+   puts "SLI Exception"
  end 
   
 end
@@ -258,7 +263,7 @@ Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
     puts "DEFECT:-The Description text box retains earlier text after reporting a problem"
    end 
   rescue
-    puts ""
+    puts "SLI Exception"
   end 
 end
 
@@ -296,7 +301,7 @@ When /^(?:|I )follow "([^\"]*)"$/ do |link|
 begin
   @driver.find_element(:link, link).click
 rescue
-puts "Link not found"
+puts "SLI Exception"
 end
   #click_link(link)
 end
@@ -326,7 +331,7 @@ Then /^I follow all the wsrp links$/ do
    
    
    rescue
-     puts "WSRP link Not found"
+    puts "SLI Exception"
    end
     
 end

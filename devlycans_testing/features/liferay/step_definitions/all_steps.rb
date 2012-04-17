@@ -33,7 +33,7 @@ end
 ele=@driver.find_element(:id, "go")
 ele.click
 rescue
-puts "No Such Element found for Selection"
+puts "SLI Exception"
 end
   #select(text, :from => 'realmId') 
 end
@@ -61,7 +61,7 @@ Then /^I follow all the wsrp links$/ do
    
    
    rescue
-     puts "WSRP link Not found"
+     puts "SLI Exception"
    end
     
 end
@@ -71,7 +71,7 @@ begin
  text=@driver.find_element(:tag_name => "title").text()
  puts text
 rescue
-  puts "The page is not opening correctly"
+  puts "SLI Exception"
 end
 
 end
@@ -88,7 +88,7 @@ begin
   end
  end
 rescue
-puts "No such element found"
+puts "SLI Exception"
 end 
 end
 
@@ -113,6 +113,7 @@ ele=true
 rescue
 ele=false
 end
+begin
 if ele == true
 options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
 options.each do |g|
@@ -124,6 +125,9 @@ end
 
 ele=@driver.find_element(:id, "go")
 ele.click
+rescue
+puts "SLI Exception"
+end
 end
 
   #visit "https://devlr2.slidev.org"
@@ -137,7 +141,7 @@ Then  /^I follow the home page Dashboard$/ do
   element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
   element.click 
  rescue
-  puts 'element selector has been changed'
+  puts 'SLI Exception'
  end
 end
 
@@ -146,11 +150,13 @@ Then /^I should logged out$/ do
   #@driver.find_element(:link, 'Sign Out').click
   #rescue
   
-  
+  begin
    menu = @driver.find_elements(:class,"menulink").first
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
-   
+  rescue
+    puts "SLI Exception"
+  end 
    #submenu=@driver.find_element(:link, 'Logout')
    
    #@driver.action.move_to(menu).click(submenu).perform
@@ -176,7 +182,7 @@ Then /^I should be on the home page$/ do
   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
   @driver.action.move_to(menu).perform
  rescue
-   puts ""
+   puts "SLI Exception"
  end  
    #submenu=@driver.find_element(:link, 'Logout').displayed?
  
@@ -204,11 +210,13 @@ end
 
 
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
-
-   menu = @driver.find_elements(:class,"menulink").first
-   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-   @driver.action.move_to(menu).perform
-   
+   begin
+    menu = @driver.find_elements(:class,"menulink").first
+    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
+    @driver.action.move_to(menu).perform
+   rescue
+     puts "SLI exception"
+   end
    #submenu=@driver.find_element(:link, 'Logout')
   # submenu.click
    
@@ -241,7 +249,7 @@ begin
   element=@driver.find_element(:class, "Btn1Def")
   element.click
 rescue
-puts "No Login form has been found"
+  puts "SLI Exception"
 end  
   #wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
  # wait.until { driver.find_element(:link => "Logout") }
@@ -259,7 +267,7 @@ begin
   }
   
 rescue
-puts "No such element found check the server url"
+  puts "SLI Exception"
 end  
   
 end
@@ -276,12 +284,16 @@ end
 
 
 Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
+  begin
    if @driver.find_element(:id, field).text == text
     val=true
    else
     val=false
     puts "DEFECT:-The Description text box retains earlier text after reporting a problem"
    end 
+  rescue
+   puts "SLI Exception"
+  end 
    
 end
 
@@ -294,6 +306,7 @@ Then /^I close the browser$/ do
 end
 
 Then /^(?:|I )should see "([^\"]*)"$/ do |text|
+
   begin
    link=@driver.find_element(:link, text).displayed? || @driver.find_element(:name, text).displayed? 
    link=true
@@ -315,11 +328,12 @@ Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
 
 #  page.should_not have_content(text)
 end
+
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
 begin
   @driver.find_element(:link, link).click
 rescue
-  puts "No such Link Found"
+  puts "SLI Exception"
 end  
   #click_link(link)
 end
