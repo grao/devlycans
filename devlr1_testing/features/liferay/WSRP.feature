@@ -16,7 +16,7 @@ Feature: title
     Then I follow all the wsrp links
     
     
-   Scenario:-SSD Realm with wsrp link click
+   Scenario:-Admin User with wsrp link click
     Given I have an open web browser
     When I go to the login page
     #Then I click "Go"

@@ -33,7 +33,7 @@ end
 ele=@driver.find_element(:id, "go")
 ele.click
 rescue
-puts "No Such Element found for Selection"
+puts "SLI Exception"
 end
   #select(text, :from => 'realmId') 
 end
@@ -61,7 +61,7 @@ Then /^I follow all the wsrp links$/ do
    
    
    rescue
-     puts "WSRP link Not found"
+     puts "SLI Exception"
    end
     
 end
@@ -71,7 +71,7 @@ begin
  text=@driver.find_element(:tag_name => "title").text()
  puts text
 rescue
-  puts "The page is not opening correctly"
+  puts "SLI Exception"
 end
 
 end
@@ -88,7 +88,7 @@ begin
   end
  end
 rescue
-puts "No such element found"
+puts "SLI Exception"
 end 
 end
 
@@ -100,7 +100,7 @@ begin
   ele=@driver.find_element(:id, "go")
   ele.click
  rescue
-  puts "Page not found"
+  puts "SLI Exception"
  end
   #@driver.find_element(:xpath, "//form/input[@value=#{btn_text}]").click
 end 
@@ -141,7 +141,7 @@ Then  /^I follow the home page Dashboard$/ do
   element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
   element.click 
  rescue
-  puts 'element selector has been changed'
+  puts "SLI Exception"
  end
 end
 
@@ -156,7 +156,7 @@ Then /^I should logged out$/ do
    @driver.action.move_to(menu).perform
    rescue
    
-   puts ""
+   puts "SLI Exception"
    
    end
    #submenu=@driver.find_element(:link, 'Logout')
@@ -177,14 +177,14 @@ Then /^I should be on the home page$/ do
  if element
   ele.click
  else
-  puts "EULA has already been accepted."
+  puts "SLI Exception"
  end
  begin
   menu = @driver.find_elements(:class,"menulink").first
   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
   @driver.action.move_to(menu).perform
  rescue
-   puts ""
+   puts "SLI Exception"
  end  
    #submenu=@driver.find_element(:link, 'Logout').displayed?
  
@@ -205,7 +205,7 @@ And /^I see the EULA Page$/ do
   if element == true
     true
   else
-    puts "You have already Acepted EULA"
+    puts "SLI Exception"
   end 
 end
 
@@ -217,7 +217,7 @@ begin
    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
    @driver.action.move_to(menu).perform
  rescue
-  puts ""
+  puts "SLI Exception"
  end  
    #submenu=@driver.find_element(:link, 'Logout')
   # submenu.click
@@ -251,7 +251,7 @@ begin
   element=@driver.find_element(:class, "Btn1Def")
   element.click
 rescue
-puts "No Login form has been found"
+puts "SLI Exception"
 end  
   #wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
  # wait.until { driver.find_element(:link => "Logout") }
@@ -269,7 +269,7 @@ begin
   }
   
 rescue
-puts "No such element found check the server url"
+puts "SLI Exception"
 end  
   
 end
@@ -296,7 +296,7 @@ Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
    end 
    
    rescue
-    puts "Page is not loadingproperly"
+    puts "SLI Exception"
    end
    
 end
@@ -335,7 +335,7 @@ When /^(?:|I )follow "([^\"]*)"$/ do |link|
 begin
   @driver.find_element(:link, link).click
 rescue
-  puts "No such Link Found"
+  puts "SLI Exception"
 end  
   #click_link(link)
 end
