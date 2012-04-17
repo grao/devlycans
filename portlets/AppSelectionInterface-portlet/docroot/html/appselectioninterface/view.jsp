@@ -20,7 +20,7 @@
 <%@page import="java.util.List"%>
 <%@page import="org.slc.sli.json.bean.AppsData"%>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <portlet:defineObjects />
 
@@ -34,12 +34,12 @@
 
 
 
-<table border ="0" cellpadding="10">
+<table border ="0">
  <c:forEach items="${appList}" var="app">
 <tr>
 <td><img src="${app.image_url }" alt="app_logo" width="46" height="45"></img><br><br></td>
 <td>&nbsp;&nbsp;&nbsp;</td>
-<td style="vertical-align:top;"> 
+<td style="vertical-align: top"> 
 
 <c:choose>
 	<c:when test='${app.behaviour eq "Wsrp App" }'>
@@ -52,9 +52,9 @@
 		<a target="_blank" style="text-decoration: none" href='<c:out value="${app.application_url}"></c:out>'>
 	</c:when>		
 </c:choose>
-    <div style="font-weight: bold;font-size: 14px;color: black"> <c:out value="${app.name}"></c:out></div>
+    <div style="font-weight: bold;font-size: 14px;color: #444444"> <c:out value="${app.name}"></c:out></div>
     <div class="clr"></div>
-    <div class="r_menu_dis" style="color:black"><c:out value="${app.description}"></c:out></div>
+    <div class="r_menu_dis" style="color:#444444"><c:out value="${app.description}"></c:out></div>
 	</a>
 </td>
 </tr>

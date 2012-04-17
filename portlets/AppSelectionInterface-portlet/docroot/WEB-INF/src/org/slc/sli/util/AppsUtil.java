@@ -76,15 +76,18 @@ public class AppsUtil {
 			String imageUrl = jsonEle.getAsJsonObject().get("image_url").toString().replaceAll("\"", "");
 			String applicationUrl = jsonEle.getAsJsonObject().get("application_url").toString();
 
-			_log.info("name---" + name);
-			_log.info("description---"+description);
-			_log.info("behaviour---"+behaviour);
-			_log.info("image url---"+imageUrl);
-			_log.info("app url---"+applicationUrl);
+			
 
 			// Map Name,Description,Image url and app Url to bean
 			if(!applicationUrl.equalsIgnoreCase("\"\"")){
 				applicationUrl = applicationUrl.replaceAll("\"","");
+				
+				_log.info("name---" + name);
+				_log.info("description---"+description);
+				_log.info("behaviour---"+behaviour);
+				_log.info("image url---"+imageUrl);
+				_log.info("app url---"+applicationUrl);
+				
 			apps.setName(name);
 			apps.setDescription(description);
 			apps.setBehaviour(behaviour);
