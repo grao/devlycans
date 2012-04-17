@@ -35,15 +35,6 @@ Then /^I select "([^\"]*)"$/ do |text|
   rescue
     puts "SLI Exception"
   end
-<<<<<<< HEAD
-end
-ele=@driver.find_element(:id, "go")
-ele.click
-rescue
-puts "SLI Exception"
-end
-=======
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
   #select(text, :from => 'realmId') 
 end
 
@@ -69,34 +60,19 @@ Then /^I follow all the wsrp links$/ do
    
    
    
-<<<<<<< HEAD
-   rescue
-     puts "SLI Exception"
-   end
-=======
   rescue
     puts "SLI Exception"
   end
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
     
 end
 
 Then /^I am on the wsrp page$/ do
-<<<<<<< HEAD
-begin
- text=@driver.find_element(:tag_name => "title").text()
- puts text
-rescue
-  puts "SLI Exception"
-end
-=======
   begin
     text=@driver.find_element(:tag_name => "title").text()
     puts text
   rescue
     puts "SLI Exception"
   end
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
 
 end
 
@@ -114,13 +90,6 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
   rescue
     puts "SLI Exception"
   end
-<<<<<<< HEAD
- end
-rescue
-puts "SLI Exception"
-end 
-=======
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
 end
 
 
@@ -141,31 +110,6 @@ Given /^EULA has been accepted$/ do
 end
 
 When /^I go to the login page$/ do
-<<<<<<< HEAD
- @driver.navigate.to "https://devlycans.slidev.org/portal"
-begin
-a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
-ele=true
-rescue
-ele=false
-end
-begin
-if ele == true
-options=a.find_elements(:tag_name=>"option") # all the options of that select tag will be selected
-options.each do |g|
-  if g.attribute('value') == '5a4bfe96-1724-4565-9db1-35b3796e3ce1'
-    g.click
-    break
-  end
-end
-
-ele=@driver.find_element(:id, "go")
-ele.click
-rescue
-puts "SLI Exception"
-end
-end
-=======
   @driver.navigate.to "https://devlycans.slidev.org/portal"
   begin
     a=@driver.find_element(:name,'realmId') #realmId should be the html tag name of select tag
@@ -187,7 +131,6 @@ end
     puts "SLI Exception"
   end
   
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
 
   #visit "https://devlr2.slidev.org"
   # select('Shared Learning Infrastructure', :from => 'realmId')
@@ -196,21 +139,12 @@ end
 
 
 Then  /^I follow the home page Dashboard$/ do 
-<<<<<<< HEAD
- begin
-  element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
-  element.click 
- rescue
-  puts 'SLI Exception'
- end
-=======
   begin
     element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
     element.click
   rescue
     puts "SLI Exception"
   end
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
 end
 
 Then /^I should logged out$/ do
@@ -219,23 +153,12 @@ Then /^I should logged out$/ do
   #rescue
   begin
   
-<<<<<<< HEAD
-  begin
-   menu = @driver.find_elements(:class,"menulink").first
-   action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-   @driver.action.move_to(menu).perform
-  rescue
-    puts "SLI Exception"
-  end 
-   #submenu=@driver.find_element(:link, 'Logout')
-=======
     menu = @driver.find_elements(:class,"menulink").first
     action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
     @driver.action.move_to(menu).perform
   rescue
    
     puts "SLI Exception"
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
    
   end
   #submenu=@driver.find_element(:link, 'Logout')
@@ -246,28 +169,6 @@ Then /^I should logged out$/ do
 end
 
 Then /^I should be on the home page$/ do
-<<<<<<< HEAD
- begin
-  ele=@driver.find_element(:xpath, "//input[@value='Agree']")
-  element=true
- rescue
-   element=false
- end
-
- if element
-  ele.click
- else
-  puts "EULA has already been accepted."
- end
- begin
-  menu = @driver.find_elements(:class,"menulink").first
-  action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-  @driver.action.move_to(menu).perform
- rescue
-   puts "SLI Exception"
- end  
-   #submenu=@driver.find_element(:link, 'Logout').displayed?
-=======
   begin
     ele=@driver.find_element(:xpath, "//input[@value='Agree']")
     element=true
@@ -288,7 +189,6 @@ Then /^I should be on the home page$/ do
     puts "SLI Exception"
   end
   #submenu=@driver.find_element(:link, 'Logout').displayed?
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
  
    
   #@driver.find_element(:link, 'Sign Out').displayed?
@@ -314,16 +214,6 @@ end
 
 
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
-<<<<<<< HEAD
-   begin
-    menu = @driver.find_elements(:class,"menulink").first
-    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-    @driver.action.move_to(menu).perform
-   rescue
-     puts "SLI exception"
-   end
-   #submenu=@driver.find_element(:link, 'Logout')
-=======
   begin
     menu = @driver.find_elements(:class,"menulink").first
     action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
@@ -332,7 +222,6 @@ When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
     puts "SLI Exception"
   end
   #submenu=@driver.find_element(:link, 'Logout')
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
   # submenu.click
    
 
@@ -354,20 +243,6 @@ Given /^I should remove all cookies$/ do
 end
 
 When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
-<<<<<<< HEAD
-begin
-  @driver.manage.delete_all_cookies
-  element = @driver.find_element(:id, 'IDToken1') #the username field id is IDToken1
-  element.send_keys username
-
-  element = @driver.find_element(:id, 'IDToken2') #the username field id is IDToken2
-  element.send_keys password
-  element=@driver.find_element(:class, "Btn1Def")
-  element.click
-rescue
-  puts "SLI Exception"
-end  
-=======
   begin
     @driver.manage.delete_all_cookies
     element = @driver.find_element(:id, 'IDToken1') #the username field id is IDToken1
@@ -380,12 +255,17 @@ end
   rescue
     puts "SLI Exception"
   end
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
   #wait = Selenium::WebDriver::Wait.new(:timeout => 100) # seconds
   # wait.until { driver.find_element(:link => "Logout") }
 end
 Then /^I should be on the authentication failed page$/ do
+begin
   @driver.navigate.to "https://devopenam1.slidev.org:80/idp2/UI/Login"
+rescue
+ 
+ puts "SLI Exception"
+end 
+  
 end
 
 Then /^I click button "([^\"]*)"$/ do |text|
@@ -396,15 +276,9 @@ Then /^I click button "([^\"]*)"$/ do |text|
   
     }
   
-<<<<<<< HEAD
-rescue
-  puts "SLI Exception"
-end  
-=======
   rescue
     puts "SLI Exception"
   end
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
   
 end
 
@@ -420,18 +294,6 @@ end
 
 
 Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
-<<<<<<< HEAD
-  begin
-   if @driver.find_element(:id, field).text == text
-    val=true
-   else
-    val=false
-    puts "DEFECT:-The Description text box retains earlier text after reporting a problem"
-   end 
-  rescue
-   puts "SLI Exception"
-  end 
-=======
 
   begin
     if @driver.find_element(:id, field).text == text
@@ -444,7 +306,6 @@ Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
   rescue
     puts "SLI Exception"
   end
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
    
 end
 
@@ -457,7 +318,6 @@ Then /^I close the browser$/ do
 end
 
 Then /^(?:|I )should see "([^\"]*)"$/ do |text|
-
   begin
     link=@driver.find_element(:link, text).displayed? || @driver.find_element(:name, text).displayed?
     link=true
@@ -479,21 +339,12 @@ Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
 
   #  page.should_not have_content(text)
 end
-
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
-<<<<<<< HEAD
-begin
-  @driver.find_element(:link, link).click
-rescue
-  puts "SLI Exception"
-end  
-=======
   begin
     @driver.find_element(:link, link).click
   rescue
     puts "SLI Exception"
   end
->>>>>>> f9baa152f60ea41a03e0746bf099ab9474b4038c
   #click_link(link)
 end
 
