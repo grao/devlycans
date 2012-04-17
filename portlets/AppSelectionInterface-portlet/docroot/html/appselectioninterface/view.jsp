@@ -49,7 +49,7 @@
 		<a style="text-decoration: none" onClick="callIframe('<c:out value="${app.application_url}"></c:out>')" href='#'>
 	</c:when>
 	<c:when test='${app.behaviour eq "Full Window App" }'>
-		<a target="_blank" style="text-decoration: none" href='<c:out value="${app.application_url}"></c:out>'>
+		<a style="text-decoration: none" href='<c:out value="${app.application_url}"></c:out>'>
 	</c:when>		
 </c:choose>
     <div style="font-weight: bold;font-size: 14px;color: #444444"> <c:out value="${app.name}"></c:out></div>
