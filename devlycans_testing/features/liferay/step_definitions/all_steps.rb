@@ -259,7 +259,13 @@ When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
   # wait.until { driver.find_element(:link => "Logout") }
 end
 Then /^I should be on the authentication failed page$/ do
+begin
   @driver.navigate.to "https://devopenam1.slidev.org:80/idp2/UI/Login"
+rescue
+ 
+ puts "SLI Exception"
+end 
+  
 end
 
 Then /^I click button "([^\"]*)"$/ do |text|
