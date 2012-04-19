@@ -34,7 +34,7 @@ Then /^I select "([^\"]*)"$/ do |text|
     ele.click
 
   rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -60,7 +60,7 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
       end
     end
  rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -80,7 +80,7 @@ Then /^I click "([^\"]*)"$/ do |btn_text|
     ele=@driver.find_element(:id, "go")
     ele.click
   rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -115,7 +115,7 @@ When /^I go to the login page$/ do
       ele.click
     end
   rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -138,7 +138,7 @@ Then  /^I follow the home page Dashboard$/ do
     element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
     element.click
   rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -160,7 +160,7 @@ end
       action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
       @driver.action.move_to(menu).perform
     rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-      if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+      if @driver.page_source.match('SLI Exception')
         ele=false
         puts "SLI Exception"
       elsif Timeout::Error
@@ -192,10 +192,10 @@ end
     end
     begin
       menu = @driver.find_elements(:class,"menulink").first
-      action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
+      #action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
       @driver.action.move_to(menu).perform
     rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-      if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+      if @driver.page_source.match('SLI Exception')
         ele=false
         puts "SLI Exception"
       elsif Timeout::Error
@@ -235,7 +235,7 @@ end
       action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
       @driver.action.move_to(menu).perform
     rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-      if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+      if @driver.page_source.match('SLI Exception')
         ele=false
         puts "SLI Exception"
       elsif Timeout::Error
@@ -277,7 +277,7 @@ end
       element=@driver.find_element(:class, "Btn1Def")
       element.click
     rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-      if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+      if @driver.page_source.match('SLI Exception')
         ele=false
         puts "SLI Exception"
       elsif Timeout::Error
@@ -304,7 +304,7 @@ end
       }
   
     rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-      if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+      if @driver.page_source.match('SLI Exception')
         ele=false
         puts "SLI Exception"
       elsif Timeout::Error
@@ -336,7 +336,7 @@ end
           puts "DEFECT:-The Description text box retains earlier text after reporting a problem"
         end
       rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-        if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+        if @driver.page_source.match('SLI Exception')
           ele=false
           puts "SLI Exception"
         elsif Timeout::Error
@@ -383,7 +383,7 @@ end
       begin
         @driver.find_element(:link, link).click
       rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-        if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+        if @driver.page_source.match('SLI Exception')
           ele=false
           puts "SLI Exception"
         elsif Timeout::Error
@@ -421,7 +421,7 @@ end
    
    
       rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-        if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+        if @driver.page_source.match('SLI Exception')
           ele=false
           puts "SLI Exception"
         elsif Timeout::Error
