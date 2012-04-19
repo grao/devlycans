@@ -122,8 +122,6 @@ The page you are requesting is not available!</div>
 </body>
 
 
-<div class="separator"><!-- --></div>
-
 <!-- <a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a> -->
 
 </html>
