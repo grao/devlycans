@@ -17,7 +17,12 @@
 <%@ include file="/html/portal/init.jsp" %>
 <%@ page isErrorPage="true" %>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html>
+=======
+
+
+>>>>>>> parent of 1b245d4... Manoj Mali
 =======
 
 
@@ -45,7 +50,11 @@
 
 .head {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/bg.png");
+=======
+	background-image: url("/sli_images/bg.png");
+>>>>>>> parent of 1b245d4... Manoj Mali
 =======
 	background-image: url("/sli_images/bg.png");
 >>>>>>> parent of 1b245d4... Manoj Mali
@@ -79,7 +88,11 @@
 	width: 128px;
 	margin: 0 auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/exception.png");
+=======
+	background-image: url("/sli_images/exception.png");
+>>>>>>> parent of 1b245d4... Manoj Mali
 =======
 	background-image: url("/sli_images/exception.png");
 >>>>>>> parent of 1b245d4... Manoj Mali
@@ -136,10 +149,16 @@ The page you are requesting is not available!</div>
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <!-- <a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a> -->
 
 </html>
+=======
+<div class="separator"><!-- --></div>
+
+<a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a>
+>>>>>>> parent of 1b245d4... Manoj Mali
 =======
 <div class="separator"><!-- --></div>
 
