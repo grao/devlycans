@@ -60,8 +60,6 @@ PortletPreferences preferences = null;
 
 if (renderRequest != null) {
 	preferences = renderRequest.getPreferences();
-}else if(resourceRequest != null ){
-	preferences = resourceRequest.getPreferences();
 }
 
 String portletResource = ParamUtil.getString(request, "portletResource");

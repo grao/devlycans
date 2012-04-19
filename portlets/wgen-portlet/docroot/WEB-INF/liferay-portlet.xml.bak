@@ -17,6 +17,9 @@
 		<instanceable>false</instanceable>
 		<private-session-attributes>false</private-session-attributes>
 		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
 		<css-class-wrapper>footerportlet-portlet</css-class-wrapper>
 	</portlet>
 	<portlet>
