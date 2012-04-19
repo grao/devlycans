@@ -16,8 +16,7 @@
 
 <%@ include file="/html/portal/init.jsp" %>
 <%@ page isErrorPage="true" %>
-
-
+<html>
 <head>
 
 <style type="text/css">
@@ -40,7 +39,7 @@
 }
 
 .head {
-	background-image: url("/sli_images/bg.png");
+	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/bg.png");
 	background-repeat: repeat-x;
 	margin: 0 auto;
 	height: 67px;
@@ -70,7 +69,7 @@
 	height: 120px;
 	width: 128px;
 	margin: 0 auto;
-	background-image: url("/sli_images/exception.png");
+	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/exception.png");
 }
 
 .page_tex {
@@ -125,4 +124,6 @@ The page you are requesting is not available!</div>
 
 <div class="separator"><!-- --></div>
 
-<a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a>
+<!-- <a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a> -->
+
+</html>

@@ -16,42 +16,8 @@
 
 <%@ include file="/html/portal/init.jsp" %>
 <%@ page isErrorPage="true" %>
+<html>
 <head>
-<%
-int status = ParamUtil.getInteger(request, "status");
-
-if (status > 0) {
-	response.setStatus(status);
-}
-
-String exception = ParamUtil.getString(request, "exception");
-
-String url = ParamUtil.getString(request, "previousURL");
-
-if (Validator.isNull(url)) {
-	url = PortalUtil.getCurrentURL(request);
-}
-
-url = themeDisplay.getPortalURL() + url;
-
-boolean noSuchResourceException = false;
-
-for (String key : SessionErrors.keySet(request)) {
-	key = key.substring(key.lastIndexOf(StringPool.PERIOD) + 1);
-
-	if (key.startsWith("NoSuch") && key.endsWith("Exception")) {
-		noSuchResourceException = true;
-	}
-}
-
-if (Validator.isNotNull(exception)) {
-	exception = exception.substring(exception.lastIndexOf(StringPool.PERIOD) + 1);
-
-	if (exception.startsWith("NoSuch") && exception.endsWith("Exception")) {
-		noSuchResourceException = true;
-	}
-}
-%>
 
 <style type="text/css">
 
@@ -73,7 +39,7 @@ if (Validator.isNotNull(exception)) {
 }
 
 .head {
-	background-image: url("/sli_images/bg.png");
+	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/bg.png");
 	background-repeat: repeat-x;
 	margin: 0 auto;
 	height: 67px;
@@ -103,7 +69,7 @@ if (Validator.isNotNull(exception)) {
 	height: 120px;
 	width: 128px;
 	margin: 0 auto;
-	background-image: url("/sli_images/exception.png");
+	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/exception.png");
 }
 
 .page_tex {
@@ -158,8 +124,6 @@ The page you are requesting is not available!</div>
 
 <div class="separator"><!-- --></div>
 
-<a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a>
+<!-- <a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a> -->
 
-<%!
-private static Log _log = LogFactoryUtil.getLog("portal-web.docroot.html.portal.status_jsp");
-%>
+</html>
