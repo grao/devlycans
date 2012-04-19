@@ -14,9 +14,18 @@
  */
 --%>
 
+<<<<<<< HEAD
 <%@ include file="/html/portal/init.jsp" %>
 <%@ page isErrorPage="true" %>
 <html>
+=======
+<%@ include file="/html/common/init.jsp" %>
+
+<%@ page isErrorPage="true" %>
+
+
+
+>>>>>>> parent of 1b245d4... Manoj Mali
 <head>
 
 <style type="text/css">
@@ -39,7 +48,11 @@
 }
 
 .head {
+<<<<<<< HEAD
 	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/bg.png");
+=======
+	background-image: url("/sli_images/bg.png");
+>>>>>>> parent of 1b245d4... Manoj Mali
 	background-repeat: repeat-x;
 	margin: 0 auto;
 	height: 67px;
@@ -69,7 +82,11 @@
 	height: 120px;
 	width: 128px;
 	margin: 0 auto;
+<<<<<<< HEAD
 	background-image: url("https://devlycans.slidev.org/sli-new-theme/images/custom/exception.png");
+=======
+	background-image: url("/sli_images/exception.png");
+>>>>>>> parent of 1b245d4... Manoj Mali
 }
 
 .page_tex {
@@ -122,6 +139,13 @@ The page you are requesting is not available!</div>
 </body>
 
 
+<<<<<<< HEAD
 <!-- <a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a> -->
 
 </html>
+=======
+<div class="separator"><!-- --></div>
+
+<a href="javascript:history.go(-1);">&laquo; <liferay-ui:message key="back" /></a>
+
+>>>>>>> parent of 1b245d4... Manoj Mali
