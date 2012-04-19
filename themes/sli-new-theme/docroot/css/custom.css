@@ -730,10 +730,6 @@ ul.menu_n ul li.last{
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
-ul.menu_n li.last a.menulink{
-	background : none;
-}
-
 /*dd_menu end*/
 
 

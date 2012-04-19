@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="org.slc.sli.headerfooter.model.HeaderFooter">
+		<field name="id" type="long" />
+		<field name="type" type="String" />
+		<field name="data" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+	</model>
+</model-hints>

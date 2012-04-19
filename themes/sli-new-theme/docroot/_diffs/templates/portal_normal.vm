@@ -8,7 +8,10 @@
 	<title>$the_title - $company_name</title>
 
 	$theme.include($top_head_include)
-
+	#js ("$javascript_folder/script.js")
+	#js ("$javascript_folder/jquery.js")
+	#js ("$javascript_folder/modal.popup.js")
+	#js ("$javascript_folder/scroll.js")
 
 
 	
