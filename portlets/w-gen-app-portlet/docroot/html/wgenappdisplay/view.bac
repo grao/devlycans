@@ -1,0 +1,73 @@
+<%@page import="org.omg.CORBA.Request"%>
+<script type="text/javascript">
+function showonlyone(thechosenone) {
+      var newboxes_m = document.getElementsByTagName("div");
+            for(var x=0; x<newboxes_m.length; x++) {
+                  name = newboxes_m[x].getAttribute("name");
+                  if (name == 'newboxes_m') {
+                        if (newboxes_m[x].id == thechosenone) {
+                        newboxes_m[x].style.display = 'block';
+						document.getElementById("app_list_box").style.display='none';
+						document.getElementById("column-3").style.display='none';
+						document.getElementById("i_frm_box").style.width='100%';
+                  }
+                  else {
+                        newboxes_m[x].style.display = 'none';
+						document.getElementById("app_list_box").style.display='none';
+						document.getElementById("column-3").style.display='none';
+						document.getElementById("i_frm_box").style.width='100%';
+                  }
+            }
+      }
+}
+</script>
+
+<%@ include file="/../../jsp/init.jsp" %>
+	<%
+	List<WgenApp> WgenAppDetailList=WgenAppLocalServiceUtil.getAllWgenApps();	%>
+		
+
+		<div class="" id="i_frm_box">
+						<%
+							for(WgenApp WgenAppDetail: WgenAppDetailList)
+							{
+								String WgenAppURL="";	
+								String WgenAppId="";
+								WgenAppId=String.valueOf(WgenAppDetail.getWgenAppId());
+								WgenAppURL=WgenAppDetail.getWgenAppURL();
+						%>	
+		<div name="newboxes_m" id="newboxes_m<%=WgenAppId %>" style="display: none;">
+		  <iframe src="<%=WgenAppURL %>" width="100%" height="800px" frameborder="0"></iframe>
+		</div>
+							<%}%>
+			</div>
+
+		<div class="" id="app_list_box">
+		<h2 class="menu_title" >List of Applications</h2>
+		<ul class="right_menu">
+						<%
+							for(WgenApp WgenAppDetail: WgenAppDetailList)
+							{	
+								String WgenAppId="";
+								String WgenAppTitle="";
+								String WgenAppDescription="";
+								String WgenAppURL="";	
+								
+								WgenAppId=String.valueOf(WgenAppDetail.getWgenAppId());
+								WgenAppTitle=WgenAppDetail.getWgenAppTitle();
+								WgenAppDescription=WgenAppDetail.getWgenAppDescription();
+								WgenAppURL=WgenAppDetail.getWgenAppURL();
+						%>	
+
+        <li><a id="myHeader<%=WgenAppId %>" href="javascript:showonlyone('newboxes_m<%=WgenAppId %>');" > <%=WgenAppTitle %></a>
+        </li>
+
+							<%}%>
+		</ul>
+		<br /><br />
+			</div>
+
+
+
+
+

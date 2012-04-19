@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/public/!svn/ver/105787/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/bind
+END
+V2ServiceDescriptionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/repos/public/!svn/ver/105787/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/bind/V2ServiceDescriptionServiceImpl.java
+END
+V1MarkupServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/bind/V1MarkupServiceImpl.java
+END
+V2MarkupServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/public/!svn/ver/104421/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/bind/V2MarkupServiceImpl.java
+END
+BaseServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/bind/BaseServiceImpl.java
+END
+V1ServiceDescriptionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/bind/V1ServiceDescriptionServiceImpl.java
+END
