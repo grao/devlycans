@@ -34,7 +34,7 @@ Then /^I select "([^\"]*)"$/ do |text|
     ele.click
 
   rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-    if @driver.page_source.match('SLI Exception')
+    if @driver.page_source.match('SLI Exception') 
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
