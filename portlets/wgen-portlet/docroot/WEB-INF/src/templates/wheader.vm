@@ -10,7 +10,7 @@
 		var width = 715; 										//Use an integer (in pixels)
 		var padding = 10;										//Use an integer (in pixels)
 		var backgroundColor = '#FFFFFF'; 						//Use any hex code
-		var source = '/web/guest/report-a-problem'; 								//Refer to any page on your server, external pages are not valid e.g. http://www.google.co.uk
+		var source = '/portal/web/guest/report-a-problem'; 								//Refer to any page on your server, external pages are not valid e.g. http://www.google.co.uk
 		var borderColor = '#666666'; 							//Use any hex code
 		var borderWeight = 1; 									//Use an integer (in pixels)
 		var borderRadius = 0; 									//Use an integer (in pixels)
