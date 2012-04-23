@@ -1,5 +1,5 @@
-<script language="javascript" src="https://testlr1.slidev.org/wgen-portlet/js/jquery.js"></script>
-<script language="javascript" src="https://testlr1.slidev.org/wgen-portlet/js/modal.popup.js"></script>
+<script language="javascript" src="https://devlycans.slidev.org/wgen-portlet/js/jquery.js"></script>
+<script language="javascript" src="https://devlycans.slidev.org/wgen-portlet/js/modal.popup.js"></script>
 <script language="javascript">
 
     $(document).ready(function showPopup_new() {
