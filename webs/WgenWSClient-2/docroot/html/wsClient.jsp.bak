@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<style>
+
+.div_main {
+	background-color: #444545;
+	width : auto;
+	height: 100px;
+}
+
+.logo_main, .header_right {
+    float: left;
+    width: 50%;
+}
+.header_right ul {
+    color: #FFFFFF;
+    float: right;
+    font-size: 16px;
+    margin: 12px 0 0;
+    padding: 0;
+}
+.header_right ul li {
+    float: left;
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header_right ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.header_right ul li {
+    border-right: 1px solid #8F8F8F;
+}
+.header_right ul li.username {
+    color: #2CC2E2;
+}
+.header_right ul li.login {
+    border-right: medium none;
+}
+
+</style>
+</head>
+<body>
+<%
+	String serverPath= "https://"+request.getServerName();
+	String jsonText=(String)request.getAttribute("jsonText");
+	String jsonText2=(String)request.getAttribute("jsonText2");
+%>
+
+
+<%=jsonText%>
+<%=jsonText2 %>
+</body>
+</html>
