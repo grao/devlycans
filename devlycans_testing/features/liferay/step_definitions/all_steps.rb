@@ -208,9 +208,13 @@ Then /^I should logged out$/ do
   #rescue
   begin
   
-    menu = @driver.find_elements(:class,"menulink").first
-    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-    @driver.action.move_to(menu).perform
+    menu = @driver.find_elements(:class,"menulink").first.click()
+    #action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
+    wait = Selenium::WebDriver::Wait.new(:timeout => 10) 
+    wait.until{
+    submenu=@driver.find_element(:link, 'Logout')
+    submenu.click }
+    #@driver.action.move_to(menu).perform
   rescue
    
     if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
@@ -245,10 +249,13 @@ Then /^I should be on the home page$/ do
     puts "EULA has already been accepted"
   end
   begin
-    menu = @driver.find_elements(:class,"menulink").first
-    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-    @driver.action.move_to(menu).perform
-  rescue
+    menu = @driver.find_elements(:class,"menulink").first.click()
+    #action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
+    #@driver.action.move_to(menu).perform
+    wait = Selenium::WebDriver::Wait.new(:timeout => 10) 
+    wait.until{
+    submenu=@driver.find_element(:link, 'Logout').displayed? }
+  rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
     if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
       ele=false
       puts "SLI Exception"
@@ -286,9 +293,12 @@ end
 
 When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
   begin
-    menu = @driver.find_elements(:class,"menulink").first
-    action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
-    @driver.action.move_to(menu).perform
+    menu = @driver.find_elements(:class,"menulink").first.click()
+    #action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
+    #@driver.action.move_to(menu).perform
+    wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+    wait.until{
+    @driver.find_element(:link, submenu).click()}
   rescue
     if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
       ele=false
