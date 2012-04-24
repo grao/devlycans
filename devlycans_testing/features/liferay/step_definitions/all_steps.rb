@@ -33,7 +33,7 @@ Then /^I select "([^\"]*)"$/ do |text|
     ele=@driver.find_element(:id, "go")
     ele.click
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -69,7 +69,7 @@ Then /^I follow all the wsrp links$/ do
    
    
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -87,7 +87,7 @@ Then /^I am on the wsrp page$/ do
     text=@driver.find_element(:tag_name => "title").text()
     puts text
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -112,7 +112,7 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
       end
     end
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -132,7 +132,7 @@ Then /^I click "([^\"]*)"$/ do |btn_text|
     ele=@driver.find_element(:id, "go")
     ele.click
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -167,7 +167,7 @@ When /^I go to the login page$/ do
       ele.click
     end
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -190,7 +190,7 @@ Then  /^I follow the home page Dashboard$/ do
     element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
     element.click
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -218,7 +218,7 @@ Then /^I should logged out$/ do
     #@driver.action.move_to(menu).perform
   rescue
    
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -258,7 +258,7 @@ Then /^I should be on the home page$/ do
     menu = @driver.find_elements(:class,"menulink").first.click()
     submenu=@driver.find_element(:link, 'Logout').displayed? }
   rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -303,7 +303,7 @@ When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
     menu = @driver.find_elements(:class,"menulink").first.click()
     @driver.find_element(:link, submenu).click()}
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -345,7 +345,7 @@ When /^I login with "([^\"]*)" and "([^\"]*)"$/ do |username, password|
     element=@driver.find_element(:class, "Btn1Def")
     element.click
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -363,7 +363,7 @@ Then /^I should be on the authentication failed page$/ do
     @driver.navigate.to "https://devopenam1.slidev.org:80/idp2/UI/Login"
   rescue
  
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -385,7 +385,7 @@ Then /^I click button "([^\"]*)"$/ do |text|
     }
   
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -420,7 +420,7 @@ Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
     end
    
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
@@ -467,7 +467,7 @@ When /^(?:|I )follow "([^\"]*)"$/ do |link|
   begin
     @driver.find_element(:link, link).click
   rescue
-    if @driver.find_element(:tag_name, 'title').text().match('SLI Exception')
+    if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
