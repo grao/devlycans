@@ -977,3 +977,15 @@ div.jbar_IE_zIndex_fix {
 	zoom: 1;
 }*/
 /*flkr menu end*/
+
+.simplemodal-container{
+ -moz-box-shadow: 0 0 20px #888;
+ -webkit-box-shadow: 0 0 20px#888;
+ box-shadow: 0 0 20px #888;
+
+display: block;
+ border:#666666 solid 1px;
+width: 715px;
+background:#FFFFFF;
+padding:20px;
+}
