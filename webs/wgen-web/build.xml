@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-
-<project name="wgen-web" basedir="." default="deploy">
-	<property name="test.properties" value="portal-test.properties" />
-	<import file="../build-common-web.xml" />
-</project>
