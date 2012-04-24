@@ -1,7 +1,11 @@
  
  
 <style type="text/css">
-
+body{
+	margin:0;
+	padding:0;	
+	font: Arial,Helvetica,Verdana,sans-serif;
+}
 .div_main {
 	width : auto;
 	min-height:30px;
@@ -155,6 +159,7 @@ ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
     font-size: 15px;
     text-decoration: none;
 }
+
 </style>
 
 <div id="banner">
