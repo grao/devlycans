@@ -6,7 +6,10 @@
 	width : auto;
 	min-height:30px;
 }
-
+.div_wgen {
+	width : auto;
+	min-height:30px;
+}
 .logo_main, .header_right {
     float: left;
     width: 50%;
