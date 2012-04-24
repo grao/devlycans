@@ -121,7 +121,7 @@ ul.menu_n .last_item{
 	border-left:#999999 solid 1px;
 }
 ul.menu_n a.menulink{
-	background:url("/sli-new-theme/images/custom/arrow_w.png") no-repeat right center;
+	background:url("/sli-new-theme/images/custom/arrow.png") no-repeat right center;
 	line-height:14px;
 } 
 ul.menu_n a.show, ul.menu_n .menulink:hover{
@@ -140,7 +140,7 @@ ul.menu_n ul li.last{
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
-ul.menu_n li.last a.menulink{
+ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
 	background : none;
 }
 
