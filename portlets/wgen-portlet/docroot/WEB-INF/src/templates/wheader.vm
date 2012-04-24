@@ -68,7 +68,7 @@ ul.menu_n ul {
 position:absolute;
 top:20px; display:none; 
 list-style:none; 
-background:url("/WgenWSClient/images/custom/menu_arrow1.png") top no-repeat;
+background:url("/sli-new-theme/images/custom/menu_arrow1.png") top no-repeat;
 border:none;
 width:162px;
 font-size: 14px;
@@ -121,7 +121,7 @@ ul.menu_n .last_item{
 	border-left:#FFFFFF solid 1px;
 }
 ul.menu_n a.menulink{
-	background:url("/WgenWSClient/images/custom/arrow_w.png") no-repeat right center;
+	background:url("/sli-new-theme/images/custom/arrow_w.png") no-repeat right center;
 } 
 
 ul.menu_n .first_item ul{

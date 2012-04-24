@@ -14,7 +14,7 @@
  */
 %>
 
-<div id="messageText">
+<div id="messageText" class="innerModalPopupDiv">
 <%@ include file="/init.jsp" %>
 
 <%

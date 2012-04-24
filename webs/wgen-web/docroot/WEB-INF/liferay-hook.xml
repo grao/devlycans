@@ -13,7 +13,7 @@
 
 	<servlet-filter-mapping>
 		<servlet-filter-name>SSO WGEN SSO Filter</servlet-filter-name>
-		<url-pattern>/c/portal/login</url-pattern>
+		<url-pattern>/*</url-pattern>
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
 	</servlet-filter-mapping>
