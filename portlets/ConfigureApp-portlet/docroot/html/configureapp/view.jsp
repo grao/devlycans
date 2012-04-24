@@ -46,14 +46,14 @@ td a:hover {
 		<td><img src="<%=request.getContextPath()%>/images/cogwheel.png"
 			alt="settings_logo" style="height: 10px; width: 10px" /></td>
 		<td>&nbsp;</td>
-		<td><a href='#' style="color: #000000;text-decoration: none;font-size: 14px;">Dashboards</a></td>
+		<td><a href='#' style="color: #000000;font-size: 14px;">Dashboards</a></td>
 	</tr>
 
 	<tr>
 		<td><img src="<%=request.getContextPath()%>/images/cogwheel.png"
 			alt="settings_logo" style="height: 10px; width: 10px" /></td>
 		<td>&nbsp;</td>
-		<td><a href='#' style="color: #000000;text-decoration: none;font-size: 14px;">App Title</a></td>
+		<td><a href='#' style="color: #000000;font-size: 14px;">App Title</a></td>
 	</tr>
 
 	<tr>
@@ -61,7 +61,7 @@ td a:hover {
 		<td><img src="<%=request.getContextPath()%>/images/cogwheel.png"
 			alt="settings_logo" style="height: 10px; width: 10px" /></td>
 		<td>&nbsp;</td>
-		<td><a href='#' style="color: #000000;text-decoration: none;font-size: 14px;">App Title</a></td>
+		<td><a href='#' style="color: #000000;font-size: 14px;">App Title</a></td>
 	</tr>
 
 
