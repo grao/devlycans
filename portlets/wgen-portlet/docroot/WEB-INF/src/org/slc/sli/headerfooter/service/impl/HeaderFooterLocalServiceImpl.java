@@ -135,7 +135,7 @@ public class HeaderFooterLocalServiceImpl extends
 
 				if (currUrl.contains("web/guest/admin")) {
 					headerData = headerData.replace("[$IS_ADMIN_PAGE$]",
-							"<li><a href=\"/web/guest/home\">Home</a></li>");
+							"<li><a href=\"/portal/web/guest/home\">Home</a></li>");
 					// headerData =
 					// headerData.replace("[$SLI_TEXT$]","<a href=\"/portal/web/guest/home\" style=\"font-weight:normal;\"><span>State Department of Education</span></a>");
 				} else {
