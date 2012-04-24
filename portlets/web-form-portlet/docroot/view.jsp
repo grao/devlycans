@@ -325,4 +325,10 @@ System.out.println("Success URL:->"+successURL+".....>>>>>"+currentURL);
 	);
 </aui:script>
 </div>
+
+<style type="text/css">
+.dockbar{
+	display:none;
+}
+</style>
  
