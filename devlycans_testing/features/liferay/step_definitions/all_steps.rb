@@ -257,13 +257,14 @@ Then /^I should be on the home page$/ do
     wait.until{
     menu = @driver.find_elements(:class,"menulink").first.click()
     submenu=@driver.find_element(:link, 'Logout').displayed? }
-  rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
+  rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error, NoMethodError
     if @driver.page_source.match('SLI Exception')
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
       puts "TimeOut error"
-
+    elsif NoMethodError
+      puts ""
     else
       raise   Selenium::WebDriver::Error::NoSuchElementError
     end
