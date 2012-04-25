@@ -408,9 +408,12 @@ public class WebFormPortlet extends MVCPortlet {
 				return false;
 			}
 
-			String body = getMailBody(fieldsMap);
-			body+="Dear Administrator: "+"User Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\n<h1>Screen Name :</h1> "+preferences.getValue("tempScreenName",StringPool.BLANK)+"\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
-		
+			//String body = getMailBody(fieldsMap);
+			//body+="Dear Administrator: "+"User Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\n&gt;h1&lt;Screen Name :&gt;/h1&lt; "+preferences.getValue("tempScreenName",StringPool.BLANK)+"\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
+		String body="Dear Administrator: \n"+"A user in your school(s) or district has reported the following problem:\n";
+body+="User Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\nScreen Name : "+preferences.getValue("tempScreenName",StringPool.BLANK);
+body+=getMailBody(fieldsMap);
+body+="\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
 			//StringBuilder body = new StringBuilder(512);
            
             /*
