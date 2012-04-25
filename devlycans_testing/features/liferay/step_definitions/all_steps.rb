@@ -103,6 +103,8 @@ end
 
 Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
   begin
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  wait.until{
     a=@driver.find_element(:id, field)
     options=a.find_elements(:tag_name=>"option")
     options.each do |g|
@@ -111,6 +113,7 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
         break
       end
     end
+    }
   rescue
     if @driver.page_source.match('SLI Exception')
       ele=false
@@ -399,6 +402,22 @@ Then /^I click button "([^\"]*)"$/ do |text|
   
 end
 
+And /^I select the "([^\"]*)"$/ do |sel|
+#wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+#wait.until{
+select=@driver.find_element(:tag_name, 'select')
+options=select.find_elements(:tag_name, "option")
+
+     options.each do |g|
+        if g.attribute('value') == sel
+          g.click
+          break
+        end
+      end
+
+
+end
+
 
 And /^I click "([^\"]*)"$/ do |btn|
    
@@ -406,7 +425,13 @@ And /^I click "([^\"]*)"$/ do |btn|
 end
 
 Then /^It open a popup$/ do
-  @driver.navigate.to "https://devlr1.slidev.org/web/guest/report-a-problem"
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  wait.until{
+  frame=@driver.find_element(:tag_name, "iframe")
+  @driver.switch_to.frame(frame)
+  
+  }
+  #@driver.navigate.to "https://devlr1.slidev.org/web/guest/report-a-problem"
 end
 
 
@@ -435,7 +460,21 @@ Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
 end
 
 Then /^I fill "([^"]*)" from "([^"]*)"$/ do |arg1, arg2|
-  @driver.find_element(:id, arg2).send_keys arg1
+ begin
+      @driver.find_element(:id, arg2).send_keys arg1
+     rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
+       if @driver.page_source.match('SLI Exception')
+          ele=false
+          puts "SLI Exception"
+        elsif Timeout::Error
+          puts "TimeOut error"
+        elsif Selenium::WebDriver::Error::NoSuchElementError
+          puts ""
+        else 
+         puts ""
+         # raise   Selenium::WebDriver::Error::NoSuchElementError
+        end
+     end 
 end
 
 Then /^I close the browser$/ do
