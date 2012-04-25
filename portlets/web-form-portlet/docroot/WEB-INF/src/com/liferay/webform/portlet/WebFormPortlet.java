@@ -409,8 +409,19 @@ public class WebFormPortlet extends MVCPortlet {
 			}
 
 			String body = getMailBody(fieldsMap);
-			body+="Dear Administrator: <br/>"+"User Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\nScreen Name : "+preferences.getValue("tempScreenName",StringPool.BLANK)+"\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
-
+			body+="Dear Administrator: "+"User Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\n<h1>Screen Name :</h1> "+preferences.getValue("tempScreenName",StringPool.BLANK)+"\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
+		
+			//StringBuilder body = new StringBuilder(512);
+           
+            /*
+             *appended dynamic html code to divscriptSB instance of StringBuilder
+             */
+            //body.append("<div id=\"");
+            //body.append(div_id);
+            //body.append("\"></div>");
+           
+            //return StringBuilder instance as a String which contains our dynamic html code
+            return divSB.toString();   
 			InternetAddress fromAddress = null;
 
 			try {
