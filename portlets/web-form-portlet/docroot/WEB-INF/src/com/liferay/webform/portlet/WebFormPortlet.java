@@ -409,7 +409,7 @@ public class WebFormPortlet extends MVCPortlet {
 			}
 
 			String body = getMailBody(fieldsMap);
-			body+="User Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\nScreen Name : "+preferences.getValue("tempScreenName",StringPool.BLANK)+"\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
+			body+="Dear Administrator: <br/>"+"User Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\nScreen Name : "+preferences.getValue("tempScreenName",StringPool.BLANK)+"\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
 
 			InternetAddress fromAddress = null;
 
