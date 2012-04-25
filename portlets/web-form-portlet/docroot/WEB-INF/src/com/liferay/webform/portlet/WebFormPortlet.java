@@ -424,7 +424,7 @@ body+="\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+pr
             //body.append("\"></div>");
            
             //return StringBuilder instance as a String which contains our dynamic html code
-            return divSB.toString();   
+            //return divSB.toString();   
 			InternetAddress fromAddress = null;
 
 			try {
