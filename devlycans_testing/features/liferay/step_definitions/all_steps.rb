@@ -404,7 +404,14 @@ end
 
 Then /^I should be on the admin page$/ do
 begin
-  @driver.find_element(:name, "ADMIN").displayed? 
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+wait.until{
+  if @driver.find_element(:name, "ADMIN").displayed? 
+  puts "On the admin Page"
+  else
+  puts "Not an admin Page"
+  end
+  }
   
 rescue
 
@@ -416,7 +423,7 @@ if @driver.page_source.match('SLI Exception')
 
     else
       raise   Selenium::WebDriver::Error::NoSuchElementError
-    end
+   end
 end
 
 end
