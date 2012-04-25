@@ -17,7 +17,7 @@
 
    
 <div id="content_main">
-<div class="home_title"><h10 style="color:#999999;font-family: 'Raleway',sans-serif;font-size: 36px;">ADMIN</h10></div>
+<div class="home_title">ADMIN</div>
 		<div class="portlet-layout">
                 <div class="portlet-column portlet-column-only" id="column-3">
                     $processor.processColumn("column-3", "portlet-column-content portlet-column-content-only")
