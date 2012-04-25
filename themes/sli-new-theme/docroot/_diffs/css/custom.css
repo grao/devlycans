@@ -97,6 +97,7 @@ hr, .separator {
 	margin: 0 auto;
 	width:980px;
 	margin-top:5px;
+	padding-bottom:30px;
 }
 
 body #banner .logo a {
