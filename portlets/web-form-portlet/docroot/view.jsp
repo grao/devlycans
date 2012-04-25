@@ -131,8 +131,8 @@ System.out.println("Success URL:->"+successURL+".....>>>>>"+currentURL);
 					options = WebFormUtil.split(fieldOptions);
 					%>
 
-					<aui:select cssClass='<%= fieldOptional ? "optional" : StringPool.BLANK %>' label="<%= HtmlUtil.escape(fieldLabel) %>" name="Choose One...">
-
+					<aui:select cssClass='<%= fieldOptional ? "optional" : StringPool.BLANK %>' label="<%= HtmlUtil.escape(fieldLabel) %>" name="<%= fieldName %>">
+						<aui:option selected="true" value="">Choose One...</aui:option>
 						<%
 						for (int j = 0; j < options.length; j++) {
 							String optionValue = options[j];
