@@ -402,6 +402,25 @@ Then /^I click button "([^\"]*)"$/ do |text|
   
 end
 
+Then /^I should be on the admin page$/ do
+begin
+  @driver.find_element(:name, "ADMIN").displayed? 
+  
+rescue
+
+if @driver.page_source.match('SLI Exception')
+      ele=false
+      puts "SLI Exception"
+    elsif Timeout::Error
+      puts "TimeOut error"
+
+    else
+      raise   Selenium::WebDriver::Error::NoSuchElementError
+    end
+end
+
+end
+
 And /^I select the "([^\"]*)"$/ do |sel|
 #wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 #wait.until{
