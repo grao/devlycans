@@ -14,8 +14,3 @@ AUI().ready(
 		}
 	}
 );
-
-	var menu_n=new menu_n.dd("menu_n");
-	menu_n.init("menu_n","menuhover");
-
-	
