@@ -39,7 +39,10 @@ sudo chown tomcat:tomcat $TOMCAT_HOME/conf/Catalina/localhost/portal.xml
 sudo chmod 600 $TOMCAT_HOME/conf/Catalina/localhost/portal.xml
 
 # Copy the liferay war (renamed to portal.war) into tomcat
-sudo cp liferay-portal-6.1.0-ce-ga1-20120106155615760.war $TOMCAT_HOME/webapps/portal.war
+#sudo cp liferay-portal-6.1.0-ce-ga1-20120106155615760.war $TOMCAT_HOME/webapps/portal.war
+# TAPAN AVASTHI
+# Rename the Liferay WAR before deploy 
+mv liferay-portal-6.1.0-ce-ga1-20120106155615760.war portal.war
 
 #TODO: find a better way to set LIFERAY_HOME (instead of $TOMCAT_HOME's parent)
 sudo cp conf/portal-ext.properties $TOMCAT_HOME/../
