@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="title" skipped="0" tests="12" time="730.705429">
+<testcase classname="title.-User Login through SSD Realm with wrong username and password" name="-User Login through SSD Realm with wrong username and password" time="22.639407">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose No filter" name="-User Login through SSD Realm and choose No filter" time="55.717988">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose English Language Learner" name="-User Login through SSD Realm and choose English Language Learner" time="65.723913">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose English Language Learner (former)" name="-User Login through SSD Realm and choose English Language Learner (former)" time="61.348952">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose Section 504" name="-User Login through SSD Realm and choose Section 504" time="54.730093">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose Section 504 (former)" name="-User Login through SSD Realm and choose Section 504 (former)" time="56.102260">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose IEP" name="-User Login through SSD Realm and choose IEP" time="52.524649">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose IEP (former)" name="-User Login through SSD Realm and choose IEP (former)" time="125.879155">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose Custom Program" name="-User Login through SSD Realm and choose Custom Program" time="60.122618">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose Repeating Grade" name="-User Login through SSD Realm and choose Repeating Grade" time="62.629250">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose Reduced Lunch" name="-User Login through SSD Realm and choose Reduced Lunch" time="55.595654">
+</testcase>
+<testcase classname="title.-User Login through SSD Realm and choose Free Lunch" name="-User Login through SSD Realm and choose Free Lunch" time="57.691489">
+</testcase>
+</testsuite>

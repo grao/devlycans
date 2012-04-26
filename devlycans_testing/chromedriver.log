@@ -1,0 +1,65 @@
+[0.000][INFO]:      ChromeDriver 19.0.1068.0 /usr/bin/chromedriver
+[0.251][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.detach": true,
+   "chromeOptions": {
+      "detach": true
+   },
+   "cssSelectorsEnabled": true,
+   "javascriptEnabled": true,
+   "nativeEvents": false,
+   "platform": "ANY",
+   "rotatable": false,
+   "takesScreenshot": false,
+   "version": ""
+}
+
+[0.251][INFO]:      Using named testing interface
+[0.616][INFO]:      Connected to Chrome successfully. Version: 17.0.963.83
+[0.663][FINE]:      Command received (/session/f166f38d2afd7347fd4cb5afe035a14f)
+[0.663][FINE]:      Command finished (/session/f166f38d2afd7347fd4cb5afe035a14f) with response {
+   "sessionId": "f166f38d2afd7347fd4cb5afe035a14f",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "19.0.1068.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "linux",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "17.0.963.83",
+      "webStorageEnabled": false
+   }
+}
+
+[0.664][FINE]:      Command received (/session/f166f38d2afd7347fd4cb5afe035a14f/timeouts/implicit_wait) with params {
+   "ms": 2000
+}
+
+[0.664][FINER]:     Waiting for all views to stop loading...
+[0.665][FINER]:     Done waiting for all views to stop loading
+[0.665][FINER]:     Waiting for all views to stop loading...
+[0.665][FINER]:     Done waiting for all views to stop loading
+[0.665][FINE]:      Command finished (/session/f166f38d2afd7347fd4cb5afe035a14f/timeouts/implicit_wait) with response {
+   "sessionId": "f166f38d2afd7347fd4cb5afe035a14f",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[0.666][FINE]:      Command received (/session/f166f38d2afd7347fd4cb5afe035a14f/url) with params {
+   "url": "https://devlycans.slidev.org/portal"
+}
+
+[0.666][FINER]:     Waiting for all views to stop loading...
+[0.667][FINER]:     Done waiting for all views to stop loading
