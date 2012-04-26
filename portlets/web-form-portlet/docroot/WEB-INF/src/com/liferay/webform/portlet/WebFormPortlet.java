@@ -413,6 +413,7 @@ public class WebFormPortlet extends MVCPortlet {
 		String body="Dear Administrator: \n"+"\nA user in your school(s) or district has reported the following problem:\n";
 body+="\nUser Name : "+preferences.getValue("tempUsrName" ,StringPool.BLANK)+"\nScreen Name : "+preferences.getValue("tempScreenName",StringPool.BLANK);
 body+="\n"+getMailBody(fieldsMap);
+body+="\n";
 body+="\nURL : "+preferences.getValue("tempURL",StringPool.BLANK)+"\nDate : "+preferences.getValue("tempUsrDateStamp",StringPool.BLANK);
 			 
 			InternetAddress fromAddress = null;
