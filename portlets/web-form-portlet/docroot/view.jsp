@@ -169,7 +169,7 @@ System.out.println("Success URL:->"+successURL+".....>>>>>"+currentURL);
 
 		<div class="pop_btn_pnl">
 		<aui:button type="submit" value="Report a Problem" />
-		<aui:button type="button" onClick="javascript: closePopup(300);" value="Cancel" />
+		<aui:button type="button" onClick="parent.closePop()" value="Cancel" />
         </div>
 	</aui:fieldset>
 </aui:form>
