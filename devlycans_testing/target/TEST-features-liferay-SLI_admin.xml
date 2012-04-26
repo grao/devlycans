@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="49.652734">
-<testcase classname="title.Admin User Login with wrong username and password" name="Admin User Login with wrong username and password" time="20.476943">
+<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="127.305525">
+<testcase classname="title.Admin User Login with wrong username and password" name="Admin User Login with wrong username and password" time="26.901369">
 </testcase>
-<testcase classname="title.Admin User Login" name="Admin User Login" time="29.175791">
+<testcase classname="title.Admin User Login" name="Admin User Login" time="100.404156">
 </testcase>
 </testsuite>

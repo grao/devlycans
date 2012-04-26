@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="149.688010">
-<testcase classname="title.-SSD Realm with wsrp link click" name="-SSD Realm with wsrp link click" time="40.503551">
+<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="64.973212">
+<testcase classname="title.-SSD Realm with wsrp link click" name="-SSD Realm with wsrp link click" time="33.414437">
 </testcase>
-<testcase classname="title.-Admin User with wsrp link click" name="-Admin User with wsrp link click" time="109.184458">
+<testcase classname="title.-Admin User with wsrp link click" name="-Admin User with wsrp link click" time="31.558775">
 </testcase>
 </testsuite>

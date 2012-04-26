@@ -731,7 +731,7 @@ ul.menu_n ul li.last{
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
-ul.menu_n li.last a.menulink{
+ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
 	background : none;
 }
 
@@ -989,4 +989,5 @@ display: block;
 width: 715px;
 background:#FFFFFF;
 padding:20px!important;
+margin : 0px;
 }
