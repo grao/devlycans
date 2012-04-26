@@ -53,7 +53,7 @@ System.out.println("Success URL:->"+successURL+".....>>>>>"+currentURL);
 	<aui:fieldset label="Report a Problem">
 		<em class="description"><%= HtmlUtil.escape(description) %></em>
 
-		<liferay-ui:success key="success" message="the-form-information-was-sent-successfully" />
+		<!--<liferay-ui:success key="success" message="the-form-information-was-sent-successfully" />-->
 
 		<liferay-ui:error exception="<%= CaptchaMaxChallengesException.class %>" message="maximum-number-of-captcha-attempts-exceeded" />
 		<liferay-ui:error exception="<%= CaptchaTextException.class %>" message="text-verification-failed" />
