@@ -18,6 +18,6 @@
 Thank you!
 </p>
 <br/>
-<p>We have sent this problem report to the operation team for further investigation.  <br/>Someone may follow up with you directly for more clarification and confirmation.</p>  
+<p>We have sent this problem report to the operation team for further investigation.<br/>Someone may follow up with you directly for more clarification and confirmation.</p>  
 
 <input type="button" onclick="parent.closePop()" value="Close"/>
