@@ -170,7 +170,7 @@
 		<header-portlet-javascript>/html/portlet/journal/js/main.js</header-portlet-javascript>
 		<css-class-wrapper>portlet-journal</css-class-wrapper>
 		<add-default-resource>true</add-default-resource>
-		<include>false</include>
+		<include>true</include>
 	</portlet>
 	<portlet>
 		<portlet-name>16</portlet-name>
