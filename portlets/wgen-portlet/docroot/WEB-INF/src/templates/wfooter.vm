@@ -22,6 +22,6 @@
 	color:#CCCCCC;
 }
 </style>
-<footer id="footer">
- <div class="footer_wrap"> $footer</div>
+<footer id="sli_footer">
+ <div class="sli_footer_wrap"> $footer</div>
 </footer>

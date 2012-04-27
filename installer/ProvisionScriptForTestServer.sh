@@ -5,19 +5,19 @@
 #MAKE SURE TOMCAT_HOME is set correctly
 mkdir /opt/sli
 cd /opt/sli
-export TOMCAT_HOME=/opt/sli 
+export TOMCAT_HOME=/opt/tomcat 
 
 wget http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/6.1.0%20GA1/liferay-portal-6.1.0-ce-ga1-20120106155615760.war
 mv liferay-portal-6.1.0-ce-ga1-20120106155615760.war portal.war
 
-sudo cp /opt/sli/portal.war /opt/sli/webapps
-cd /opt/sli/webapps/
-ls /opt/sli/webapps
+sudo cp /opt/tomcat/portal.war /opt/sli/webapps
+cd /opt/tomcat/webapps/
+ls /opt/tomcat/webapps
  
-sh /opt/sli/bin/catalina.sh start
+sh /opt/tomcat/bin/catalina.sh start
 sleep 3
-rm -rf /opt/sli/webapps/portal.war
-sh /opt/sli/bin/catalina.sh stop
+rm -rf /opt/tomcat/webapps/portal.war
+sh /opt/tomcat/bin/catalina.sh stop
 
 
 #The setenv.sh has settings for the JVM that are used when tomcat starts
