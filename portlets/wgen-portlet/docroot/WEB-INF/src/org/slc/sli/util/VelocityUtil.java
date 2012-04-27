@@ -34,9 +34,9 @@ public class VelocityUtil {
 			/* create a context and add data */
 			VelocityContext context = new VelocityContext();
 			context.put("header", headerRes);
-			context.put("menu_arrow1","data:image/png;base64,"+getEncodedImg("images/menu_arrow1.png"));
-			context.put("arrow","data:image/png;base64,"+getEncodedImg("images/arrow.png"));
-			context.put("arrow_w","data:image/png;base64,"+getEncodedImg("images/arrow_w.png"));
+			context.put("menu_arrow1","data:image/png;base64,"+getEncodedImg("/org/images/menu_arrow1.png"));
+			context.put("arrow","data:image/png;base64,"+getEncodedImg("/org/images/arrow.png"));
+			context.put("arrow_w","data:image/png;base64,"+getEncodedImg("/org/images/arrow_w.png"));
 			//context.put("sli_logo","<img alt=\"sli_logo\" src=\""+getEncodedImg("images/sli_logo_icn.png")+"\"/>");
 			/* now render the template into a StringWriter */
 
