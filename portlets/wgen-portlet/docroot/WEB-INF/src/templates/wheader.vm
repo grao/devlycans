@@ -51,13 +51,13 @@ body{
 box-shadow: 0 0 20px #888;
 }
 
-#banner {
+#WSbanner {
     background: none repeat scroll 0 0 #333333;
     height: auto;
     padding: 0;
 }
 
-#banner #heading {
+#WSbanner #heading {
     margin: 0 auto;
     width: 980px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -73,7 +73,7 @@ ul.menu_n ul {
 position:absolute;
 top:28px; display:none; 
 list-style:none; 
-background:url("/sli-new-theme/images/custom/menu_arrow1.png") top no-repeat;
+background:url($menu_arrow1) top no-repeat;
 border:none;
 width:162px;
 font-size: 14px;
@@ -126,11 +126,11 @@ ul.menu_n .last_item{
 	border-left:#999999 solid 1px;
 }
 ul.menu_n a.menulink{
-	background:url("/sli-new-theme/images/custom/arrow.png") no-repeat right center;
+	background:url($arrow) no-repeat right center;
 	line-height:14px;
 } 
 ul.menu_n a.show, ul.menu_n .menulink:hover{
-	background:url("/sli-new-theme/images/custom/arrow_w.png") no-repeat right center;
+	background:url($arrow_w) no-repeat right center;
 	color: #FFFFFF;
 } 
 ul.menu_n .first_item ul{
@@ -163,7 +163,7 @@ ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
 
 </style>
 
-<div id="banner">
+<div id="WSbanner">
 	<div id="heading">
 
 $header

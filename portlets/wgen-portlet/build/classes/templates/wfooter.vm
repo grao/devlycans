@@ -1,1 +1,27 @@
-<div style="border-top:2px solid #E5E5E5">$footer</div>
+
+<style type="text/css">
+#footer {
+	text-align: left;
+	padding-top:5px;
+	padding-bottom:0px;
+	position:fixed;
+	bottom:0;
+}
+#footer .footer_wrap{
+	width:980px;
+	margin:0 auto;
+	border-top:#E5E5E5 solid 2px;
+	background:#FFFFFF;
+}
+
+#footer .footer_wrap p{
+	margin:0;
+}
+
+#footer a{
+	color:#CCCCCC;
+}
+</style>
+<footer id="footer">
+ <div class="footer_wrap"> $footer</div>
+</footer>

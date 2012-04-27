@@ -132,8 +132,10 @@ public class HeaderFooterLocalServiceImpl extends
 				UserData userdata = RolesUtil.getUserData(token);
 				String fullName = getFullName(userdata);
 				boolean isAdmin = isAdmin(userdata);
+				
+				headerData = headerData.replace("[$SLI_LOGO$]","<img alt=\"\" class=\"company-logo\" height=\"17\" src=\"/sli-new-theme/images/custom/sli_logo_icn.png\" width=\"21\" />");
 
-				if (currUrl.contains("web/guest/admin")) {
+				/*if (currUrl.contains("web/guest/admin")) {
 					headerData = headerData.replace("[$IS_ADMIN_PAGE$]",
 							"<li><a href=\"/portal/web/guest/home\">Home</a></li>");
 					// headerData =
@@ -142,7 +144,7 @@ public class HeaderFooterLocalServiceImpl extends
 					headerData = headerData.replace("[$IS_ADMIN_PAGE$]", "");
 					// headerData =
 					// headerData.replace("[$SLI_TEXT$]","<a href=\"/portal/web/guest/home\" style=\"font-weight:normal;\"><span>SLI Portal</span></a>");
-				}
+				}*/
 
 				if (isAdmin) {
 					headerData = headerData
