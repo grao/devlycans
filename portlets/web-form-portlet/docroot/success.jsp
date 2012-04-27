@@ -14,6 +14,7 @@
  */
 --%>
 <%@ include file="/init.jsp" %>
+<div style="margin-top:70px;margin-left:10px;" >
 <p>
 <strong>Thank you!</strong>
 </p>
@@ -21,3 +22,4 @@
 <p>We have sent this problem report to the operation team for further investigation.<br/>Someone may follow up with you directly for more clarification and confirmation.</p>  
 
 <input type="button" onclick="parent.closePop()" value="Close"/>
+</div>
