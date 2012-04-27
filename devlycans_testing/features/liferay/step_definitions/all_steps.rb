@@ -103,8 +103,8 @@ end
 
 Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
   begin
-  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-  wait.until{
+  #wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+ # wait.until{
     a=@driver.find_element(:id, field)
     options=a.find_elements(:tag_name=>"option")
     options.each do |g|
@@ -113,17 +113,17 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
         break
       end
     end
-    }
+   # }
   rescue
     if @driver.page_source.match('SLI Exception')
-      ele=false
-      puts "SLI Exception"
-    elsif Timeout::Error
+     ele=false
+     puts "SLI Exception"
+   elsif Timeout::Error
       puts "TimeOut error"
 
-    else
-      raise   Selenium::WebDriver::Error::NoSuchElementError
-    end
+   else
+    raise   Selenium::WebDriver::Error::NoSuchElementError
+   end
   end
 end
 
