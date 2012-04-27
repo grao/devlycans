@@ -15,7 +15,7 @@
 --%>
 <%@ include file="/init.jsp" %>
 <p>
-Thank you!
+<strong>Thank you!</strong>
 </p>
 <br/>
 <p>We have sent this problem report to the operation team for further investigation.<br/>Someone may follow up with you directly for more clarification and confirmation.</p>  

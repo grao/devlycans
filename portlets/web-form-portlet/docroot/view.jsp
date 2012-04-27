@@ -148,6 +148,9 @@ System.out.println("Success URL:->"+successURL+".....>>>>>"+currentURL);
 					</aui:select>
 				</c:when>
 			</c:choose>
+			<div>
+				Please describe your problem in as much detail as possible in the space below.  We already have logged the time and page location of this problem.<strong>  Do not include private student data or passwords in this field.</strong>
+			</div>
 
 		<%
 			i++;
