@@ -14,7 +14,7 @@ body{
 	width : auto;
 	min-height:30px;
 }
-.sli_logo_main, .header_right {
+.sli_logo_main, .sli_header_right {
     float: left;
     width: 50%;
     margin:5px 0 0
@@ -66,7 +66,7 @@ box-shadow: 0 0 20px #888;
 
 #sli_banner {
 	background: #333333;
-	height: auto;
+	min-height:28px;
 	padding:0;
 }
 
