@@ -122,6 +122,7 @@ public class RESTClient {
     }
 
     public void setSecurityUrl(String securityUrl) {
+    	logger.info("inside app sel interface portlet..."+securityUrl);
         this.securityUrl = securityUrl;
     }
 

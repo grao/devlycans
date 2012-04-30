@@ -4,6 +4,7 @@ import com.liferay.portal.kernel.util.Validator;
 import org.slc.sli.login.json.bean.UserData;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.PropsUtil;
+import org.slc.sli.util.PropsKeys;
 /**
  * WgenUtil.java
  * 
@@ -24,8 +25,8 @@ public class WgenUtil {
 		if(Validator.isNotNull(userdata)){
 			String[] granted_authorities = userdata.getGranted_authorities();
 			for(String role : granted_authorities){
-				if(role.equalsIgnoreCase(GetterUtil.getString(PropsUtil.get(WgenPropsKeys.ROLE_IT_ADMINISTRATOR))) || 
-						role.equalsIgnoreCase( GetterUtil.getString(PropsUtil.get(WgenPropsKeys.ROLE_SLI_ADMINISTRATOR))))
+				if(role.equalsIgnoreCase(GetterUtil.getString(PropsUtil.get(PropsKeys.ROLE_IT_ADMINISTRATOR))) || 
+						role.equalsIgnoreCase( GetterUtil.getString(PropsUtil.get(PropsKeys.ROLE_SLI_ADMINISTRATOR))))
 				{
 					isAdmin=true;
 					break;
