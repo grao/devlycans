@@ -5,16 +5,7 @@ require_relative '../../utils/selenium_common.rb'
 
 
 
-Given /^an admin user Demo exists with "([^\"]*)" and "([^\"]*)"$/ do |username,password|
-  
 
-end
-
-Given /^a normal user Educator exists with "([^\"]*)" and "([^\"]*)"$/ do |username,password|
-  
-  #User.new(:username => username, :password => password, :password_confirmation => password).save! unless User.exists?(:username => username)
-  # User.exists?(:username => username)
-end
 
 Then /^I am on the Realm selection page$/ do
   @driver.navigate.to "https://devlycans.slidev.org/portal"
@@ -43,7 +34,7 @@ Then /^I select "([^\"]*)"$/ do |text|
       raise   Selenium::WebDriver::Error::NoSuchElementError
     end
   end
-  #select(text, :from => 'realmId') 
+ 
 end
 
 Then /^I follow all the wsrp links$/ do
@@ -182,9 +173,7 @@ When /^I go to the login page$/ do
   end
   
 
-  #visit "https://devlr2.slidev.org"
-  # select('Shared Learning Infrastructure', :from => 'realmId')
-  #click_button('Go')
+  
 end
 
 
@@ -325,14 +314,7 @@ When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
 end
 
 
-#Then /^(?:|I )should be on (.+)$/ do |page_name|
-#  current_path = URI.parse(current_url).select(:path, :query).compact.join('?')
-#  if defined?(Spec::Rails::Matchers)
-#    current_path.should == path_to(page_name)
-#  else
-#    assert_equal path_to(page_name), current_path
-#  end
-#end
+
 
 Given /^I should remove all cookies$/ do
   @driver.manage.delete_all_cookies
@@ -457,7 +439,7 @@ Then /^It open a popup$/ do
   @driver.switch_to.frame(frame)
   
   }
-  #@driver.navigate.to "https://devlr1.slidev.org/web/guest/report-a-problem"
+ 
 end
 
 
@@ -515,7 +497,7 @@ Then /^(?:|I )should see "([^\"]*)"$/ do |text|
     link=false
   end
   link 
-  #page.should have_content(text)
+ 
 end
 
 Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
@@ -527,7 +509,7 @@ Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
   end 
   link
 
-  #  page.should_not have_content(text)
+ 
 end
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
   begin
@@ -543,15 +525,8 @@ When /^(?:|I )follow "([^\"]*)"$/ do |link|
       raise   Selenium::WebDriver::Error::NoSuchElementError
     end
   end
-  #click_link(link)
+ 
 end
 
 
-#Then /^(?:|I )should be on (.+)$/ do |page_name|
-#  current_path = URI.parse(current_url).select(:path, :query).compact.join('?')
-#  if defined?(Spec::Rails::Matchers)
-#    current_path.should == path_to(page_name)
-#  else
-#    assert_equal path_to(page_name), current_path
-#  end
-#end
+
