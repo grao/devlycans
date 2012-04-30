@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="81.178073">
-<testcase classname="title.Report a problem cancelation for SLI admin User for Happy submission" name="Report a problem cancelation for SLI admin User for Happy submission" time="39.733858">
+<testsuite errors="0" failures="0" name="title" skipped="0" tests="2" time="89.997389">
+<testcase classname="title.Report a problem cancelation for SLI admin User for Happy submission" name="Report a problem cancelation for SLI admin User for Happy submission" time="42.428141">
 </testcase>
-<testcase classname="title.Report a problem submission for SLI admin User for non Happy submission or blank submission" name="Report a problem submission for SLI admin User for non Happy submission or blank submission" time="41.444216">
+<testcase classname="title.Report a problem submission for SLI admin User for non Happy submission or blank submission" name="Report a problem submission for SLI admin User for non Happy submission or blank submission" time="47.569247">
 </testcase>
 </testsuite>

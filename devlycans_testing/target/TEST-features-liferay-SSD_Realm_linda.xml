@@ -1,27 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" name="title" skipped="0" tests="12" time="730.705429">
-<testcase classname="title.-User Login through SSD Realm with wrong username and password" name="-User Login through SSD Realm with wrong username and password" time="22.639407">
+<testsuite errors="0" failures="2" name="title" skipped="0" tests="8" time="358.691434">
+<testcase classname="title.-User Login through SSD Realm with wrong username and password" name="-User Login through SSD Realm with wrong username and password" time="27.141298">
 </testcase>
-<testcase classname="title.-User Login through SSD Realm and choose No filter" name="-User Login through SSD Realm and choose No filter" time="55.717988">
+<testcase classname="title.-User Login through SSD Realm and choose No filter" name="-User Login through SSD Realm and choose No filter" time="43.770024">
 </testcase>
-<testcase classname="title.-User Login through SSD Realm and choose English Language Learner" name="-User Login through SSD Realm and choose English Language Learner" time="65.723913">
+<testcase classname="title.-User Login through SSD Realm and choose English Language Learner" name="-User Login through SSD Realm and choose English Language Learner" time="44.367182">
 </testcase>
-<testcase classname="title.-User Login through SSD Realm and choose English Language Learner (former)" name="-User Login through SSD Realm and choose English Language Learner (former)" time="61.348952">
+<testcase classname="title.-User Login through SSD Realm and choose English Language Learner (former)" name="-User Login through SSD Realm and choose English Language Learner (former)" time="44.785963">
 </testcase>
-<testcase classname="title.-User Login through SSD Realm and choose Section 504" name="-User Login through SSD Realm and choose Section 504" time="54.730093">
+<testcase classname="title.-User Login through SSD Realm and choose Section 504" name="-User Login through SSD Realm and choose Section 504" time="45.993444">
 </testcase>
-<testcase classname="title.-User Login through SSD Realm and choose Section 504 (former)" name="-User Login through SSD Realm and choose Section 504 (former)" time="56.102260">
+<testcase classname="title.-User Login through SSD Realm and choose Section 504 (former)" name="-User Login through SSD Realm and choose Section 504 (former)" time="43.129159">
 </testcase>
-<testcase classname="title.-User Login through SSD Realm and choose IEP" name="-User Login through SSD Realm and choose IEP" time="52.524649">
+<testcase classname="title.-User Login through SSD Realm and choose IEP" name="-User Login through SSD Realm and choose IEP" time="104.017680">
+  <failure message="failed -User Login through SSD Realm and choose IEP" type="failed">
+    <![CDATA[Scenario: -User Login through SSD Realm and choose IEP
+
+Given I have an open web browser
+Then I am on the Realm selection page
+Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
+When I login with "linda.kim" and "linda.kim1234"
+Then I should be on the home page
+Then I should see " Dashboard"
+Then I follow the home page Dashboard
+Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
+Then I select "Daybreak School District 4529" from "edOrgSelect"
+Then I select "East Daybreak Junior High" from "schoolSelect"
+
+Message:
+]]>
+    <![CDATA[Timeout::Error (Timeout::Error)
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:146:in `rescue in rbuf_fill'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:140:in `rbuf_fill'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:122:in `readuntil'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:132:in `readline'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:2562:in `read_status_line'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:2551:in `read_new'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1319:in `block in transport_request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1316:in `catch'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1316:in `transport_request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1293:in `request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1286:in `block in request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:745:in `start'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1284:in `request'
+./features/liferay/step_definitions/all_steps.rb:185:in `rescue in block in <top (required)>'
+./features/liferay/step_definitions/all_steps.rb:181:in `/^I follow the home page Dashboard$/'
+features/liferay/SSD_Realm_linda.feature:153:in `Then I follow the home page Dashboard']]>
+  </failure>
 </testcase>
-<testcase classname="title.-User Login through SSD Realm and choose IEP (former)" name="-User Login through SSD Realm and choose IEP (former)" time="125.879155">
-</testcase>
-<testcase classname="title.-User Login through SSD Realm and choose Custom Program" name="-User Login through SSD Realm and choose Custom Program" time="60.122618">
-</testcase>
-<testcase classname="title.-User Login through SSD Realm and choose Repeating Grade" name="-User Login through SSD Realm and choose Repeating Grade" time="62.629250">
-</testcase>
-<testcase classname="title.-User Login through SSD Realm and choose Reduced Lunch" name="-User Login through SSD Realm and choose Reduced Lunch" time="55.595654">
-</testcase>
-<testcase classname="title.-User Login through SSD Realm and choose Free Lunch" name="-User Login through SSD Realm and choose Free Lunch" time="57.691489">
+<testcase classname="title.-User Login through SSD Realm and choose IEP (former)" name="-User Login through SSD Realm and choose IEP (former)" time="5.486684">
+  <failure message="failed -User Login through SSD Realm and choose IEP (former)" type="failed">
+    <![CDATA[Scenario: -User Login through SSD Realm and choose IEP (former)
+
+Given I have an open web browser
+Then I am on the Realm selection page
+Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
+When I login with "linda.kim" and "linda.kim1234"
+Then I should be on the home page
+Then I should see " Dashboard"
+Then I follow the home page Dashboard
+Then I select "4cb03fa0-83ad-46e2-a936-09ab31af377e"
+Then I should see "Learning Map"
+Then I should see "Dashboard"
+Then I select "Daybreak School District 4529" from "edOrgSelect"
+Then I select "East Daybreak Junior High" from "schoolSelect"
+
+Message:
+]]>
+    <![CDATA[end of file reached (EOFError)
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:141:in `read_nonblock'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:141:in `rbuf_fill'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:122:in `readuntil'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/protocol.rb:132:in `readline'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:2562:in `read_status_line'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:2551:in `read_new'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1319:in `block in transport_request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1316:in `catch'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1316:in `transport_request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1293:in `request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1286:in `block in request'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:745:in `start'
+/home/fladmin/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/net/http.rb:1284:in `request'
+./features/liferay/step_definitions/all_steps.rb:11:in `/^I am on the Realm selection page$/'
+features/liferay/SSD_Realm_linda.feature:173:in `Then I am on the Realm selection page']]>
+  </failure>
 </testcase>
 </testsuite>
