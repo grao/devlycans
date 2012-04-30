@@ -164,7 +164,7 @@ ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
 </style>
 
 <div id="WSbanner">
-	<div id="heading">
+	<div id="sli_heading">
 
 $header
     </div>

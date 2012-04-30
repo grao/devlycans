@@ -57,7 +57,8 @@ public class HeaderFooterServiceImpl extends HeaderFooterServiceBaseImpl {
 		String header = headerFooterLocalService.getHeader(isAdmin);
 	    String headerWithLogo="";
 		try {
-			headerWithLogo = header.replace("[$SLI_LOGO$]","<img alt=\"sli_logo\" src=\""+VelocityUtil.getEncodedImg(PortletPropsValues.SLI_LOGO)+"\"/>");
+			//headerWithLogo = header.replace("[$SLI_LOGO$]","<img alt=\"sli_logo\" src=\""+VelocityUtil.getEncodedImg(PortletPropsValues.SLI_LOGO)+"\"/>");
+			headerWithLogo = header.replace("[$SLI_LOGO$]","<img alt=\"sli_logo\" src=\"data:image/png;base64,"+VelocityUtil.getEncodedImg(PortletPropsValues.SLI_LOGO)+"\"/>");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
