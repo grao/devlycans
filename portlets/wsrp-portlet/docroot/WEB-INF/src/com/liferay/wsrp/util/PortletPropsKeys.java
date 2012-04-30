@@ -19,14 +19,20 @@ package com.liferay.wsrp.util;
  */
 public class PortletPropsKeys {
 
-	public static final String CONSUMER_REQUEST_EXTENSIONS = "consumer.request.extensions";
+	public static final String CONSUMER_REQUEST_EXTENSIONS =
+		"consumer.request.extensions";
 
 	public static final String PROXY_URL_IPS_ALLOWED = "proxy.url.ips.allowed";
 
-	public static final String SECURE_RESOURCE_URLS_ENABLED = "secure.resource.urls.enabled";
+	public static final String SECURE_RESOURCE_URLS_ENABLED =
+		"secure.resource.urls.enabled";
 
-	public static final String SECURE_RESOURCE_URLS_SALT = "secure.resource.urls.salt";
+	public static final String SECURE_RESOURCE_URLS_SALT =
+		"secure.resource.urls.salt";
 
 	public static final String SOAP_DEBUG = "soap.debug";
+	
+	public static final String TEMPLATE_PROCESSING_ENABLED =
+		"template.processing.enabled";
 
 }

@@ -29,8 +29,6 @@ import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.Http;
 import com.liferay.portal.kernel.util.HttpUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
-import com.liferay.portal.kernel.util.PropsKeys;
-import com.liferay.portal.kernel.util.PropsUtil;
 import com.liferay.portal.kernel.util.StreamUtil;
 import com.liferay.portal.kernel.util.StringBundler;
 import com.liferay.portal.kernel.util.StringPool;
@@ -149,7 +147,7 @@ import oasis.names.tc.wsrp.v2.types.UserProfile;
 
 import org.apache.axis.client.Stub;
 import org.apache.axis.message.MessageElement;
-import org.slc.sli.util.WgenPropsKeys;
+
 /**
  * @author Brian Wing Shun Chan
  * @author Michael Young
@@ -1218,10 +1216,7 @@ public class ConsumerPortlet extends GenericPortlet {
 		Boolean doesUrlTemplateProcessing =
 			portletDescription.getDoesUrlTemplateProcessing();
 		
-		boolean enableTemplateProcessing = 	
-				GetterUtil.getBoolean(PropsUtil.get(WgenPropsKeys.TEMPLATE_PROCESSING_ENABLED));
-		
-		if ((doesUrlTemplateProcessing != null) && doesUrlTemplateProcessing && enableTemplateProcessing ) {
+		if ((doesUrlTemplateProcessing != null) && doesUrlTemplateProcessing && PortletPropsValues.TEMPLATE_PROCESSING_ENABLED ) {
 			Templates templates = new Templates();
 
 			templates.setBlockingActionTemplate(_BLOCKING_ACTION_TEMPLATE);

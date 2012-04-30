@@ -22,9 +22,7 @@ import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.JavaConstants;
 import com.liferay.portal.util.PortalUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.util.PropsUtil;
-import com.wgen.util.PropsKeys;
+import com.wgen.util.PortletPropsValues;
 
 /**
  * Portlet implementation class AppSelectionInterfacePortlet
@@ -51,15 +49,13 @@ public class AppSelectionInterfacePortlet extends MVCPortlet {
 	}
 
 	/**
-	 * <b> This method process wsrl action and opens wsrp page with appropriate
-	 * wsrp portlet</b>
-	 * 
+	 * <b> This method process wsrl action and opens wsrp page with appropriate wsrp portlet</b>
 	 * @param actionRequest
 	 * @param actionResponse
 	 * @throws IOException
 	 * @throws PortletException
 	 */
-
+	
 	@ProcessAction(name = "openwsrppage")
 	public void processWsrpAction(ActionRequest actionRequest,
 			ActionResponse actionResponse) throws IOException, PortletException {
@@ -68,22 +64,16 @@ public class AppSelectionInterfacePortlet extends MVCPortlet {
 		actionResponse.setEvent(new QName("http:wgen.com/events", "wsrpurl"),
 				url);
 
-		String wsrpPage = GetterUtil.getString(PropsUtil
-				.get(PropsKeys.WSRP_PAGE));
-
-		// Hide default success Message
-		PortletConfig portletConfig = (PortletConfig) actionRequest
-				.getAttribute(JavaConstants.JAVAX_PORTLET_CONFIG);
-		SessionMessages.add(actionRequest, portletConfig.getPortletName()
-				+ SessionMessages.KEY_SUFFIX_HIDE_DEFAULT_ERROR_MESSAGE);
-
+		String wsrpPage = PortletPropsValues.WSRP_PAGE;
+		//Hide default success Message
+		PortletConfig portletConfig = (PortletConfig)actionRequest.getAttribute(JavaConstants.JAVAX_PORTLET_CONFIG);
+		SessionMessages.add(actionRequest, portletConfig.getPortletName() + SessionMessages.KEY_SUFFIX_HIDE_DEFAULT_ERROR_MESSAGE);
+		
 		actionResponse.sendRedirect(wsrpPage);
 	}
 
 	/**
-	 * <b> This method process Iframe action and opens Iframe page with proper
-	 * url</b>
-	 * 
+	 * <b> This method process Iframe action and opens Iframe page with proper url</b>
 	 * @param actionRequest
 	 * @param actionResponse
 	 * @throws IOException
@@ -98,15 +88,12 @@ public class AppSelectionInterfacePortlet extends MVCPortlet {
 		actionResponse.setEvent(new QName("http:wgen.com/events", "iframeurl"),
 				url);
 
-		String iframePage = GetterUtil.getString(PropsUtil
-				.get(PropsKeys.IFRAME_PAGE));
-
-		// Hide default success message
-		PortletConfig portletConfig = (PortletConfig) actionRequest
-				.getAttribute(JavaConstants.JAVAX_PORTLET_CONFIG);
-		SessionMessages.add(actionRequest, portletConfig.getPortletName()
-				+ SessionMessages.KEY_SUFFIX_HIDE_DEFAULT_ERROR_MESSAGE);
-
+		String iframePage = PortletPropsValues.IFRAME_PAGE;
+		
+		//Hide default success message
+		PortletConfig portletConfig = (PortletConfig)actionRequest.getAttribute(JavaConstants.JAVAX_PORTLET_CONFIG);
+		SessionMessages.add(actionRequest, portletConfig.getPortletName() + SessionMessages.KEY_SUFFIX_HIDE_DEFAULT_ERROR_MESSAGE);
+		
 		actionResponse.sendRedirect(iframePage + "#" + url);
 	}
 

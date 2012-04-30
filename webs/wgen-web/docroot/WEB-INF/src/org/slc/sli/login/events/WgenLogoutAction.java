@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slc.sli.login.servlet.filter.sso.wgensso.WgenSSOUtil;
-import org.slc.sli.util.PropsKeys;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.util.PropsUtil;
+import org.slc.sli.util.WgenPropsValues;
 
 /**
  * WgenLogoutAction.java
@@ -28,7 +26,7 @@ public class WgenLogoutAction extends Action {
 	@Override
 	public void run(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			boolean filterEnabled = GetterUtil.getBoolean(PropsUtil.get(PropsKeys.WGEN_SSO_FILTER));
+			boolean filterEnabled = WgenPropsValues.WGEN_SSO_FILTER;
 
 			if (!filterEnabled) {
 				return;

@@ -137,7 +137,6 @@ public class RESTClient {
     }
 
     public void setSecurityUrl(String securityUrl) {
-    	logger.info("inside rest client.."+securityUrl);
         this.securityUrl = securityUrl;
     }
 }

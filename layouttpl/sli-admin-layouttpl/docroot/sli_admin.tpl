@@ -17,7 +17,7 @@
 
    
 <div id="sli_content_main">
-<div class="sli_home_title">Admin</div>
+<div class="sli_home_title">ADMIN</div>
 		<div class="portlet-layout">
                 <div class="portlet-column portlet-column-only" id="column-3">
                     $processor.processColumn("column-3", "portlet-column-content portlet-column-content-only")

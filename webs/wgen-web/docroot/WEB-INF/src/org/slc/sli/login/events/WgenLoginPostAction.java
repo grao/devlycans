@@ -16,9 +16,8 @@ import javax.servlet.http.HttpSession;
 import org.slc.sli.login.json.bean.UserData;
 import org.slc.sli.util.WgenUtil;
 import org.slc.sli.util.Constants;
-import org.slc.sli.util.PropsKeys;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.util.PropsUtil;
+import org.slc.sli.util.WgenPropsValues;
+
 /**
  * WgenLoginPostAction.java
  * 
@@ -47,10 +46,10 @@ public class WgenLoginPostAction extends Action {
 			long companyId = PortalUtil.getCompanyId(request);
 
 			Role sliAdminRole = RoleLocalServiceUtil.getRole(companyId,
-					GetterUtil.getString(PropsUtil.get(PropsKeys.ROLE_SLI_ADMINISTRATOR)));
+					WgenPropsValues.ROLE_SLI_ADMINISTRATOR);
 
 			Role sliEducatorRole = RoleLocalServiceUtil.getRole(companyId,
-					GetterUtil.getString(PropsUtil.get(PropsKeys.ROLE_EDUCATOR)));
+					WgenPropsValues.ROLE_EDUCATOR);
 
 			long[] adminRoleIds = { sliAdminRole.getRoleId() };
 
