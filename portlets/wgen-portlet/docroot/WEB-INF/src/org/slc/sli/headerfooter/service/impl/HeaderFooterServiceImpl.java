@@ -14,8 +14,7 @@
 
 package org.slc.sli.headerfooter.service.impl;
 
-import java.io.IOException;
-
+import org.slc.sli.headerfooter.model.HeaderFooter;
 import org.slc.sli.headerfooter.service.base.HeaderFooterServiceBaseImpl;
 import org.slc.sli.util.VelocityUtil;
 
@@ -51,16 +50,8 @@ public class HeaderFooterServiceImpl extends HeaderFooterServiceBaseImpl {
 	}	
 	
 	public String getHeader(boolean isAdmin) throws SystemException {
-	  
-		String header = headerFooterLocalService.getHeader(isAdmin);
-	    String headerWithLogo="";
-		try {
-			headerWithLogo = header.replace("[$SLI_LOGO$]","<img alt=\"sli_logo\" src=\""+VelocityUtil.getEncodedImg("images/sli_logo_icn.png")+"\"/>");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    return VelocityUtil.velocityHeaderRes(headerWithLogo);
+	    String header = headerFooterLocalService.getHeader(isAdmin);
+	    return VelocityUtil.velocityHeaderRes(header);
 	}
 	
 	public String getFooter(boolean isAdmin) throws SystemException {

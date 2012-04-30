@@ -23,7 +23,7 @@ import org.slc.sli.headerfooter.model.impl.HeaderFooterImpl;
 import org.slc.sli.headerfooter.service.base.HeaderFooterLocalServiceBaseImpl;
 import org.slc.sli.login.json.bean.UserData;
 import org.slc.sli.util.RolesUtil;
-import org.slc.sli.util.WgenPropsKeys;
+import org.slc.sli.util.PropsKeys;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -69,9 +69,9 @@ public class HeaderFooterLocalServiceImpl extends
 			String[] granted_authorities = userdata.getGranted_authorities();
 			for (String role : granted_authorities) {
 				if (role.equalsIgnoreCase(GetterUtil.getString(PropsUtil
-						.get(WgenPropsKeys.ROLE_IT_ADMINISTRATOR)))
+						.get(PropsKeys.ROLE_IT_ADMINISTRATOR)))
 						|| role.equalsIgnoreCase(GetterUtil.getString(PropsUtil
-								.get(WgenPropsKeys.ROLE_SLI_ADMINISTRATOR)))) {
+								.get(PropsKeys.ROLE_SLI_ADMINISTRATOR)))) {
 					isAdmin = true;
 					break;
 				}
@@ -132,10 +132,8 @@ public class HeaderFooterLocalServiceImpl extends
 				UserData userdata = RolesUtil.getUserData(token);
 				String fullName = getFullName(userdata);
 				boolean isAdmin = isAdmin(userdata);
-				
-				headerData = headerData.replace("[$SLI_LOGO$]","<img alt=\"\" class=\"company-logo\" height=\"17\" src=\"/sli-new-theme/images/custom/sli_logo_icn.png\" width=\"21\" />");
 
-				/*if (currUrl.contains("web/guest/admin")) {
+				if (currUrl.contains("web/guest/admin")) {
 					headerData = headerData.replace("[$IS_ADMIN_PAGE$]",
 							"<li><a href=\"/portal/web/guest/home\">Home</a></li>");
 					// headerData =
@@ -144,7 +142,7 @@ public class HeaderFooterLocalServiceImpl extends
 					headerData = headerData.replace("[$IS_ADMIN_PAGE$]", "");
 					// headerData =
 					// headerData.replace("[$SLI_TEXT$]","<a href=\"/portal/web/guest/home\" style=\"font-weight:normal;\"><span>SLI Portal</span></a>");
-				}*/
+				}
 
 				if (isAdmin) {
 					headerData = headerData
