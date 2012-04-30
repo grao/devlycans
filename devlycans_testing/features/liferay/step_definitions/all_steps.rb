@@ -94,8 +94,8 @@ end
 
 Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
   begin
-  #wait = Selenium::WebDriver::Wait.new(:timeout => 10)
- # wait.until{
+    #wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+    # wait.until{
     a=@driver.find_element(:id, field)
     options=a.find_elements(:tag_name=>"option")
     options.each do |g|
@@ -104,17 +104,17 @@ Then /^I select "([^\"]*)" from "([^\"]*)"$/ do |text,field|
         break
       end
     end
-   # }
+    # }
   rescue
     if @driver.page_source.match('SLI Exception')
-     ele=false
-     puts "SLI Exception"
-   elsif Timeout::Error
+      ele=false
+      puts "SLI Exception"
+    elsif Timeout::Error
       puts "TimeOut error"
 
-   else
-    raise   Selenium::WebDriver::Error::NoSuchElementError
-   end
+    else
+      raise   Selenium::WebDriver::Error::NoSuchElementError
+    end
   end
 end
 
@@ -179,7 +179,7 @@ end
 
 Then  /^I follow the home page Dashboard$/ do 
   begin
-    element= @driver.find_element(:xpath, "//a/span[text()=' SLI Dashboard']")
+    element= @driver.find_element(:xpath, "//td/a/div[text()=' Dashboard (Integration)']")
     element.click
   rescue
     if @driver.page_source.match('SLI Exception')
@@ -204,9 +204,9 @@ Then /^I should logged out$/ do
     #action=Selenium::WebDriver::ActionBuilder.new(:move_to,nil)
     wait = Selenium::WebDriver::Wait.new(:timeout => 10) 
     wait.until{
-    menu = @driver.find_elements(:class,"menulink").first.click()
-    submenu=@driver.find_element(:link, 'Logout')
-    submenu.click }
+      menu = @driver.find_elements(:class,"menulink").first.click()
+      submenu=@driver.find_element(:link, 'Logout')
+      submenu.click }
     #@driver.action.move_to(menu).perform
   rescue
    
@@ -214,7 +214,7 @@ Then /^I should logged out$/ do
       ele=false
       puts "SLI Exception"
     elsif Timeout::Error
-     puts "TimeOut error"
+      puts "TimeOut error"
 
     else
       raise   Selenium::WebDriver::Error::NoSuchElementError
@@ -247,8 +247,8 @@ Then /^I should be on the home page$/ do
     #@driver.action.move_to(menu).perform
     wait = Selenium::WebDriver::Wait.new(:timeout => 10) 
     wait.until{
-    menu = @driver.find_elements(:class,"menulink").first.click()
-    submenu=@driver.find_element(:link, 'Logout').displayed? }
+      menu = @driver.find_elements(:class,"menulink").first.click()
+      submenu=@driver.find_element(:link, 'Logout').displayed? }
   rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error, NoMethodError
     if @driver.page_source.match('SLI Exception')
       ele=false
@@ -293,8 +293,8 @@ When /^I mouseover on menu and click submenu "([^\"]*)"$/ do |submenu|
     #@driver.action.move_to(menu).perform
     wait = Selenium::WebDriver::Wait.new(:timeout => 10)
     wait.until{
-    menu = @driver.find_elements(:class,"menulink").first.click()
-    @driver.find_element(:link, submenu).click()}
+      menu = @driver.find_elements(:class,"menulink").first.click()
+      @driver.find_element(:link, submenu).click()}
   rescue
     if @driver.page_source.match('SLI Exception')
       ele=false
@@ -385,43 +385,43 @@ Then /^I click button "([^\"]*)"$/ do |text|
 end
 
 Then /^I should be on the admin page$/ do
-#begin
-#wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-#wait.until{
+  #begin
+  #wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  #wait.until{
   if @driver.find_element(:link, "Admin").displayed? 
-  puts "On the admin Page"
+    puts "On the admin Page"
   else
-  puts "Not an admin Page"
+    puts "Not an admin Page"
   end
-#  }
+  #  }
   
-#rescue
+  #rescue
 
-#if @driver.page_source.match('SLI Exception')
- #     ele=false
- #     puts "SLI Exception"
- #   elsif Timeout::Error
+  #if @driver.page_source.match('SLI Exception')
+  #     ele=false
+  #     puts "SLI Exception"
+  #   elsif Timeout::Error
   #    puts "TimeOut error"
 
- #   else
+  #   else
   #    raise   Selenium::WebDriver::Error::NoSuchElementError
   # end
-#end
+  #end
 
 end
 
 And /^I select the "([^\"]*)"$/ do |sel|
-#wait = Selenium::WebDriver::Wait.new(:timeout => 10)
-#wait.until{
-select=@driver.find_element(:tag_name, 'select')
-options=select.find_elements(:tag_name, "option")
+  #wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  #wait.until{
+  select=@driver.find_element(:tag_name, 'select')
+  options=select.find_elements(:tag_name, "option")
 
-     options.each do |g|
-        if g.attribute('value') == sel
-          g.click
-          break
-        end
-      end
+  options.each do |g|
+    if g.attribute('value') == sel
+      g.click
+      break
+    end
+  end
 
 
 end
@@ -435,8 +435,8 @@ end
 Then /^It open a popup$/ do
   wait = Selenium::WebDriver::Wait.new(:timeout => 10)
   wait.until{
-  frame=@driver.find_element(:tag_name, "iframe")
-  @driver.switch_to.frame(frame)
+    frame=@driver.find_element(:tag_name, "iframe")
+    @driver.switch_to.frame(frame)
   
   }
  
@@ -468,21 +468,21 @@ Then /^I should see "([^"]*)" as "([^"]*)"$/ do |field,text|
 end
 
 Then /^I fill "([^"]*)" from "([^"]*)"$/ do |arg1, arg2|
- begin
-      @driver.find_element(:id, arg2).send_keys arg1
-     rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
-       if @driver.page_source.match('SLI Exception')
-          ele=false
-          puts "SLI Exception"
-        elsif Timeout::Error
-          puts "TimeOut error"
-        elsif Selenium::WebDriver::Error::NoSuchElementError
-          puts ""
-        else 
-         puts ""
-         # raise   Selenium::WebDriver::Error::NoSuchElementError
-        end
-     end 
+  begin
+    @driver.find_element(:id, arg2).send_keys arg1
+  rescue Selenium::WebDriver::Error::NoSuchElementError, Timeout::Error
+    if @driver.page_source.match('SLI Exception')
+      ele=false
+      puts "SLI Exception"
+    elsif Timeout::Error
+      puts "TimeOut error"
+    elsif Selenium::WebDriver::Error::NoSuchElementError
+      puts ""
+    else
+      puts ""
+      # raise   Selenium::WebDriver::Error::NoSuchElementError
+    end
+  end
 end
 
 Then /^I close the browser$/ do
