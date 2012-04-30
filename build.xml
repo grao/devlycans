@@ -19,7 +19,9 @@
 
 	<target name="moveenv" depends="check">
 		<echo>${env}</echo>
-		<copy file="${env}" tofile="${app.server.dir}/../environment.properties" overwrite="true"/>
+		 <scp file="myfile.txt" todir="tomcat@devlycans.slidev.org:/opt/"/>
+		<scp file="${env}" tofile="${app.server.dir}/../environment.properties" overwrite="true"/>
+		<!--<copy file="${env}" tofile="${app.server.dir}/../environment.properties" overwrite="true"/>-->
 	</target>
 
 	<!--added for moving environment properties to server end -->
