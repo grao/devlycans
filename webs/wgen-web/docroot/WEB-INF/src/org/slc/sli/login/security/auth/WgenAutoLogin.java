@@ -27,8 +27,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.slc.sli.login.servlet.filter.sso.wgensso.WgenSSOUtil;
 
 import org.slc.sli.login.json.bean.UserData;
-import org.slc.sli.util.PortletPropsValues;
-import org.slc.sli.util.WgenPropsValues;
+import org.slc.sli.util.PropsKeys;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.util.PropsUtil;
 
 /**
  * WgenAutoLogin.java Purpose: Login to Liferay portal automatically, creates
@@ -46,15 +47,15 @@ public class WgenAutoLogin implements AutoLogin {
 		String[] credentials = null;
 		boolean isauthenticated = false;
 
-		boolean filterEnabled = WgenPropsValues.WGEN_SSO_FILTER;
+		boolean filterEnabled = GetterUtil.getBoolean(PropsUtil.get(PropsKeys.WGEN_SSO_FILTER));
 
-		String serverURL = PortletPropsValues.API_SERVER_URL;
+		//String serverURL = GetterUtil.getString(PropsUtil.get(PropsKeys.API_SERVER_URL));
 
 		try {
 			long companyId = PortalUtil.getCompanyId(request);
 
 			// return if filter not enabled
-			if (!filterEnabled && !Validator.isNotNull(serverURL)) {
+			if (!filterEnabled) {
 				return credentials;
 			}
 

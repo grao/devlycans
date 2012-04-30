@@ -9,7 +9,6 @@
 		<instanceable>false</instanceable>
 		<private-session-attributes>false</private-session-attributes>
 		<header-portlet-css>/css/main.css</header-portlet-css>
-		<header-portlet-javascript>/js/jquery.js</header-portlet-javascript>
 		<css-class-wrapper>headerportlet-portlet</css-class-wrapper>
 	</portlet>
 	<portlet>

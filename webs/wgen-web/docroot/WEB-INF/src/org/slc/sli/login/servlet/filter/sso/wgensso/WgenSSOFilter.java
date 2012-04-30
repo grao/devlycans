@@ -16,8 +16,10 @@ import org.scribe.model.Token;
 import org.scribe.model.Verifier;
 import org.scribe.oauth.OAuthService;
 import org.slc.sli.security.SliApi;
-import org.slc.sli.util.PortletPropsValues;
-import org.slc.sli.util.WgenPropsValues;
+import org.slc.sli.util.PropsValues;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.util.PropsUtil;
+import org.slc.sli.util.PropsKeys;
 
 /**
  * WgenSSOFilter.java Purpose: This filter is invoked when the user logs in to
@@ -45,10 +47,9 @@ public class WgenSSOFilter extends BasePortalFilter {
 		// check if the session check url is not null
 		// check if the session check rest api is accesseble - can be removed
 		// not needed in prod
-
+						
 		try {
-			if (WgenPropsValues.WGEN_SSO_FILTER
-					&& Validator.isNotNull(PortletPropsValues.API_SERVER_URL)) {
+			if (GetterUtil.getBoolean(PropsUtil.get(PropsKeys.WGEN_SSO_FILTER))) {
 				return true;
 			}
 		} catch (Exception e) {

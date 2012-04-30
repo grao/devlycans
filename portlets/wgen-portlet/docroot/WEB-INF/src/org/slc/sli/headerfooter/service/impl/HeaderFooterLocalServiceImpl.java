@@ -23,7 +23,7 @@ import org.slc.sli.headerfooter.model.impl.HeaderFooterImpl;
 import org.slc.sli.headerfooter.service.base.HeaderFooterLocalServiceBaseImpl;
 import org.slc.sli.login.json.bean.UserData;
 import org.slc.sli.util.RolesUtil;
-import org.slc.sli.util.WgenPropsKeys;
+import org.slc.sli.util.PropsKeys;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -69,9 +69,9 @@ public class HeaderFooterLocalServiceImpl extends
 			String[] granted_authorities = userdata.getGranted_authorities();
 			for (String role : granted_authorities) {
 				if (role.equalsIgnoreCase(GetterUtil.getString(PropsUtil
-						.get(WgenPropsKeys.ROLE_IT_ADMINISTRATOR)))
+						.get(PropsKeys.ROLE_IT_ADMINISTRATOR)))
 						|| role.equalsIgnoreCase(GetterUtil.getString(PropsUtil
-								.get(WgenPropsKeys.ROLE_SLI_ADMINISTRATOR)))) {
+								.get(PropsKeys.ROLE_SLI_ADMINISTRATOR)))) {
 					isAdmin = true;
 					break;
 				}
