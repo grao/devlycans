@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/public/!svn/ver/104408/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util
+END
+ConsumerRequestExtension.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/ConsumerRequestExtension.java
+END
+WSRPConsumerManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/public/!svn/ver/104408/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/WSRPConsumerManager.java
+END
+ConsumerRequestExtensionsHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/ConsumerRequestExtensionsHelper.java
+END
+PortletPropsKeys.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/PortletPropsKeys.java
+END
+WebKeys.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/WebKeys.java
+END
+ExtensionUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/ExtensionUtil.java
+END
+WSRPConsumerManagerFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/WSRPConsumerManagerFactory.java
+END
+LocalizedStringUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/LocalizedStringUtil.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/Constants.java
+END
+PortletPropsValues.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/public/!svn/ver/104408/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/src/com/liferay/wsrp/util/PortletPropsValues.java
+END

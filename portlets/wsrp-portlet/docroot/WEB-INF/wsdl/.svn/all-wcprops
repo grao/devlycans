@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl
+END
+wsrp-1.0-interfaces.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-1.0-interfaces.wsdl
+END
+wsrp-2.0-interfaces.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-2.0-interfaces.wsdl
+END
+wsrp-service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-service.wsdl
+END
+wsrp-1.0-types.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-1.0-types.xsd
+END
+wsrp-2.0-extra.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-2.0-extra.xsd
+END
+wsrp-2.0-types.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-2.0-types.xsd
+END
+wsrp-1.0-bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-1.0-bindings.wsdl
+END
+wsrp-2.0-bindings.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-2.0-bindings.wsdl
+END
+wsrp-1.0-service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-1.0-service.wsdl
+END
+wsrp-2.0-service.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/public/!svn/ver/99847/plugins/branches/6.1.x/portlets/wsrp-portlet/docroot/WEB-INF/wsdl/wsrp-2.0-service.wsdl
+END
