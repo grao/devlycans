@@ -19,30 +19,30 @@ body{
     width: 50%;
     margin:5px 0 0
 }
-.header_right ul {
+.sli_header_right ul {
     color: #FFFFFF;
     float: right;
     font-size: 16px;
     margin: 12px 0 0;
     padding: 0;
 }
-.header_right ul li {
+.sli_header_right ul li {
     float: left;
     list-style-type: none;
     padding-left: 10px;
     padding-right: 10px;
 }
-.header_right ul li a {
+.sli_header_right ul li a {
     color: #FFFFFF;
     text-decoration: none;
 }
-.header_right ul li {
+.sli_header_right ul li {
     border-right: 1px solid #8F8F8F;
 }
-.header_right ul li.username {
+.sli_header_right ul li.username {
     color: #2CC2E2;
 }
-.header_right ul li.login {
+.sli_header_right ul li.login {
     border-right: medium none;
 }
 .outerModalPopupDiv{
@@ -50,7 +50,7 @@ body{
 -webkit-box-shadow: 0 0 20px#888;
 box-shadow: 0 0 20px #888;
 }
-
+/*
 #WSbanner {
     background: none repeat scroll 0 0 #333333;
     height: 30px;
@@ -62,7 +62,38 @@ box-shadow: 0 0 20px #888;
     width: 980px;
 	font-family: Arial, Helvetica, sans-serif;
 }
+*/
 
+#sli_banner {
+	background: #333333;
+	height: auto;
+	padding:0;
+}
+
+#sli_banner #sli_heading{
+	margin: 0 auto;
+	width:980px;
+}
+
+#sli_banner .company-title {
+	float: none;
+	margin: 0px 0 0;
+	position: static;
+}
+
+#sli_banner #navigation{
+	margin: 0 auto;
+	width:980px;
+}
+
+#sli_banner .portlet-column-content{
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+#sli_banner .portlet-borderless-container{
+	min-height:1.5em;
+}
  /*dd menu*/
 
 ul.menu_n {list-style:none; margin:0; padding:0;color: #FFFFFF;float: right;font-size: 14px; margin-top:7px;}
@@ -150,7 +181,7 @@ ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
 }
 
 /*dd_menu end*/
-#content_main {
+#sli_content_main {
     margin: 5px auto 0;
     width: 980px;
 }
@@ -163,7 +194,7 @@ ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
 
 </style>
 
-<div id="WSbanner">
+<div id="sli_banner">
 	<div id="sli_heading">
 
 $header
