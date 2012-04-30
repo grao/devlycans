@@ -51,7 +51,37 @@ body{
 box-shadow: 0 0 20px #888;
 }
 
-#WSbanner {
+#sli_banner {
+	background: #333333;
+	height: auto;
+	padding:0;
+}
+
+#sli_banner #sli_heading{
+	margin: 0 auto;
+	width:980px;
+}
+
+#sli_banner .company-title {
+	float: none;
+	margin: 0px 0 0;
+	position: static;
+}
+
+#sli_banner #navigation{
+	margin: 0 auto;
+	width:980px;
+}
+
+#sli_banner .portlet-column-content{
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+#sli_banner .portlet-borderless-container{
+	min-height:1.5em;
+}
+/*#WSbanner {
     background: none repeat scroll 0 0 #333333;
     height: 30px;
     padding: 0;
@@ -61,7 +91,7 @@ box-shadow: 0 0 20px #888;
     margin: 0 auto;
     width: 980px;
 	font-family: Arial, Helvetica, sans-serif;
-}
+}*/
 
  /*dd menu*/
 
@@ -163,7 +193,7 @@ ul.menu_n li.last a.menulink, ul.menu_n li.last_item a.menulink{
 
 </style>
 
-<div id="WSbanner">
+<div id="sli_banner">
 	<div id="sli_heading">
 
 $header

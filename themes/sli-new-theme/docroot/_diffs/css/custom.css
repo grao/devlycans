@@ -739,11 +739,11 @@ ul.menu_n ul li.last, ul.menu_n ul li.last_item{
 
 
 .sli_home_title{
-	font-size:26px;
+	font-size:36px;
 	font-weight: normal;
 	font-style: normal;
-	font-family: 'HelveticaNeueLT25UltLightRg';
-	color:#333333;	
+	font-family: Arail,Helvetica,sans-serif;
+	color:#D8D8D8;	
 	margin-bottom:50px;
 }
 
